@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alcaldía de Jamundí</title>
+    <title>Alcaldía Municipal de {...}</title>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -13,19 +13,444 @@
       referrerpolicy="no-referrer"
     />
     <script src="./tailwind.js"></script>
+
+    <link rel="stylesheet" href="./SplideSlider/splide.min.css">
   </head>
-  <body class="w-full h-full overflow-x-hidden">
+  <body class="w-full h-screen">
     <!--Header-->
+    <!--Header-->
+    <header class="w-full border-b-4 border-b-blue-500 z-99">
+      <section
+        class="h-[2.5rem] bg-blue-600 w-full flex lg:py-[0.5rem] lg:pl-[3rem]"
+      >
+        <!--Barra gov-->
+        <section
+          class="container lg:m-auto flex justify-center items-center lg:items-start lg:justify-start"
+        >
+          <a
+            href="#"
+            title="Enlace Gov"
+            aria-label="Enlace Gov"
+            class="w-[8rem] flex items-center"
+          >
+            <img src="./img/logoGov.svg" alt="Logo gov" />
+          </a>
+        </section>
+      </section>
 
+      <!--Titulo principal alcaldia-->
+      <section class="lg:container hidden lg:flex justify-between mx-auto p-5">
+        <section class="flex items-center gap-5">
+          <figure>
+            <img
+              src="./img/Escudo_de_Colombia.png"
+              alt="Escudo de la república de Colombia"
+              class="w-14"
+            />
+          </figure>
+
+          <h1 class="text-lg font-bold font-work-sans">
+            Alcaldia municipal de {...}
+          </h1>
+        </section>
+
+        <section class="flex items-end flex-col gap-2">
+          <a
+            class="font-medium font-work-sans text-sm text-blue-500 hover:underline"
+            href="#"
+            title="Administrar sitio"
+            aria-label="Administrar sitio"
+            >Administrar sitio</a
+          >
+          <section class="relative">
+            <input
+              type="text"
+              placeholder="Buscar en la entidad"
+              class="w-[20rem] border-2 border-gray-300 px-4 py-[0.5rem] rounded-md shadow"
+            />
+
+            <i
+              class="fa-solid fa-magnifying-glass absolute top-[0.4rem] right-[0.5rem] p-2 bg-blue-500 rounded-xl text-white cursor-pointer hover:bg-blue-700 transition-all ease duration-500"
+            ></i>
+          </section>
+        </section>
+      </section>
+
+      <!--Menu-->
+      <nav
+        class="bg-gray-100 w-full flex px-5 lg:px-0 items-center py-3 lg:p-0 h-16 shadow-xl z-99"
+        id="navbar"
+      >
+        <section class="mx-auto lg:container w-full lg:h-full">
+          <section class="flex items-center justify-between lg:hidden h-[10%]">
+            <img
+              src="./img/Escudo_de_Colombia.png"
+              alt="Escudo de Colombia"
+              class="w-14 lg:hidden"
+            />
+
+            <i
+              class="fa-solid fa-bars lg:hidden text-[1.7rem]"
+              id="btnMenu"
+            ></i>
+          </section>
+
+          <ul
+            class="w-full h-screen lg:h-full left-0 flex lg:gap-0 lg:justify-evenly lg:justify-between font-work-sans text-sm font-medium text-gray-800 flex-col lg:flex-row lg:relative fixed lg:top-auto top-0 items-center bg-gray-100 lg:z-50 z-50 transition-all ease duration-500 transform lg:translate-x-0 translate-x-[-100%] overflow-y-scroll lg:overflow-y-visible"
+            id="menu"
+          >
+            <section class="w-full flex flex-col gap-3 lg:hidden">
+              <section
+                class="h-[2.5rem] bg-blue-600 w-full flex lg:py-[0.5rem] lg:pl-[3rem]"
+              >
+                <!--Barra gov-->
+                <section
+                  class="container lg:m-auto flex justify-center items-center lg:items-start lg:justify-start"
+                >
+                  <a
+                    href="#"
+                    title="Enlace Gov"
+                    aria-label="Enlace Gov"
+                    class="w-[8rem] flex items-center"
+                  >
+                    <img src="./img/logoGov.svg" alt="Logo gov" />
+                  </a>
+                </section>
+              </section>
+              <section
+                class="flex justify-between items-center px-6 border-b-4 border-b-blue-500 pb-3"
+              >
+                <article class="flex items-center gap-3">
+                  <img
+                    src="./img/Escudo_de_Colombia.png"
+                    alt="Escudo de Colombia"
+                    class="w-14 lg:hidden"
+                  />
+                  <h3 class="text-lg font-semibold">
+                    Alcaldía municipal de:{}
+                  </h3>
+                </article>
+                <i
+                  class="fa-solid fa-xmark flex lg:hidden text-[1.7rem]"
+                  id="btnClose"
+                ></i>
+              </section>
+            </section>
+            <section
+              class="flex flex-col lg:flex-row lg:justify-between w-full h-full"
+            >
+              <li
+                class="lg:h-full flex items-center hover:bg-gray-300 transition-all ease duration-500 sm:text-center font-bold px-5 justify-center py-4 lg:py-0"
+              >
+                <a href="#" title="Enlace" aria-label="Enlace">Inicio</a>
+              </li>
+
+              <li
+                class="w-full flex flex-col justify-center lg:w-auto sm:text-center group font-bold relative lg:h-full z-40"
+              >
+                <section
+                  class="lg:h-full flex items-center justify-center hover:bg-gray-300 group-hover:bg-gray-300 transition-all ease duration-500 font-bold px-5 cursor-pointer"
+                >
+                  <span class="py-4 lg:py-0"
+                    >Transparencia y acceso <br />
+                    a la informacion publica</span
+                  >
+
+                  <i
+                    class="fa-solid fa-chevron-down p-2 transform rotate-0 group-hover:rotate-180 transition-all duration-500"
+                  ></i>
+                </section>
+
+                <ul
+                  class="w-full lg:top-[100%] lg:rounded-lg lg:z-50 z-50 lg:left-0 group-hover:flex lg:flex overflow-y-hidden transition-all duration-700 ease lg:absolute [&>section>li>a]:text-gray-700 max-h-0 group-hover:max-h-[400px] lg:h-auto transform lg:group-hover:translate-y-[20px] bg-white"
+                >
+                  <section
+                    class="w-full lg:rounded-lg text-start p-6 flex flex-col gap-2 [&>li:hover]:bg-gray-300 [&>li:hover]:transition-all [&>li:hover]:ease [&>li:hover]:duration-500 lg:z-50 z-50 lg:bg-white lg:shadow-md [&>li]:p-1"
+                  >
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 2</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 3</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 4</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 5</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 6</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 7</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 8</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 9</a>
+                    </li>
+                  </section>
+                </ul>
+              </li>
+
+              <li
+                class="w-full flex flex-col justify-center lg:w-auto sm:text-center group font-bold relative lg:h-full z-40"
+              >
+                <section
+                  class="lg:h-full flex items-center justify-center hover:bg-gray-300 group-hover:bg-gray-300 transition-all ease duration-500 font-bold px-5 cursor-pointer"
+                >
+                  <span class="py-4 lg:py-0"
+                    >Atención y servicios <br />
+                    a la ciudadanía</span
+                  >
+
+                  <i
+                    class="fa-solid fa-chevron-down p-2 rotate-0 group-hover:rotate-180 transition-all duration-500"
+                  ></i>
+                </section>
+
+                <ul
+                  class="w-full lg:top-[100%] lg:rounded-lg lg:z-50 z-50 lg:left-0 group-hover:flex lg:flex overflow-y-hidden transition-all duration-700 ease lg:absolute [&>section>li>a]:text-gray-700 max-h-0 group-hover:max-h-[400px] lg:h-auto transform lg:group-hover:translate-y-[20px] bg-white"
+                >
+                  <section
+                    class="w-full lg:rounded-lg text-start p-6 flex flex-col gap-2 [&>li:hover]:bg-gray-300 [&>li:hover]:transition-all [&>li:hover]:ease [&>li:hover]:duration-500 lg:z-50 z-50 lg:bg-white lg:shadow-md [&>li]:p-1"
+                  >
+                    <li class="cursor-pointer relative">
+                      <section class="flex items-center justify-between">
+                        <h3>Item 1</h3>
+                        <i
+                          class="fa-solid fa-chevron-down p-2 transform rotate-60 group-hover:rotate-120 transition-all duration-500"
+                        ></i>
+                      </section>
+                      <!-- submenu item  -->
+                      <section
+                        class="transition-all duration-500 absolute w-full max-h-0 right-[-100px] group-hover:max-h-[200px] bg-white shadow-md rounded-lg"
+                      >
+                        <ul class="p-6 flex flex-col gap-3">
+                          <li><a href="">sub Item 1</a></li>
+                          <li><a href="">sub Item 1</a></li>
+                          <li><a href="">sub Item 1</a></li>
+                          <li><a href="">sub Item 1</a></li>
+                        </ul>
+                      </section>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 2</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 3</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 4</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 5</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 6</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 7</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 8</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 9</a>
+                    </li>
+                  </section>
+                </ul>
+              </li>
+              <li
+                class="w-full flex flex-col justify-center lg:w-auto sm:text-center group font-bold relative lg:h-full z-40"
+              >
+                <section
+                  class="lg:h-full flex items-center justify-center hover:bg-gray-300 group-hover:bg-gray-300 transition-all ease duration-500 font-bold px-5 cursor-pointer"
+                >
+                  <span class="py-4 lg:py-0">Participa</span>
+
+                  <i
+                    class="fa-solid fa-chevron-down p-2 rotate-0 group-hover:rotate-180 transition-all duration-500"
+                  ></i>
+                </section>
+
+                <ul
+                  class="w-full lg:top-[100%] lg:rounded-lg lg:z-50 z-50 lg:left-0 group-hover:flex lg:flex overflow-y-hidden transition-all duration-700 ease lg:absolute [&>section>li>a]:text-gray-700 max-h-0 group-hover:max-h-[400px] lg:h-auto transform lg:group-hover:translate-y-[20px] bg-white"
+                >
+                  <section
+                    class="w-full lg:rounded-lg text-start p-6 flex flex-col gap-2 [&>li:hover]:bg-gray-300 [&>li:hover]:transition-all [&>li:hover]:ease [&>li:hover]:duration-500 lg:z-50 z-50 lg:bg-white lg:shadow-md [&>li]:p-1"
+                  >
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 2</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 3</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 4</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 5</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 6</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 7</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 8</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 9</a>
+                    </li>
+                  </section>
+                </ul>
+              </li>
+
+              <li
+                class="w-full flex flex-col justify-center lg:w-auto sm:text-center group font-bold relative lg:h-full z-40"
+              >
+                <section
+                  class="lg:h-full flex items-center justify-center hover:bg-gray-300 group-hover:bg-gray-300 transition-all ease duration-500 font-bold px-5 cursor-pointer"
+                >
+                  <span class="py-4 lg:py-0">Nuestra entidad</span>
+
+                  <i
+                    class="fa-solid fa-chevron-down p-2 rotate-0 group-hover:rotate-180 transition-all duration-500"
+                  ></i>
+                </section>
+
+                <ul
+                  class="w-full lg:top-[100%] lg:rounded-lg lg:z-50 z-50 lg:left-0 group-hover:flex lg:flex overflow-y-hidden transition-all duration-700 ease lg:absolute [&>section>li>a]:text-gray-700 max-h-0 group-hover:max-h-[400px] lg:h-auto transform lg:group-hover:translate-y-[20px] bg-white"
+                >
+                  <section
+                    class="w-full lg:rounded-lg text-start p-6 flex flex-col gap-2 [&>li:hover]:bg-gray-300 [&>li:hover]:transition-all [&>li:hover]:ease [&>li:hover]:duration-500 lg:z-50 z-50 lg:bg-white lg:shadow-md [&>li]:p-1"
+                  >
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 2</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 3</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 4</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 5</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 6</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 7</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 8</a>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a href="#" title="Enlace" aria-label="Enlace">Item 9</a>
+                    </li>
+                  </section>
+                </ul>
+              </li>
+
+              <li
+                class="lg:h-full w-full lg:w-auto flex items-center justify-center hover:bg-gray-300 transition-all ease duration-500 sm:text-center font-bold px-5"
+              >
+                <a
+                  class="py-4 lg:py-0"
+                  href=""
+                  title="Enlace"
+                  aria-label="Enlace"
+                  >Noticias</a
+                >
+              </li>
+            </section>
+          </ul>
+        </section>
+      </nav>
+    </header>
     <!--Header-->
-    Sapo
+    
     <!-- main  -->
+    <section class="lg:container mx-auto w-full mt-4">
 
+      <!--Boton tramites-->
+      <section class="w-full h-20 flex items-center justify-center bg-colorMunicipio text-white">
+        <a href="#" class="py-2 px-10 border-2 border-gray-300 text-xl rounded-md [&:hover>i]:translate-x-1">Tramites y servicios
+          <i class="fa-solid fa-circle-chevron-right transition-all duration-500"></i>
+        </a>
+      </section>
+
+      <!--Slider home-->
+      <section class="slider__container w-full h-[300px] lg:h-[450px] text-white">
+        <section class="splide slider__home h-full relative flex justify-center items-end">
+          <section class="splide__track h-full">
+    
+            <ul class="splide__list">
+              <a href="#" class="splide__slide">
+                <img class="w-full h-full object-cover" src="./img/slider-1.avif" alt="Imagen">
+              </a>
+    
+              <a href="#" class="splide__slide">
+                <img class="w-full h-full object-cover" src="./img/slider-2.webp" alt="Imagen">
+              </a>
+    
+              <a href="#" class="splide__slide">
+                <img class="w-full h-full object-cover" src="./img/slider-3.jpeg" alt="Imagen">
+              </a>
+            </ul>
+    
+    
+          </section>
+    
+          <section class="splide__arrows"></section>
+
+          <button class="splide__toggle text-white uppercase absolute bottom-[0.5em] left-[28rem] transform -translate-x-1/3 text-md" type="button">
+            <span class="splide__toggle__play">
+              Iniciar
+              <i class="fa-solid fa-play"></i>
+            </span>
+            <span class="splide__toggle__pause">
+              Pausar
+              <i class="fa-solid fa-pause"></i>
+            </span>
+          </button>
+          
+        </section>
+      </section>
+
+
+      <!--Enlaces de interes-->
+      <section class="w-full flex flex-col items-center mt-10">
+
+        <h2 class="py-2 uppercase text-2xl font-bold text-gray-700 border-b-4 border-b-colorMunicipio">Enlaces de interes</h2>
+
+        <section class="w-full">
+          
+        </section>
+      </section>
+
+    </section>
     <!-- main  -->
 
     <!-- footer  -->
 
     <!-- footer  -->
+
+    <script src="./SplideSlider/splide.min.js"></script>
     <script src="./main.js" defer></script>
   </body>
 </html>
