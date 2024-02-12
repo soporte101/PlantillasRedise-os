@@ -22,17 +22,11 @@ const menu = document.getElementById("menu"),
 btnMenu.addEventListener("click", () => {
   menu.classList.toggle("translate-x-[-100%]");
 
-  btnMenu.classList.toggle("hidden");
-  btnClose.classList.toggle("hidden");
-
   document.body.style.overflow = "hidden";
 });
 
 btnClose.addEventListener("click", () => {
   menu.classList.toggle("translate-x-[-100%]");
-
-  btnMenu.classList.toggle("hidden");
-  btnClose.classList.toggle("hidden");
 
   document.body.style.overflow = "auto";
 });
