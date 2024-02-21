@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alcaldía Municipal de {...}</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/nav.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -12,445 +13,1458 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="./tailwind.js"></script>
+    <script src="./js/Tailwind/tailwind.js"></script>
+    <script src="./js/Tailwind/tailwind.config.js"></script>
 
     <link rel="stylesheet" href="./SplideSlider/splide.min.css">
   </head>
   <body class="w-full h-screen">
     <!--Header-->
-    <!--Header-->
-    <header class="w-full border-b-4 border-b-blue-500 z-99">
-      <section
-        class="h-[2.5rem] bg-blue-600 w-full flex lg:py-[0.5rem] lg:pl-[3rem]"
-      >
-        <!--Barra gov-->
-        <section
-          class="container lg:m-auto flex justify-center items-center lg:items-start lg:justify-start"
-        >
-          <a
-            href="#"
-            title="Enlace Gov"
-            aria-label="Enlace Gov"
-            class="w-[8rem] flex items-center"
-          >
-            <img src="./img/logoGov.svg" alt="Logo gov" />
+    <header class="flex flex-col">
+      <!-- sec gob  -->
+      <section class="bg-gobColor px-6 py-2">
+        <figure
+          class="lg:container mx-auto flex items-center justify-center lg:justify-start">
+          <a href="https://www.gov.co">
+            <img src="./img/logoGov.svg"
+              class="w-32 object-contain" alt="" />
           </a>
+        </figure>
+      </section>
+      <!-- sec gob  -->
+      <!-- sec logos and input search -->
+      <section
+        class="lg:container mx-auto  p-6 flex flex-wrap justify-center lg:justify-between items-center gap-y-6 xl:gap-6">
+        <article
+          class="flex gap-6 flex-col lg:flex-row items-center justify-center lg:justify-start">
+          <section class="flex gap-3">
+            <a href="https://petro.presidencia.gov.co" class="w-14">
+              <img src="./img/Escudo_de_Colombia.png"
+                class="w-full h-full object-contain" alt="" />
+            </a>
+            <a href="/" class="w-14">
+              <img src="./img/logoAlcaldia.png"
+                class="w-full h-full object-contain" alt="" />
+            </a>
+          </section>
+          <h2 class="text-[14px] font-semibold text-center lg:text-start">
+            Alcaldía Municipal de {...}
+          </h2>
+        </article>
+
+        <section class="flex flex-col gap-3 w-full lg:w-1/4">
+          <a href="/_layouts/15/Authenticate.aspx"
+            class="headerWeb__aut text-[12px] text-center lg:!text-end hover:underline text-primaryBlue">Administrar
+            Sitio</a>
+          <!-- section input  -->
+          <article class="relative h-auto w-full">
+            <input type="text" placeholder="Buscar....."
+              class="text-[12px] border-2 w-full rounded-md py-2 px-3 outline-none focus:shadow-md transition duration-300" />
+            <button
+              class="bg-gobColor hover:bg-navColor transition duration-300 rounded-full text-white absolute right-2 top-[0.3rem] cursor-pointer p-1 min-w-7 w-7 h-7 flex justify-center items-center"
+              id="btnSearchTramite">
+              <i class="fas fa-search text-[12px]"></i>
+            </button>
+          </article>
+          <!-- section input  -->
         </section>
       </section>
+      <!-- sec logos and input search -->
+      <!-- nav  -->
+      <section class="header bg-gris px-6 w-full border-b-2 border-blueLine">
+        <nav class="menu lg:container mx-auto">
+          <div class="head p-3 lg:px-0">
+            <div class="logo">
+              <img src="./img/logoAlcaldia.png"
+                alt="logo" />
+            </div>
+            <button type="button" class="close-menu-btn"></button>
+          </div>
+          <ul>
+            <li class=""><a href="#" class="">Inicio</a></li>
+            <li class="">
+              <a
+                href="/Transparencia/Paginas/Transparencia-y-Acceso-a-la-Informacion-Publica.aspx">Transparencia
+                y acceso <br />
+                información pública</a>
+            </li>
+            <li class="dropdown group">
+              <section class=" h-full lg:pr-4 ">
+                <a href="#"
+                  class="transition-all duration-300 ">Atención y
+                  Servicios <br />
+                  a la Ciudadanía</a>
 
-      <!--Titulo principal alcaldia-->
-      <section class="lg:container hidden lg:flex justify-between mx-auto p-5">
-        <section class="flex items-center gap-5">
-          <figure>
-            <img
-              src="./img/Escudo_de_Colombia.png"
-              alt="Escudo de la república de Colombia"
-              class="w-14"
-            />
-          </figure>
-
-          <h1 class="text-lg font-bold font-work-sans">
-            Alcaldia municipal de {...}
-          </h1>
-        </section>
-
-        <section class="flex items-end flex-col gap-2">
-          <a
-            class="font-medium font-work-sans text-sm text-blue-500 hover:underline"
-            href="#"
-            title="Administrar sitio"
-            aria-label="Administrar sitio"
-            >Administrar sitio</a
-          >
-          <section class="relative">
-            <input
-              type="text"
-              placeholder="Buscar en la entidad"
-              class="w-[20rem] border-2 border-gray-300 px-4 py-[0.5rem] rounded-md shadow"
-            />
-
-            <i
-              class="fa-solid fa-magnifying-glass absolute top-[0.4rem] right-[0.5rem] p-2 bg-blue-500 rounded-xl text-white cursor-pointer hover:bg-blue-700 transition-all ease duration-500"
-            ></i>
-          </section>
-        </section>
-      </section>
-
-      <!--Menu-->
-      <nav
-        class="bg-gray-100 w-full flex px-5 lg:px-0 items-center py-3 lg:p-0 h-16 shadow-xl z-99"
-        id="navbar"
-      >
-        <section class="mx-auto lg:container w-full lg:h-full">
-          <section class="flex items-center justify-between lg:hidden h-[10%]">
-            <img
-              src="./img/Escudo_de_Colombia.png"
-              alt="Escudo de Colombia"
-              class="w-14 lg:hidden"
-            />
-
-            <i
-              class="fa-solid fa-bars lg:hidden text-[1.7rem]"
-              id="btnMenu"
-            ></i>
-          </section>
-
-          <ul
-            class="w-full h-screen lg:h-full left-0 flex lg:gap-0 lg:justify-evenly lg:justify-between font-work-sans text-sm font-medium text-gray-800 flex-col lg:flex-row lg:relative fixed lg:top-auto top-0 items-center bg-gray-100 lg:z-50 z-50 transition-all ease duration-500 transform lg:translate-x-0 translate-x-[-100%] overflow-y-scroll lg:overflow-y-visible"
-            id="menu"
-          >
-            <section class="w-full flex flex-col gap-3 lg:hidden">
-              <section
-                class="h-[2.5rem] bg-blue-600 w-full flex lg:py-[0.5rem] lg:pl-[3rem]"
-              >
-                <!--Barra gov-->
-                <section
-                  class="container lg:m-auto flex justify-center items-center lg:items-start lg:justify-start"
-                >
-                  <a
-                    href="#"
-                    title="Enlace Gov"
-                    aria-label="Enlace Gov"
-                    class="w-[8rem] flex items-center"
-                  >
-                    <img src="./img/logoGov.svg" alt="Logo gov" />
-                  </a>
-                </section>
-              </section>
-              <section
-                class="flex justify-between items-center px-6 border-b-4 border-b-blue-500 pb-3"
-              >
-                <article class="flex items-center gap-3">
-                  <img
-                    src="./img/Escudo_de_Colombia.png"
-                    alt="Escudo de Colombia"
-                    class="w-14 lg:hidden"
-                  />
-                  <h3 class="text-lg font-semibold">
-                    Alcaldía municipal de:{}
-                  </h3>
-                </article>
                 <i
-                  class="fa-solid fa-xmark flex lg:hidden text-[1.7rem]"
-                  id="btnClose"
-                ></i>
+                  class="fa-solid fa-chevron-down transform group-hover:rotate-180 duration-500 group-hover:text-white"></i>
               </section>
-            </section>
-            <section
-              class="flex flex-col lg:flex-row lg:justify-between w-full h-full"
-            >
-              <li
-                class="lg:h-full flex items-center hover:bg-gray-300 transition-all ease duration-500 sm:text-center font-bold px-5 justify-center py-4 lg:py-0"
-              >
-                <a href="#" title="Enlace" aria-label="Enlace">Inicio</a>
-              </li>
 
-              <li
-                class="w-full flex flex-col justify-center lg:w-auto sm:text-center group font-bold relative lg:h-full z-40"
-              >
-                <section
-                  class="lg:h-full flex items-center justify-center hover:bg-gray-300 group-hover:bg-gray-300 transition-all ease duration-500 font-bold px-5 cursor-pointer"
-                >
-                  <span class="py-4 lg:py-0"
-                    >Transparencia y acceso <br />
-                    a la informacion publica</span
-                  >
+              <ul class="sub-menu">
+                <li><a accesskey="q"
+                    href="/Ciudadanos/Paginas/PQRD.aspx">Peticiones,
+                    Quejas, Reclamos y Denuncias</a> </li>
 
-                  <i
-                    class="fa-solid fa-chevron-down p-2 transform rotate-0 group-hover:rotate-180 transition-all duration-500"
-                  ></i>
-                </section>
+                <li><a
+                    href="/Ciudadanos/Paginas/Estado-Tramite.aspx">Estado
+                    Tramite</a></li>
 
-                <ul
-                  class="w-full lg:top-[100%] lg:rounded-lg lg:z-50 z-50 lg:left-0 group-hover:flex lg:flex overflow-y-hidden transition-all duration-700 ease lg:absolute [&>section>li>a]:text-gray-700 max-h-0 group-hover:max-h-[400px] lg:h-auto transform lg:group-hover:translate-y-[20px] bg-white"
-                >
-                  <section
-                    class="w-full lg:rounded-lg text-start p-6 flex flex-col gap-2 [&>li:hover]:bg-gray-300 [&>li:hover]:transition-all [&>li:hover]:ease [&>li:hover]:duration-500 lg:z-50 z-50 lg:bg-white lg:shadow-md [&>li]:p-1"
-                  >
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 2</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 3</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 4</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 5</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 6</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 7</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 8</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 9</a>
-                    </li>
-                  </section>
-                </ul>
-              </li>
+                <li><a
+                    href="/Ciudadanos/Paginas/Tramites-y-Servicios.aspx">Trámites
+                    y Servicios</a> </li>
 
-              <li
-                class="w-full flex flex-col justify-center lg:w-auto sm:text-center group font-bold relative lg:h-full z-40"
-              >
-                <section
-                  class="lg:h-full flex items-center justify-center hover:bg-gray-300 group-hover:bg-gray-300 transition-all ease duration-500 font-bold px-5 cursor-pointer"
-                >
-                  <span class="py-4 lg:py-0"
-                    >Atención y servicios <br />
-                    a la ciudadanía</span
-                  >
+                <li><a
+                    href="/Ciudadanos/Paginas/Pagos-en-Linea.aspx">Pagos
+                    en Línea</a> </li>
 
-                  <i
-                    class="fa-solid fa-chevron-down p-2 rotate-0 group-hover:rotate-180 transition-all duration-500"
-                  ></i>
-                </section>
+                <li><a
+                    href="/Ciudadanos/Paginas/Servicios-de-Atencion-en-Linea.aspx">Servicio
+                    de Atención en Línea</a> </li>
 
-                <ul
-                  class="w-full lg:top-[100%] lg:rounded-lg lg:z-50 z-50 lg:left-0 group-hover:flex lg:flex overflow-y-hidden transition-all duration-700 ease lg:absolute [&>section>li>a]:text-gray-700 max-h-0 group-hover:max-h-[400px] lg:h-auto transform lg:group-hover:translate-y-[20px] bg-white"
-                >
-                  <section
-                    class="w-full lg:rounded-lg text-start p-6 flex flex-col gap-2 [&>li:hover]:bg-gray-300 [&>li:hover]:transition-all [&>li:hover]:ease [&>li:hover]:duration-500 lg:z-50 z-50 lg:bg-white lg:shadow-md [&>li]:p-1"
-                  >
-                    <li class="cursor-pointer relative">
-                      <section class="flex items-center justify-between">
-                        <h3>Item 1</h3>
-                        <i
-                          class="fa-solid fa-chevron-down p-2 transform rotate-60 group-hover:rotate-120 transition-all duration-500"
-                        ></i>
-                      </section>
-                      <!-- submenu item  -->
-                      <section
-                        class="transition-all duration-500 absolute w-full max-h-0 right-[-100px] group-hover:max-h-[200px] bg-white shadow-md rounded-lg"
-                      >
-                        <ul class="p-6 flex flex-col gap-3">
-                          <li><a href="">sub Item 1</a></li>
-                          <li><a href="">sub Item 1</a></li>
-                          <li><a href="">sub Item 1</a></li>
-                          <li><a href="">sub Item 1</a></li>
-                        </ul>
-                      </section>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 2</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 3</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 4</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 5</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 6</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 7</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 8</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 9</a>
-                    </li>
-                  </section>
-                </ul>
-              </li>
-              <li
-                class="w-full flex flex-col justify-center lg:w-auto sm:text-center group font-bold relative lg:h-full z-40"
-              >
-                <section
-                  class="lg:h-full flex items-center justify-center hover:bg-gray-300 group-hover:bg-gray-300 transition-all ease duration-500 font-bold px-5 cursor-pointer"
-                >
-                  <span class="py-4 lg:py-0">Participa</span>
+                <li class="dropdown">
+                  <a href="#"><span>Trabaja con
+                      nosotros</span></a>
+                  <i class="fa-solid fa-chevron-down"></i>
 
-                  <i
-                    class="fa-solid fa-chevron-down p-2 rotate-0 group-hover:rotate-180 transition-all duration-500"
-                  ></i>
-                </section>
+                  <ul
+                    class="sub-menu sub-menu-right sub-menu-left-mobile">
+                    <li><a
+                        href="/Ciudadanos/Paginas/Ofertas-Laborales.aspx">Agencia
+                        de Gestión y Colocación de
+                        Empleo</a></li>
+                    <li><a
+                        href="/Ciudadanos/Paginas/Envie-su-Hoja-de-Vida.aspx?IDRequest=6242">Envíe
+                        su Hoja de Vida</a></li>
+                  </ul>
+                </li>
+                <li>
+                <li><a
+                    href="/Ciudadanos/Paginas/Notificaciones-a-Terceros.aspx">Notificaciones
+                    a Terceros</a></li>
 
-                <ul
-                  class="w-full lg:top-[100%] lg:rounded-lg lg:z-50 z-50 lg:left-0 group-hover:flex lg:flex overflow-y-hidden transition-all duration-700 ease lg:absolute [&>section>li>a]:text-gray-700 max-h-0 group-hover:max-h-[400px] lg:h-auto transform lg:group-hover:translate-y-[20px] bg-white"
-                >
-                  <section
-                    class="w-full lg:rounded-lg text-start p-6 flex flex-col gap-2 [&>li:hover]:bg-gray-300 [&>li:hover]:transition-all [&>li:hover]:ease [&>li:hover]:duration-500 lg:z-50 z-50 lg:bg-white lg:shadow-md [&>li]:p-1"
-                  >
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 2</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 3</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 4</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 5</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 6</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 7</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 8</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 9</a>
-                    </li>
-                  </section>
-                </ul>
-              </li>
+                <li><a
+                    href="/Ciudadanos/Paginas/Encuesta.aspx">Encuestas</a>
+                </li>
 
-              <li
-                class="w-full flex flex-col justify-center lg:w-auto sm:text-center group font-bold relative lg:h-full z-40"
-              >
-                <section
-                  class="lg:h-full flex items-center justify-center hover:bg-gray-300 group-hover:bg-gray-300 transition-all ease duration-500 font-bold px-5 cursor-pointer"
-                >
-                  <span class="py-4 lg:py-0">Nuestra entidad</span>
+                <li><a
+                    href="/Ciudadanos/Paginas/Mecanismos-de-Participacion-Ciudadana.aspx">Mecanismo
+                    de Participación Ciudadana</a></li>
 
-                  <i
-                    class="fa-solid fa-chevron-down p-2 rotate-0 group-hover:rotate-180 transition-all duration-500"
-                  ></i>
-                </section>
+                <li><a
+                    href="/Ciudadanos/Paginas/Escribale-al-Alcalde.aspx?IDRequest=6291">Escríbale
+                    al Alcalde</a></li>
 
-                <ul
-                  class="w-full lg:top-[100%] lg:rounded-lg lg:z-50 z-50 lg:left-0 group-hover:flex lg:flex overflow-y-hidden transition-all duration-700 ease lg:absolute [&>section>li>a]:text-gray-700 max-h-0 group-hover:max-h-[400px] lg:h-auto transform lg:group-hover:translate-y-[20px] bg-white"
-                >
-                  <section
-                    class="w-full lg:rounded-lg text-start p-6 flex flex-col gap-2 [&>li:hover]:bg-gray-300 [&>li:hover]:transition-all [&>li:hover]:ease [&>li:hover]:duration-500 lg:z-50 z-50 lg:bg-white lg:shadow-md [&>li]:p-1"
-                  >
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 2</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 3</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 4</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 5</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 6</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 7</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 8</a>
-                    </li>
-                    <li class="cursor-pointer">
-                      <a href="#" title="Enlace" aria-label="Enlace">Item 9</a>
-                    </li>
-                  </section>
-                </ul>
-              </li>
+                <li><a
+                    href="/Ciudadanos/PortaldeNinos/Paginas/default.aspx">Portal
+                    de Niños</a></li>
+              </ul>
+            </li>
+            <li class="dropdown group">
+              <section class=" h-full lg:pr-4 ">
+                <a href="#"
+                  class="transition-all duration-300 ">Participa</a>
 
-              <li
-                class="lg:h-full w-full lg:w-auto flex items-center justify-center hover:bg-gray-300 transition-all ease duration-500 sm:text-center font-bold px-5"
-              >
-                <a
-                  class="py-4 lg:py-0"
-                  href=""
-                  title="Enlace"
-                  aria-label="Enlace"
-                  >Noticias</a
-                >
-              </li>
-            </section>
+                <i
+                  class="fa-solid fa-chevron-down transform group-hover:rotate-180 duration-500 group-hover:text-white"></i>
+              </section>
+
+              <ul class="sub-menu">
+                <li><a
+                    href="/Conectividad/Paginas/Participacion-en-Linea.aspx">Participación
+                    en Línea</a></li>
+                <li><a
+                    href="/Ciudadanos/Paginas/Servicios-de-Atencion-en-Linea.aspx">Servicios
+                    de Atención en Línea</a></li>
+                <li><a
+                    href="/Ciudadanos/Paginas/Encuesta.aspx">Encuestas</a>
+                </li>
+                <li><a
+                    href="/Conectividad/Paginas/Instancias-de-Participacion-Ciudadana.aspx">Instancias
+                    de Participación<br />
+                    Ciudadana</a></li>
+
+                <li><a
+                    href="/Conectividad/Paginas/Estadisticas-del-Sitio-Web.aspx">Estadísticas
+                    del Sitio Web</a></li>
+              </ul>
+            </li>
+            <li class="dropdown group">
+              <section class="h-full lg:pr-4">
+                <a href="#">Mi municipio</a>
+                <i
+                  class="fa-solid fa-chevron-down group-hover:rotate-180 duration-500 group-hover:text-white"></i>
+              </section>
+
+              <ul class="sub-menu">
+                <li><a
+                    href="/MiMunicipio/Paginas/Presentacion.aspx">Presentación</a>
+                </li>
+
+                <li><a accesskey="i"
+                    href="/MiMunicipio/Paginas/Informacion-del-Municipio.aspx">Información
+                    del Municipio</a></li>
+
+                <li><a
+                    href="/MiMunicipio/Paginas/Nuestros-Simbolos.aspx">Nuestros
+                    Símbolos</a></li>
+
+                <li><a
+                    href="/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx">Pasado,
+                    Presente y Futuro</a></li>
+
+                <li class="dropdown">
+                  <a href="#"><span>Turismo</span></a>
+                  <i class="fa-solid fa-chevron-down"></i>
+
+                  <ul
+                    class="sub-menu sub-menu-left sub-menu-left-mobile">
+                    <li><a
+                        href="/MiMunicipio/Paginas/Turismo%20Donmatías.aspx">Fiestas
+                        y Celebraciones</a></li>
+
+                    <li><a
+                        href="/MiMunicipio/Paginas/Como-Llegar-al-Municipio.aspx">Cómo
+                        llegar al Municipio </a></li>
+
+                    <li><a
+                        href="/MiMunicipio/Paginas/Vias-de-Comunicacion.aspx">Vías
+                        de Comunicación</a></li>
+
+                    <li><a
+                        href="/MiMunicipio/Paginas/Sitios-de-Interes.aspx">Sitios
+                        de Interés</a></li>
+
+                    <li><a
+                        href="/MiMunicipio/Paginas/Directorio-Turistico.aspx">Directorio
+                        Turístico</a></li>
+                  </ul>
+                </li>
+
+                <li><a
+                    href="/MiMunicipio/Paginas/Economia.aspx">Economía</a>
+                </li>
+
+                <li><a
+                    href="/MiMunicipio/Paginas/Ecologia.aspx">Ecología</a>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#"><span>Galerías</span></a>
+                  <i class="fa-solid fa-chevron-down"></i>
+
+                  <ul
+                    class="sub-menu sub-menu-left sub-menu-left-mobile">
+                    <li><a
+                        href="/MiMunicipio/Paginas/Galeria-de-Imagenes.aspx">Galería
+                        de Imágenes</a></li>
+
+                    <li><a
+                        href="/MiMunicipio/Paginas/Galeria-de-Mapas.aspx">Galería
+                        de Mapas</a></li>
+
+                    <li><a
+                        href="/MiMunicipio/Paginas/Galeria-de-Videos.aspx">Galería
+                        de Videos</a></li>
+
+                    <li><a
+                        href="/MiMunicipio/Paginas/Galeria-de-Audios.aspx">Galería
+                        de Audios</a></li>
+                  </ul>
+                </li>
+
+                <li><a
+                    href="/MiMunicipio/Paginas/Calendario-de-Eventos.aspx">Calendario
+                    de Eventos</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown group">
+              <section class="h-full lg:pr-4">
+                <a href="#">Nuestra alcaldía</a>
+                <i
+                  class="fa-solid fa-chevron-down group-hover:rotate-180 duration-500 group-hover:text-white"></i>
+              </section>
+
+              <ul class="sub-menu">
+                <li><a
+                    href="/NuestraAlcaldia/Paginas/Mision-y-Vision.aspx">Misión
+                    Visión</a></li>
+                <li><a
+                    href="/NuestraAlcaldia/Paginas/Objetivos-y-Funciones.aspx">Objetivos
+                    y Funciones</a></li>
+
+                <li><a
+                    href="/NuestraAlcaldia/Paginas/Organigrama.aspx">Organigrama</a>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#"><span>Directorios</span></a>
+                  <i class="fa-solid fa-chevron-down"></i>
+
+                  <ul
+                    class="sub-menu sub-menu-left sub-menu-left-mobile">
+                    <li><a
+                        href="/NuestraAlcaldia/Paginas/Directorio-de-Dependencias.aspx">Directorio
+                        de Dependencias</a></li>
+
+                    <li><a
+                        href="/NuestraAlcaldia/Paginas/Directorio-de-Entidades-Descentralizadas.aspx">Entidades
+                        Descentralizadas</a></li>
+
+                    <li><a
+                        href="/NuestraAlcaldia/Paginas/Directorio-de-Agremiaciones.aspx">Directorio
+                        de Agremiaciones</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#"><span>Órganos de Control</span></a>
+                  <i class="fa-solid fa-chevron-down"></i>
+
+                  <ul
+                    class="sub-menu sub-menu-left sub-menu-left-mobile">
+                    <li><a
+                        href="/NuestraAlcaldia/Paginas/Personeria.aspx">Personería</a>
+                    </li>
+
+                    <li><a
+                        href="/NuestraAlcaldia/Paginas/Contraloria.aspx">Contraloría</a>
+                    </li>
+
+                    <li><a
+                        href="/NuestraAlcaldia/Paginas/Procuraduria.aspx">Procuraduría</a>
+                    </li>
+
+                    <li><a
+                        href="/NuestraAlcaldia/Paginas/Control-Interno.aspx">Control
+                        Interno</a></li>
+                  </ul>
+                </li>
+
+                <li><a
+                    href="/NuestraAlcaldia/Paginas/Nuestros-Directivos-y-Funcionarios.aspx">Nuestros
+                    Directivos y <br />
+                    Funcionarios</a></li>
+
+                <li><a accesskey="n"
+                    href="/NuestraAlcaldia/Paginas/Sala-de-Prensa.aspx">Sala
+                    de prensa</a></li>
+
+                <li><a
+                    href="/NuestraAlcaldia/Paginas/Objetivos-de-Desarrollo-Sostenible.aspx">Objetivos
+                    de Desarrollo<br />
+                    Sostenible</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown group">
+              <section class="h-full lg:pr-4">
+                <a href="#">Proyectos</a>
+                <i
+                  class="fa-solid fa-chevron-down group-hover:rotate-180 duration-500 group-hover:text-white"></i>
+              </section>
+
+              <ul class="sub-menu">
+                <li><a
+                    href="/Proyectos/Paginas/Proyectos-Vigentes.aspx">Proyectos
+                    Vigentes</a></li>
+
+                <li><a
+                    href="/Proyectos/Paginas/Portal-Unico-de-Contratacion.aspx">Portal
+                    Único de Contratación</a></li>
+              </ul>
+            </li>
           </ul>
+          </li>
+
+          </ul>
+        </nav>
+        <section class="container py-2 lg:py-0">
+          <div class="header-right">
+            <button type="button" class="open-menu-btn">
+              <span class="line line-1"></span>
+              <span class="line line-2"></span>
+              <span class="line line-3"></span>
+            </button>
+          </div>
         </section>
-      </nav>
+      </section>
+
+      <!-- nav  -->
     </header>
     <!--Header-->
     
     <!-- main  -->
-    <section class="lg:container mx-auto w-full mt-4">
+    <main>
+      <section class="lg:container mx-auto w-full mt-4">
 
-      <!--Boton tramites-->
-      <section class="w-full h-20 flex items-center justify-center bg-colorMunicipio text-white">
-        <a href="#" class="py-2 px-10 border-2 border-gray-300 text-xl rounded-md [&:hover>i]:translate-x-1">Tramites y servicios
-          <i class="fa-solid fa-circle-chevron-right transition-all duration-500"></i>
-        </a>
-      </section>
-
-      <!--Slider home-->
-      <section class="slider__container w-full h-[300px] lg:h-[450px] text-white">
-        <section class="splide slider__home h-full relative flex justify-center items-end">
-          <section class="splide__track h-full">
-    
-            <ul class="splide__list">
-              <a href="#" class="splide__slide">
-                <img class="w-full h-full object-cover" src="./img/slider-1.avif" alt="Imagen">
-              </a>
-    
-              <a href="#" class="splide__slide">
-                <img class="w-full h-full object-cover" src="./img/slider-2.webp" alt="Imagen">
-              </a>
-    
-              <a href="#" class="splide__slide">
-                <img class="w-full h-full object-cover" src="./img/slider-3.jpeg" alt="Imagen">
-              </a>
-            </ul>
-    
-    
+        <!--Boton tramites-->
+        <section class="w-full h-20 flex items-center justify-center bg-colorMunicipio text-white">
+          <a href="#" class="py-2 px-10 border-2 border-gray-300 text-xl rounded-md [&:hover>i]:translate-x-1">Trámites y servicios
+            <i class="fa-solid fa-circle-chevron-right transition-all duration-500"></i>
+          </a>
+        </section>
+        <!--Boton tramites-->
+  
+        <!--Slider home-->
+        <section class="slider__container w-full h-[300px] lg:h-[450px] text-white">
+          <section class="splide slider__home h-full relative flex justify-center items-end">
+            <section class="splide__track h-full">
+      
+              <ul class="splide__list">
+                <a href="#" class="splide__slide">
+                  <img class="w-full h-full object-cover" src="./img/slider-1.avif" alt="Imagen">
+                </a>
+      
+                <a href="#" class="splide__slide">
+                  <img class="w-full h-full object-cover" src="./img/slider-2.webp" alt="Imagen">
+                </a>
+      
+                <a href="#" class="splide__slide">
+                  <img class="w-full h-full object-cover" src="./img/slider-3.jpeg" alt="Imagen">
+                </a>
+              </ul>
+      
+      
+            </section>
+      
+            <section class="splide__arrows"></section>
+  
+            <button class="splide__toggle text-white uppercase absolute bottom-[0.5em] lg:left-[28rem] transform lg:-translate-x-1/3 text-md" type="button">
+              <span class="splide__toggle__play">
+                Iniciar
+                <i class="fa-solid fa-play"></i>
+              </span>
+              <span class="splide__toggle__pause">
+                Pausar
+                <i class="fa-solid fa-pause"></i>
+              </span>
+            </button>
+            
           </section>
+        </section>
+        <!--Slider home-->
+  
+  
+        <!--Enlaces de interes-->
+        <section class="w-full flex flex-col items-center mt-10">
+  
+          <h2 class="py-2 uppercase text-2xl font-bold text-gray-700 border-b-4 border-b-colorMunicipio">Enlaces de interés</h2>
+  
+          <section class="w-full mt-10 flex justify-center flex-col lg:flex-row">
+            <a href="#" class="flex items-center justify-center">
+              <div class="flex flex-col items-center justify-center gap-8 w-[10rem] h-[16rem] rounded-tl-lg rounded-tr-lg transition-all duration-500 ease hover:bg-colorMunicipio group p-2">
+                <svg width="86" height="87" viewBox="0 0 86 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M84.8001 47.3418V39.8647C84.8001 39.5649 84.7411 39.2681 84.6264 38.9911C84.5116 38.7141 84.3435 38.4625 84.1315 38.2505C83.9195 38.0385 83.6678 37.8702 83.3908 37.7555C83.1138 37.6408 82.817 37.5818 82.5172 37.5818H79.5712C78.5246 37.573 77.509 37.2258 76.6761 36.592C75.8431 35.9583 75.2377 35.0721 74.9502 34.0658C74.3151 31.9405 73.4664 29.885 72.4171 27.9308C71.9086 27.0153 71.7099 25.9598 71.8506 24.922C71.9914 23.8842 72.4641 22.9197 73.1982 22.1727L75.2751 20.0957C75.7031 19.6676 75.9435 19.0871 75.9435 18.4818C75.9435 17.8765 75.7031 17.2959 75.2751 16.8678L69.9872 11.5797C69.559 11.1518 68.9785 10.9114 68.3731 10.9114C67.7678 10.9114 67.1873 11.1518 66.7592 11.5797L64.6822 13.6567C63.935 14.3905 62.9706 14.863 61.9329 15.0038C60.8952 15.1445 59.8398 14.946 58.9242 14.4377C56.9698 13.3885 54.9143 12.5396 52.7892 11.9038C51.7828 11.6166 50.8965 11.0114 50.2627 10.1786C49.629 9.34581 49.2818 8.33029 49.2732 7.28381V4.33679C49.2732 3.7313 49.0326 3.15056 48.6045 2.72241C48.1763 2.29427 47.5956 2.05371 46.9901 2.05371H39.5121C38.9067 2.05398 38.3262 2.29469 37.8981 2.72278C37.47 3.15087 37.2294 3.73138 37.2292 4.33679V7.28381C37.2207 8.33033 36.8736 9.34591 36.2398 10.1787C35.606 11.0115 34.7196 11.6168 33.7132 11.9038C31.5881 12.54 29.5327 13.3889 27.5782 14.4377C26.6625 14.946 25.6071 15.1445 24.5694 15.0038C23.5317 14.863 22.5673 14.3905 21.8202 13.6567L19.7441 11.5797C19.3159 11.1517 18.7351 10.9114 18.1296 10.9114C17.5241 10.9114 16.9435 11.1517 16.5152 11.5797L11.2281 16.8678C11.016 17.0796 10.8477 17.3312 10.7329 17.6082C10.6181 17.8851 10.559 18.182 10.559 18.4818C10.559 18.7816 10.6181 19.0784 10.7329 19.3553C10.8477 19.6323 11.016 19.8839 11.2281 20.0957L13.3041 22.1727C14.0382 22.9197 14.5109 23.8842 14.6517 24.922C14.7924 25.9598 14.5937 27.0153 14.0851 27.9308C13.0358 29.885 12.1872 31.9405 11.5522 34.0658C11.2648 35.0722 10.6594 35.9585 9.82642 36.5923C8.99347 37.2261 7.97776 37.5732 6.93115 37.5818H3.98514C3.37965 37.5818 2.79896 37.8223 2.37082 38.2505C1.94267 38.6786 1.70215 39.2593 1.70215 39.8647V47.3418C1.70215 47.9473 1.94267 48.5279 2.37082 48.9561C2.79896 49.3842 3.37965 49.6248 3.98514 49.6248H6.93115C7.97772 49.6335 8.99335 49.9806 9.82626 50.6144C10.6592 51.2481 11.2646 52.1344 11.5522 53.1407C12.1874 55.2663 13.036 57.3221 14.0851 59.2767C14.5936 60.1921 14.7923 61.2474 14.6516 62.285C14.5108 63.3227 14.0381 64.287 13.3041 65.0338L11.2281 67.1107C11.0161 67.3227 10.8479 67.5744 10.7331 67.8514C10.6184 68.1285 10.5593 68.4254 10.5593 68.7252C10.5593 69.0251 10.6184 69.322 10.7331 69.599C10.8479 69.876 11.0161 70.1277 11.2281 70.3397L16.5152 75.6267C16.7271 75.8389 16.9788 76.0072 17.2558 76.1221C17.5328 76.2369 17.8298 76.296 18.1296 76.296C18.4295 76.296 18.7265 76.2369 19.0035 76.1221C19.2805 76.0072 19.5322 75.8389 19.7441 75.6267L21.8202 73.5498C22.5673 72.816 23.5317 72.3435 24.5694 72.2028C25.6071 72.062 26.6625 72.2606 27.5782 72.7688C29.5324 73.8183 31.5879 74.6672 33.7132 75.3027C34.7197 75.59 35.6061 76.1953 36.2399 77.0283C36.8737 77.8613 37.2207 78.8771 37.2292 79.9237V82.8698C37.2292 83.4752 37.4697 84.056 37.8978 84.4841C38.326 84.9123 38.9067 85.1527 39.5121 85.1527H46.9901C47.5956 85.1527 48.1763 84.9123 48.6045 84.4841C49.0326 84.056 49.2732 83.4752 49.2732 82.8698V79.9237C49.2816 78.8771 49.6286 77.8613 50.2624 77.0283C50.8962 76.1953 51.7827 75.59 52.7892 75.3027C54.9145 74.6674 56.97 73.8184 58.9242 72.7688C59.8398 72.2606 60.8952 72.062 61.9329 72.2028C62.9706 72.3435 63.935 72.816 64.6822 73.5498L66.7592 75.6267C66.971 75.8388 67.2226 76.0072 67.4995 76.1221C67.7765 76.2369 68.0733 76.2959 68.3731 76.2959C68.6729 76.2959 68.9698 76.2369 69.2468 76.1221C69.5237 76.0072 69.7753 75.8388 69.9872 75.6267L75.2751 70.3397C75.7032 69.9114 75.9436 69.3307 75.9436 68.7252C75.9436 68.1197 75.7032 67.539 75.2751 67.1107L73.1982 65.0338C72.4641 64.2868 71.9914 63.3223 71.8506 62.2845C71.7099 61.2468 71.9086 60.1913 72.4171 59.2758C73.4664 57.3215 74.3151 55.266 74.9502 53.1407C75.2378 52.1345 75.8433 51.2483 76.6762 50.6146C77.5091 49.9809 78.5246 49.6337 79.5712 49.6248H82.5172C83.1226 49.6248 83.7033 49.3842 84.1315 48.9561C84.5596 48.5279 84.8001 47.9473 84.8001 47.3418Z" stroke="#26282D" stroke-width="2.208" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M43.2542 64.6798C54.8942 64.6798 64.3302 55.2438 64.3302 43.6038C64.3302 31.9639 54.8942 22.5278 43.2542 22.5278C31.6143 22.5278 22.1782 31.9639 22.1782 43.6038C22.1782 55.2438 31.6143 64.6798 43.2542 64.6798Z" fill="#68A61B"/>
+                  <path d="M32.7161 45.7109L40.8451 52.3348L55.5981 35.1729" stroke="#1D5523" stroke-width="2.564" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                  
     
+                <h3 class="uppercase text-sm font-bold text-gray-600 text-center group-hover:text-white">Proyectos <br> en ejecución</h3>
+              </div>
+            </a>
+            
+            <a href="#" class="flex items-center justify-center">
+              <div class="flex flex-col items-center justify-center gap-8 w-[10rem] h-[16rem] rounded-tl-lg rounded-tr-lg transition-all duration-500 ease hover:bg-colorMunicipio group p-2">
+                <svg width="81" height="92" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.71313 74.8419C2.16213 75.0939 16.8831 63.6318 25.8771 62.4338C29.7771 61.9138 42.1851 65.9338 46.1171 67.2508C46.6025 67.4092 47.0102 67.7451 47.2585 68.1913C47.5068 68.6374 47.5774 69.1609 47.4561 69.6569C47.0361 71.2949 45.5361 73.3849 41.6941 73.8019C38.237 74.0358 34.7681 74.0358 31.3111 73.8019" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.70801 90.6555C8.81601 90.6195 13.679 86.9825 15.395 85.5555C16.3555 84.7549 17.4744 84.1663 18.6784 83.8285C19.8824 83.4907 21.1442 83.4113 22.381 83.5955L43.896 86.7955C46.2174 87.1402 48.5814 86.5614 50.481 85.1835L53.13 83.3635L59.55 78.9545L67.456 73.5245L74.564 68.6425L77.105 66.8975C78.0268 66.421 78.8218 65.7316 79.424 64.8865C79.6991 64.3857 79.8356 63.8207 79.8195 63.2495C79.8033 62.6784 79.635 62.1219 79.332 61.6375C78.9392 61.1466 78.4348 60.7569 77.8607 60.5009C77.2866 60.2448 76.6596 60.1299 76.032 60.1655C74.3774 60.3351 72.7618 60.7742 71.249 61.4655L67.403 62.7905L57.879 66.0725L49.788 68.8605L47.458 69.6605" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16.238 24.3547V6.36279H26.2001V14.8757" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16.5061 58.8076V32.7866" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M66.0229 32.7866V58.4866" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M34.4431 53.4681L47.5181 30.6201" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M26.677 37.36C26.677 32.837 29.197 30.271 32.577 30.271C35.983 30.271 38.483 32.837 38.483 37.36C38.483 41.883 35.983 44.449 32.577 44.449C29.2 44.449 26.677 41.883 26.677 37.36ZM35.277 37.36C35.277 34.246 34.177 32.954 32.577 32.954C31.003 32.954 29.9 34.246 29.9 37.36C29.9 40.474 31 41.766 32.577 41.766C34.177 41.766 35.279 40.473 35.279 37.36H35.277Z" fill="#26282D"/>
+                  <path d="M43.4731 46.8721C43.4731 42.3491 45.9921 39.7842 49.3731 39.7842C52.7791 39.7842 55.2781 42.3491 55.2781 46.8721C55.2781 51.3951 52.7781 53.9612 49.3731 53.9612C45.9921 53.9612 43.4731 51.4001 43.4731 46.8721ZM52.0731 46.8721C52.0731 43.7591 50.9731 42.4661 49.3731 42.4661C47.7981 42.4661 46.6961 43.7591 46.6961 46.8721C46.6961 49.9851 47.7961 51.2781 49.3731 51.2781C50.9731 51.2781 52.0751 49.9861 52.0751 46.8721H52.0731Z" fill="#26282D"/>
+                  <path d="M8.68804 39.6931C7.85574 39.6929 7.04266 39.443 6.354 38.9756C5.66533 38.5082 5.13278 37.8449 4.82525 37.0715C4.51772 36.2981 4.44938 35.4502 4.62905 34.6376C4.80872 33.8249 5.22815 33.0847 5.83306 32.5131L38.266 1.8811C39.0377 1.15248 40.0588 0.746582 41.12 0.746582C42.1813 0.746582 43.2024 1.15248 43.9741 1.8811L75.845 31.9501C76.2421 32.3247 76.5615 32.774 76.7849 33.2721C77.0084 33.7702 77.1316 34.3073 77.1474 34.853C77.1632 35.3987 77.0714 35.9422 76.8772 36.4524C76.683 36.9626 76.3902 37.4296 76.0156 37.8267C75.6409 38.2237 75.1917 38.543 74.6936 38.7665C74.1955 38.9899 73.6583 39.1131 73.1126 39.1289C72.5669 39.1447 72.0235 39.053 71.5133 38.8588C71.0031 38.6646 70.5361 38.3717 70.139 37.9971L41.1221 10.6232L11.542 38.5591C10.771 39.2886 9.74948 39.6945 8.68804 39.6931Z" fill="#68A61B"/>
+                </svg>
+    
+                <h3 class="uppercase text-sm font-bold text-gray-600 text-center group-hover:text-white">Paga aquí <br> impuesto predial</h3>
+              </div>
+            </a>
+  
+            <a href="#" class="flex items-center justify-center">
+              <div class="flex flex-col items-center justify-center gap-8 w-[10rem] h-[16rem] rounded-tl-lg rounded-tr-lg transition-all duration-500 ease hover:bg-colorMunicipio group p-2">
+                <svg width="69" height="81" viewBox="0 0 69 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M56.5569 41.8711V79.3391H48.9229V41.8711" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9.84083 70.7969H1.29883V79.3389H9.84083V70.7969Z" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M25.376 64.502H16.834V79.34H25.376V64.502Z" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M40.9009 54.9731H32.3589V79.5501H40.9009V54.9731Z" fill="#68A61B" stroke="#68A61B" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M44.3201 43.9998H38.311C38.311 43.9998 38.8001 37.2598 43.8651 33.0508" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M60.4 36.8148C66.455 14.3148 52.692 1.23193 52.692 1.23193C52.692 1.23193 38.857 14.3108 44.912 36.8148" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M60.9861 44H66.9951C66.9951 44 66.515 37.38 61.576 33.165" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M46.4351 10.7998H58.9071" stroke="#26282D" stroke-width="2.372" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M52.6529 19.5841C53.9596 19.5841 55.0189 18.5248 55.0189 17.2181C55.0189 15.9113 53.9596 14.8521 52.6529 14.8521C51.3462 14.8521 50.2869 15.9113 50.2869 17.2181C50.2869 18.5248 51.3462 19.5841 52.6529 19.5841Z" fill="#26282D"/>
+                  <path d="M52.6529 28.0518C53.9596 28.0518 55.0189 26.9925 55.0189 25.6858C55.0189 24.3791 53.9596 23.3198 52.6529 23.3198C51.3462 23.3198 50.2869 24.3791 50.2869 25.6858C50.2869 26.9925 51.3462 28.0518 52.6529 28.0518Z" fill="#26282D"/>
+                  <path d="M52.6529 36.5191C53.9596 36.5191 55.0189 35.4598 55.0189 34.1531C55.0189 32.8464 53.9596 31.7871 52.6529 31.7871C51.3462 31.7871 50.2869 32.8464 50.2869 34.1531C50.2869 35.4598 51.3462 36.5191 52.6529 36.5191Z" fill="#26282D"/>
+                </svg>
+    
+                <h3 class="uppercase text-sm font-bold text-gray-600 text-center group-hover:text-white">plan de <br> desarrollo</h3>
+              </div>
+            </a>
+  
+            <a href="#" class="flex items-center justify-center">
+              <div class="flex flex-col items-center justify-center gap-8 w-[10rem] h-[16rem] rounded-tl-lg rounded-tr-lg transition-all duration-500 ease hover:bg-colorMunicipio group p-2">
+                <svg width="96" height="87" viewBox="0 0 96 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M31.827 40.0547H1.177V85.3917H31.827V40.0547Z" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21.939 1.96094H11.064L7.35596 40.0549H25.6469L21.939 1.96094Z" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M31.827 85.3916L94.405 85.3916V40.0546L31.827 40.0546L31.827 85.3916Z" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M52.423 40.0551H31.823V24.814L52.423 40.0551Z" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M73.235 40.0551H52.635V24.814L73.235 40.0551Z" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M94.047 40.0551H73.447V24.814L94.047 40.0551Z" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M55.198 55.0586H47.845V62.4116H55.198V55.0586Z" fill="#68A61B" stroke="#68A61B" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M78.3869 55.0586H71.0339V62.4116H78.3869V55.0586Z" fill="#68A61B" stroke="#68A61B" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.6069 47.498H31.8269" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.6069 55.0591H31.8269" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.6069 62.6201H31.8269" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.6069 70.1821H31.8269" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.09814 32.4351H14.7431" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                  
+    
+                <h3 class="uppercase text-sm font-bold text-gray-600 text-center group-hover:text-white">industria y <br> comercio</h3>
+              </div>
+            </a>
+  
+            <a href="#" class="flex items-center justify-center">
+              <div class="flex flex-col items-center justify-center gap-8 w-[10rem] h-[16rem] rounded-tl-lg rounded-tr-lg transition-all duration-500 ease hover:bg-colorMunicipio group p-2">
+                <svg width="98" height="77" viewBox="0 0 98 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M54.136 26.6528L68.003 29.5578" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M76.842 17.4219L52.592 18.5289" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M94.4911 2.98679C94.4911 2.98679 99.3231 6.03973 93.8661 13.5307L72.1542 42.8547C72.1542 42.8547 67.4541 49.1077 66.0841 50.5637C63.1001 53.7347 58.3171 58.7498 55.4491 56.7328C52.6491 54.6218 55.8341 48.4418 57.9361 44.6328C58.9021 42.8818 63.4121 36.4907 63.4121 36.4907L84.6631 6.83176C90.1201 -0.660241 94.5082 3.00278 94.5082 3.00278L94.4911 2.98679Z" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M89.05 7.99902L91.999 10.147" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M56.5562 18.4187L61.9631 10.9948L63.7952 10.6167L66.7441 12.7648L67.2241 14.6708L65.0021 17.7218L56.5562 18.4187Z" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M86.7062 24.6079L94.9291 54.7749L91.1292 59.9949L77.8691 36.7429" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M57.936 44.6285C57.936 44.6285 56.245 44.3035 54.136 44.0205" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M66.576 50.9219C66.576 50.9219 70.421 57.9359 70.714 60.9509L67.603 65.2229L61.283 55.9498" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M55.449 56.7329L63.326 45.9189" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22.8149 17.3159V9.66689C22.8149 9.66689 22.962 6.28295 26.934 6.42995H39.584C39.584 6.42995 42.968 6.72495 42.968 9.96095V17.3239" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12.2251 58.5998V70.7708C12.2251 70.7708 11.6962 75.3218 17.0932 75.6398H48.1032C48.1032 75.6398 54.2422 76.3808 54.1362 70.9828V22.9337C54.1362 22.9337 54.7712 17.8538 49.7962 17.5338H16.8821C16.8821 17.5338 12.1191 17.2168 12.2251 22.1908V32.5628" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1.21802 54.593V36.812L12.437 27.499L23.126 36.499V55.02C23.2127 55.3658 23.2121 55.7278 23.1243 56.0734C23.0364 56.4189 22.8641 56.7371 22.6227 56.9995C22.3813 57.2619 22.0785 57.4602 21.7415 57.5765C21.4044 57.6929 21.0439 57.7236 20.692 57.666H3.96997C3.96997 57.666 1.64202 57.873 1.21802 54.593Z" fill="#68A61B" stroke="#68A61B" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12.225 39.0032C13.4936 39.0032 14.522 37.9748 14.522 36.7062C14.522 35.4376 13.4936 34.4092 12.225 34.4092C10.9564 34.4092 9.92798 35.4376 9.92798 36.7062C9.92798 37.9748 10.9564 39.0032 12.225 39.0032Z" stroke="#1D5523" stroke-width="2.564" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5.73389 46.4077H18.7159" stroke="#1D5523" stroke-width="2.564" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5.73389 51.77H18.7159" stroke="#1D5523" stroke-width="2.564" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M28.947 25.896V67.736" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M37.209 25.896V67.736" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M45.47 25.896V67.736" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20.6919 58.917V67.737" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+    
+                <h3 class="uppercase text-sm font-bold text-gray-600 text-center group-hover:text-white">Turismo</h3>
+              </div>
+            </a>
+  
+            <a href="#" class="flex items-center justify-center">
+              <div class="flex flex-col items-center justify-center gap-8 w-[10rem] h-[16rem] rounded-tl-lg rounded-tr-lg transition-all duration-500 ease hover:bg-colorMunicipio group p-2">
+                <svg width="94" height="69" viewBox="0 0 94 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.55908 2.31591V59.5519C8.55908 59.5519 21.1131 55.8938 46.8151 67.7518V11.9999C46.8151 11.9999 30.0101 -1.63809 8.55908 2.31591Z" fill="#68A61B"/>
+                  <path d="M46.8149 67.756H1.73804V7.35596H8.55896" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M85.071 2.31591V59.5519C85.071 59.5519 72.5169 55.8938 46.8149 67.7518V11.9999C46.8149 11.9999 63.62 -1.63809 85.071 2.31591Z" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M46.8149 67.756H91.892V7.35596H85.071" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M55.8521 21.4591C61.9821 18.5149 68.6396 16.8277 75.432 16.4971" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M55.8521 29.7999C61.9818 26.8547 68.6394 25.1675 75.432 24.8379" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M55.8521 38.13C61.982 35.1853 68.6395 33.4981 75.432 33.168" stroke="#26282D" stroke-width="2.244" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23.321 27.1807H29.438V44.4667" stroke="#1D5523" stroke-width="2.564" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M29.5711 23.5339C31.1557 23.5339 32.4401 22.2494 32.4401 20.6649C32.4401 19.0804 31.1557 17.7959 29.5711 17.7959C27.9866 17.7959 26.7021 19.0804 26.7021 20.6649C26.7021 22.2494 27.9866 23.5339 29.5711 23.5339Z" fill="#1D5523"/>
+                </svg>
+    
+                <h3 class="uppercase text-sm font-bold text-gray-600 text-center group-hover:text-white">Normatividad</h3>
+              </div>
+            </a>
+          </section>
+        </section>
+        <!--Enlaces de interes-->
+  
+  
+        <!--Bienvenida-->
+        <section class="w-full lg:container mx-auto mt-10">
+          <h2 class="text-colorMunicipio font-bold text-4xl text-center flex flex-col">
+            ¡Bienvenidos!
+            <span class="font-semibold text-2xl">ALCADÍA DE ...</span>
+          </h2>
+          <p class="text-gray-700 text-center mx-auto w-full lg:w-[31rem]">
+            Realice de manera ágil y segura sus trámites en línea sin ﬁlas
+            ni congestiones en lugares públicos. <br> <br>
+            En este espacio brindamos atención a sus solicitudes.
+          </p>
+        </section>
+        <!--Bienvenida-->
+  
+  
+        <!--Servicio al ciudadano-->
+        <section class="w-full lg:container mx-auto h-auto mt-10 bg-gray-200 rounded-lg flex flex-col items-center border-b-[15px] border-b-colorMunicipio">
+          <h2 class="py-2 uppercase text-2xl font-semibold text-gray-600 border-b-4 border-b-colorMunicipio text-center mt-12">Servicio al ciudadano</h2>
+  
+          <section class="servicio__ciudadano w-full lg:container mx-auto p-14 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-10 justify-items-center">
+  
+            <a href="#" class="group w-full h-full col-span-1">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/pqrsd.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">pqrsd</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full col-span-1">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/atencion.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">ATENCIÓN A LA CIUDADANÍA</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/transparencia.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">TRANSPARENCIA</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/portalTributario.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">Portal tributario</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/observatorio.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">Observatorio laboral</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/gabinete.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">Nuestro gabinete</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/presupuesto.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">Presupuesto y finanzas</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/rendicion.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">RENDICIÓN DE CUENTAS</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/tramites.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">TRÁMITES Y SERVICIOS</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/portalNinos.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">PORTAL DE NIÑOS</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/municipio.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">NUESTRO MUNICIPIO</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/galeria.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">GALERÍA</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/secretarias.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">SECRETARÍAS Y <br>
+                  DIRECCIONES</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/alcalde.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">NUESTRO ALCALDE</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/geoportal.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">Geoportal</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/proyectos.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">PROYECTOS QUE AVANZAN</p>
+            </a>
+  
+            <a href="#" class="group w-full h-full">
+                <section class="bg-gray-300 rounded-md p-5 transition-all duration-500 ease group-hover:bg-colorMunicipio w-full h-[8rem] flex items-center justify-center">
+                  <img class="" src="./img/Iconos/IconosServicio/redMunicipal.svg" alt="icono">
+                </section>
+    
+                <p class="uppercase text-sm font-semibold text-gray-500 transition-all duration-500 ease group-hover:text-colorMunicipio text-center mt-4">RED DE EMPRENDIMIENTO MUNICIPAL</p>
+            </a>
+  
+          </section>
+        </section>
+        <!--Servicio al ciudadano-->
+  
+  
+        <!--Seccion de noticias-->
+        <section class="w-full lg:container mx-auto mt-14 flex flex-col items-center">
+          <h2 class="uppercase font-semibold text-2xl text-center text-gray-600">
+            Actualidad en
+            <br>
+            <span class="text-3xl font-bold">Municipio de...</span>
+          </h2>
+          <div class="w-16 h-1 bg-colorMunicipio mt-4"></div>
+  
+          <h3 class="uppercase font-semibold text-xl text-center text-gray-600 mt-4">Noticias</h3>
+  
+          
+          <section class="w-full lg:container mx-auto p-10 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
+  
+            <div class="col-span-1 rounded-md bg-[#f5f4f4] relative h-[520px]">
+  
+              <img class="w-full rounded-tl-md rounded-tr-md h-[50%]" src="./img/Rectangle 514noticia1.png" alt="Noticia">
+  
+              <span class="bg-colorMunicipio py-1 px-5 rounded-sm absolute top-0 right-1/2 transform translate-x-1/2 text-sm text-white">Febrero 20, 2024</span>
+  
+              <section class="w-full py-5 px-4 flex flex-col gap-4 h-[50%]">
+                <h4 class="text-lg text-gray-900 font-semibold line-clamp-2">Mejoramiento y construccion de las redes de alcantarillado</h4>
+  
+                <p class="text-gray-500 text-sm line-clamp-3">Lorem Ipsum is simply dummy text of
+                  the printing and typesetting industry.
+                  Lorem Ipsum has been the...</p>
+  
+                <a href="#" class="text-colorMunicipio"><i class="fa-solid fa-circle-plus !text-xl transition-all duration-500 ease transform hover:rotate-180"></i></a>
+              </section>
+            </div>
+  
+            <div class="col-span-1 lg:col-span-2 rounded-md bg-[#f5f4f4] relative h-[520px]">
+  
+              <img class="w-full rounded-tl-md rounded-tr-md h-[50%]" src="./img/Rectangle 507noticia2.png" alt="Noticia">
+  
+              <span class="bg-colorMunicipio py-1 px-5 rounded-sm absolute top-0 right-1/2 transform translate-x-1/2 text-sm text-white">Febrero 20, 2024</span>
+  
+              <section class="w-full py-5 px-4 flex flex-col gap-4 h-[50%]">
+                <h4 class="text-lg text-gray-900 font-semibold line-clamp-2">Apertura “Centro Día Casa Municipal del Abuelo” y “Unidad de Atención Integral” 2023</h4>
+  
+                <p class="text-gray-500 text-sm line-clamp-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled...</p>
+  
+                <a href="#" class="text-colorMunicipio"><i class="fa-solid fa-circle-plus !text-xl transition-all duration-500 ease transform hover:rotate-180"></i></a>
+              </section>
+            </div>
+  
+            <div class="col-span-1 lg:col-span-2 rounded-md bg-[#f5f4f4] relative h-[520px]">
+  
+              <img class="w-full rounded-tl-md rounded-tr-md h-[50%]" src="./img/Rectangle 507noticia2.png" alt="Noticia">
+  
+              <span class="bg-colorMunicipio py-1 px-5 rounded-sm absolute top-0 right-1/2 transform translate-x-1/2 text-sm text-white">Febrero 20, 2024</span>
+  
+              <section class="w-full py-5 px-4 flex flex-col gap-4 h-[50%]">
+                <h4 class="text-lg text-gray-900 font-semibold line-clamp-2">Apertura “Centro Día Casa Municipal del Abuelo” y “Unidad de Atención Integral” 2023</h4>
+  
+                <p class="text-gray-500 text-sm line-clamp-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum has been the industry's standard dummy text ever since the
+                  1500s, when an unknown printer took a galley of type and scrambled...</p>
+  
+                <a href="#" class="text-colorMunicipio"><i class="fa-solid fa-circle-plus !text-xl transition-all duration-500 ease transform hover:rotate-180"></i></a>
+              </section>
+            </div>
+  
+            <div class="col-span-1 rounded-md bg-[#f5f4f4] relative h-[520px]">
+  
+              <img class="w-full rounded-tl-md rounded-tr-md h-[50%]" src="./img/Rectangle 518.png" alt="Noticia">
+  
+              <span class="bg-colorMunicipio py-1 px-5 rounded-sm absolute top-0 right-1/2 transform translate-x-1/2 text-sm text-white">Febrero 20, 2024</span>
+  
+              <section class="w-full py-5 px-4 flex flex-col gap-4 h-[50%]">
+                <h4 class="text-lg text-gray-900 font-semibold">Mejoramiento y construccion de las redes de alcantarillado</h4>
+  
+                <p class="text-gray-500 text-sm line-clamp-3">Lorem Ipsum is simply dummy text of
+                  the printing and typesetting industry.
+                  Lorem Ipsum has been the...</p>
+  
+                <a href="#" class="text-colorMunicipio"><i class="fa-solid fa-circle-plus !text-xl transition-all duration-500 ease transform hover:rotate-180"></i></a>
+              </section>
+            </div>
+  
+          </section>
+  
+          <a href="#" class="uppercase text-lg text-gray-600 flex items-center justify-center gap-3 [&:hover>i]:translate-x-1">
+            MÁS NOTICIAS
+            <i class="fa-solid fa-circle-chevron-right text-xl transition-all duration-500"></i>
+          </a>
+        </section>
+        <!--Seccion de noticias-->
+  
+        <!--Separador de secciones-->
+        <section class="px-10 mt-20">
+          <div class="w-full h-1 bg-colorMunicipio mt-4"></div>
+        </section>
+        <!--Separador de secciones-->
+  
+        <!--Redes sociales-->
+        <section class="w-full lg:container mx-auto mt-20 flex flex-col items-center">
+          <h2 class="uppercase font-semibold text-2xl text-center text-gray-600">
+            Nuestras redes
+          </h2>
+          <div class="w-16 h-1 bg-colorMunicipio mt-4"></div>
+  
+          <section class="w-full grid grid-cols-1 lg:grid-cols-3 p-10 gap-x-5">
+  
+            <section class="col-span-1 lg:col-span-2 flex flex-col gap-10">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/xcJtL7QggTI?si=2ZeKMmAaGCeOoewJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  
+              <section class="flex flex-col lg:flex-row gap-5 [&>iframe]:w-full [&>iframe]:lg:w-[50%]">
+                <iframe width="50%" height="315" src="https://www.youtube.com/embed/xcJtL7QggTI?si=2ZeKMmAaGCeOoewJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  
+                <iframe width="50%" height="315" src="https://www.youtube.com/embed/xcJtL7QggTI?si=2ZeKMmAaGCeOoewJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </section>
+            </section>
+  
+            <section class="w-full lg:col-span-1 pt-10 lg:pt-0">
+              
+              <ul class="contenedorTabs flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200" id="tabs">
+                <li class="me-2">
+                    <a href="#" aria-current="page" data-target="facebook" class="tabRedes inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-100 activeTab">
+                      <i class="fa-brands fa-facebook"></i>
+                      Facebook</a>
+                </li>
+                <li class="me-2">
+                    <a href="#" data-target="twitter" class="tabRedes inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-100">
+                      <i class="fa-brands fa-x-twitter"></i>
+                      Twitter</a>
+                </li>
+              </ul>
+  
+              <section class="w-full mt-8">
+                <section class="itemRed" data-select="facebook">
+                  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02ehuwchFae64ZLcuKCviGWre2RKgCnwjcQkM9Dnv4MJbHM9FBhfCxryRR6PUEXYZ9l%26id%3D100094379833626&show_text=true&width=500" width="100%" height="630" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </section>
+  
+                <section class="itemRed hidden" data-select="twitter">
+                  <blockquote class="twitter-tweet"><p lang="es" dir="ltr">“Extra” virgin mfw <a href="https://t.co/yd908fcNgT">pic.twitter.com/yd908fcNgT</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1759857255124807757?ref_src=twsrc%5Etfw">February 20, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </section>
+              </section>
+  
+            </section>
+          </section>
+        </section>
+        <!--Redes sociales-->
+  
+      </section>
+
+      <!--Turismo-->
+      <section class="w-full bg-gray-200 flex flex-col items-center">
+        <h2 class="mt-10 uppercase font-semibold text-xl text-center text-colorMunicipio">
+          Prográmate Y <br>
+          <span class="font-semibold text-3xl">ven a visitarnos</span>
+        </h2>
+        <div class="w-64 h-1 bg-colorMunicipio mt-4"></div>
+
+        <!--Informacion turistica-->
+        <section class="w-full flex flex-col gap-8 mx-auto p-5">
+          <h3 class="mt-8 font-normal text-lg text-gray-700 text-center">¿Vas a pasar unos días en el Municipio y <br>
+            no sabes muy bien qué visitar?</h3>
+
+          
+          <p class="text-sm text-center text-gray-600">No te preocupes, hay muchos atractivos turísticos para conocer. La ciudad <br> tiene un patrimonio histórico, cultural y natural increíble.</p>
+
+          <p class="text-sm text-center text-gray-600">Declarado monumento nacional, el casco urbano del Municipio es un espacio <br>
+            encantador y sorprendente gracias a su arquitectura colonial. Recorrer sus <br>
+            calles es transportarse a la época de su fundación. Sobresale la inmensa Plaza <br>
+            Mayor, un espacio rodeado de viejas ediﬁcaciones coloniales que te llevarán a <br>
+            sumergirte en la cultura local de una de las ciudades más hermosas del país.</p>
+        </section>
+        <!--Informacion turistica-->
+
+        <!--Items Turismo-->
+        <section class="w-full lg:container mx-auto mt-10 px-16 lg:px-32 mb-20 flex flex-col gap-5">
+          <div class="rounded-md lg:h-[652px]">
+            <img class="w-full h-[70%] rounded-tl-md rounded-tr-md" src="./img/Rectangle 527turismo1.png" alt="Imagen">
+
+            <section class="h-[30%] bg-[#3c3c3b] text-white py-8 px-6 flex flex-col gap-4 rounded-bl-md rounded-br-md">
+              <h3 class="text-lg font-semibold">Atractivos Naturales</h3>
+
+              <p class="text-sm font-semibold">¿Vas a pasar unos días en la ciudad y no sabes muy bien qué visitar en el Municipio?
+                <span class="font-normal">No te
+                  preocupes, hay muchísimas cosas que ver en nuestro Municipio.</span>
+              </p>
+
+              <a class="text-md text-[#789827] font-semibold transition-all duration-500 hover:underline" href="#">Ver más</a>
+            </section>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:h-[313px]">
+            <img class="w-full lg:w-1/2 h-[70%] lg:h-full rounded-tl-md rounded-tr-md lg:rounded-tr-none lg:rounded-tl-md lg:rounded-bl-md" src="./img/Rectangle 564turismo2.png" alt="Imagen">
+
+            <section class="w-full lg:w-1/2 h-[30%] lg:h-full bg-[#3c3c3b] text-white py-8 px-6 flex flex-col justify-evenly rounded-bl-md rounded-br-md lg:rounded-tr-md lg:rounded-br-md lg:rounded-bl-none">
+              <h3 class="text-lg font-semibold">Festival y celebraciones</h3>
+
+              <p class="text-sm font-semibold">¿Vas a pasar unos días en la ciudad y no sabes muy bien qué visitar en el Municipio?
+                <span class="font-normal">No te
+                  preocupes, hay muchísimas cosas que ver en nuestro Municipio.</span>
+              </p>
+
+              <a class="text-md text-[#789827] font-semibold transition-all duration-500 hover:underline" href="#">Ver más</a>
+            </section>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:h-[313px]">
+
+            <section class="w-full order-2 lg:order-1 lg:w-1/2 h-[30%] lg:h-full bg-[#3c3c3b] text-white py-8 px-6 flex flex-col justify-evenly rounded-bl-md rounded-br-md lg:rounded-br-none lg:rounded-tl-md lg:rounded-bl-md">
+              <h3 class="text-lg font-semibold">Destino Turístico</h3>
+
+              <p class="text-sm font-semibold">¿Vas a pasar unos días en la ciudad y no sabes muy bien qué visitar en el Municipio?
+                <span class="font-normal">No te
+                  preocupes, hay muchísimas cosas que ver en nuestro Municipio.</span>
+              </p>
+
+              <a class="text-md text-[#789827] font-semibold transition-all duration-500 hover:underline" href="#">Ver más</a>
+            </section>
+
+            <img class="order-1 lg:order-2 w-full lg:w-1/2 h-[70%] lg:h-full rounded-tl-md rounded-tr-md lg:rounded-tr-md lg:rounded-br-md lg:rounded-tl-none" src="./img/Rectangle 571turismo3.png" alt="Imagen">
+
+          </div>
+        </section>
+        <!--Items Turismo-->
+
+
+
+      </section>
+      <!--Turismo-->
+
+      <!--Seccion de encuesta-->
+      <section class="w-full bg-[#3c3c3b] mt-10">
+
+        <section class="lg:container mx-auto flex flex-col lg:flex-row items-center gap-10 justify-center text-white py-12">
+          <section class="flex items-center">
+            <img class="w-20" src="./img/encuestaSatisfaccion.svg" alt="Imagen">
+
+            <h2 class="font-bold text-2xl">
+              ENCUESTA
+              <br>
+              <span class="font-normal">de satisfacción</span>
+            </h2>
+          </section>
+
+          <section class="flex flex-col gap-y-5">
+            <p class="font-semibold text-sm">
+              Gracias por visitar nuestro portal web.
+              <br>
+              <span class="font-normal">
+                Te invitamos a contarnos cómo fue tu
+                <br>
+                experiencia con nosotros.
+              </span>
+            </p>
+
+            <a class="text-center rounded-sm py-2 transition-all duration-500 ease hover:bg-[#6b8d16] hover:text-white bg-[#93c01f] text-sm text-[#3c3c3b] font-semibold" href="#">Click aquí para responder</a>
+          </section>
+        </section>
+
+      </section>
+      <!--Seccion de encuesta-->
+
+      <!--Eventos-->
+      <section class="lg:container mx-auto w-full mt-10 px-10 lg:px-24">
+        <h2 class="uppercase bg-colorMunicipio w-full text-center py-5 text-white text-2xl font-semibold">PRÓXIMOS EVENTOS</h2>
+
+        <div class="w-full pt-[2.5rem] pb-[4rem] relative overflow-hidden transition-all duration-500">
+          <div class="splide-wrapper">
+              <section class="splide eventos w-full relative" aria-labelledby="multiple-slides-heading">
+                  <div class="splide__track relative z-0 px-0">
+                      <ul class="splide__list" id="slider__eventos">
+                            <div class="splide__slide bg-[#ecebec] py-3 px-3 rounded-md flex flex-col gap-3">
+                              <p class="text-lg font-bold text-gray-600 flex items-center justify-start gap-2">
+                                <i class="fa-regular fa-calendar p-1 text-center rounded-full bg-[#cccccc]"></i>
+                                20 may
+                              </p>
+
+                              <section class="flex w-full gap-3">
+                                <img class="w-1/2 rounded-md" src="./img/Rectangle 535evento1.png" alt="Imagen">
+
+                                <section class="flex flex-col gap-5">
+                                  <h3 class="line-clamp-2 text-lg font-semibold text-gray-600">Encuentro
+                                    de saberes y
+                                    sabores:</h3>
+  
+                                  <p class="text-sm font-normal text-gray-500 line-clamp-4">
+                                    Compartir el
+                                    conocimiento sobre las
+                                    tradiciones
+                                    gastronómicas
+                                    propias...
+                                  </p>
+                                </section>
+                              </section>
+
+                              <section class="flex items-center justify-center mt-2">
+                                <a class="bg-colorMunicipio text-white rounded-md py-1 px-5 transition-all duration-500 ease hover:bg-colorMunicipioHover" href="#">Ver más</a>
+                              </section>
+                            </div>
+
+                            <div class="splide__slide bg-[#ecebec] py-3 px-3 rounded-md flex flex-col gap-3">
+                              <p class="text-lg font-bold text-gray-600 flex items-center justify-start gap-2">
+                                <i class="fa-regular fa-calendar p-1 text-center rounded-full bg-[#cccccc]"></i>
+                                12 jun
+                              </p>
+
+                              <section class="flex w-full gap-3">
+                                <img class="w-1/2 rounded-md" src="./img/Rectangle 537evento2.png" alt="Imagen">
+
+                                <section class="flex flex-col gap-5">
+                                  <h3 class="line-clamp-2 text-lg font-semibold text-gray-600">Aniversario de a
+                                    Fundación de
+                                    Municipio...:</h3>
+  
+                                  <p class="text-sm font-normal text-gray-500 line-clamp-4">
+                                    El 12 de junio de 1572
+                                    se fundó la Villa de
+                                    Nuestra Señora de
+                                    Santa María de...
+                                  </p>
+                                </section>
+                              </section>
+
+                              <section class="flex items-center justify-center mt-2">
+                                <a class="bg-colorMunicipio text-white rounded-md py-1 px-5 transition-all duration-500 ease hover:bg-colorMunicipioHover" href="#">Ver más</a>
+                              </section>
+                            </div>
+
+                            <div class="splide__slide bg-[#ecebec] py-3 px-3 rounded-md flex flex-col gap-3">
+                              <p class="text-lg font-bold text-gray-600 flex items-center justify-start gap-2">
+                                <i class="fa-regular fa-calendar p-1 text-center rounded-full bg-[#cccccc]"></i>
+                                20 may
+                              </p>
+
+                              <section class="flex w-full gap-3">
+                                <img class="w-1/2 rounded-md" src="./img/Rectangle 535evento1.png" alt="Imagen">
+
+                                <section class="flex flex-col gap-5">
+                                  <h3 class="line-clamp-2 text-lg font-semibold text-gray-600">Encuentro
+                                    de saberes y
+                                    sabores:</h3>
+  
+                                  <p class="text-sm font-normal text-gray-500 line-clamp-4">
+                                    Compartir el
+                                    conocimiento sobre las
+                                    tradiciones
+                                    gastronómicas
+                                    propias...
+                                  </p>
+                                </section>
+                              </section>
+
+                              <section class="flex items-center justify-center mt-2">
+                                <a class="bg-colorMunicipio text-white rounded-md py-1 px-5 transition-all duration-500 ease hover:bg-colorMunicipioHover" href="#">Ver más</a>
+                              </section>
+                            </div>
+
+                            <div class="splide__slide bg-[#ecebec] py-3 px-3 rounded-md flex flex-col gap-3">
+                              <p class="text-lg font-bold text-gray-600 flex items-center justify-start gap-2">
+                                <i class="fa-regular fa-calendar p-1 text-center rounded-full bg-[#cccccc]"></i>
+                                12 jun
+                              </p>
+
+                              <section class="flex w-full gap-3">
+                                <img class="w-1/2 rounded-md" src="./img/Rectangle 537evento2.png" alt="Imagen">
+
+                                <section class="flex flex-col gap-5">
+                                  <h3 class="line-clamp-2 text-lg font-semibold text-gray-600">Aniversario de a
+                                    Fundación de
+                                    Municipio...:</h3>
+  
+                                  <p class="text-sm font-normal text-gray-500 line-clamp-4">
+                                    El 12 de junio de 1572
+                                    se fundó la Villa de
+                                    Nuestra Señora de
+                                    Santa María de...
+                                  </p>
+                                </section>
+                              </section>
+
+                              <section class="flex items-center justify-center mt-2">
+                                <a class="bg-colorMunicipio text-white rounded-md py-1 px-5 transition-all duration-500 ease hover:bg-colorMunicipioHover" href="#">Ver más</a>
+                              </section>
+                            </div>
+                      </ul>
+                  </div>
+    
+                <section class="splide__arrows absolute bottom-[-20px] transform translate-x-1/2 left-1/2"></section>
+              </section>
+          </div>
+      </div>
+      </section>
+      <!--Eventos-->
+
+      <!--Separador de secciones-->
+      <section class="px-24">
+        <div class="w-full h-1 bg-colorMunicipio mt-4"></div>
+      </section>
+      <!--Separador de secciones-->
+
+      <!--Banner Bancolombia-->
+      <section class="w-full lg:container mx-auto py-10 lg:px-16">
+        <img class="w-full shadow-md"  src="./img/banner_bancolombia_v2.jpg" alt="Imagen">
+      </section>
+      <!--Banner Bancolombia-->
+
+      <!--Patrocinadores-->
+      <div class="w-full p-14 lg:container mx-auto relative overflow-hidden transition-all duration-500">
+        <div class="splide-wrapper">
+            <section class="splide patrocinadores w-full relative" aria-labelledby="multiple-slides-heading">
+                <div class="splide__track overflow-hidden relative z-0 px-0">
+                    <ul class="splide__list" id="slider__patrocinadores">
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/2.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/3.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/4.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/5.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/6.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/7.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/8.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/9.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/10.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/11.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/12.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/13.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/15.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/17.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/18.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/19.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/20.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/21.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/22.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/23.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/24.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/27.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/28.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/29.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/30.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/31.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/32.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/33.webp" alt="">
+                          </a>
+                          <a href="#" class="splide__slide">
+                              <img src="./img/patrocinadores/logos/37.webp" alt="">
+                          </a>
+                        
+                          <!--Aqui se carga el resto de categorias-->
+                    </ul>
+                </div>
+  
           <section class="splide__arrows"></section>
-
-          <button class="splide__toggle text-white uppercase absolute bottom-[0.5em] left-[28rem] transform -translate-x-1/3 text-md" type="button">
-            <span class="splide__toggle__play">
-              Iniciar
-              <i class="fa-solid fa-play"></i>
-            </span>
-            <span class="splide__toggle__pause">
-              Pausar
-              <i class="fa-solid fa-pause"></i>
-            </span>
-          </button>
-          
-        </section>
       </section>
+        </div>
+      </div>
+      <!--Patrocinadores-->
 
+      <!--Mapa-->
+      <section class="w-full lg:container mx-auto">
 
-      <!--Enlaces de interes-->
-      <section class="w-full flex flex-col items-center mt-10">
+        <!--Informacion municipio-->
+        <section class="w-full flex flex-col lg:flex-row items-center justify-center bg-colorMunicipio text-white">
+          <div class="flex flex-col items-center justify-center gap-5 p-5">
+            <img class="w-12" src="./img/InformacionConmutador.svg" alt="Imagen">
 
-        <h2 class="py-2 uppercase text-2xl font-bold text-gray-700 border-b-4 border-b-colorMunicipio">Enlaces de interes</h2>
+            <p class="font-bold text-center">
+              Teléfono conmutador:
+              <br>
+              <span class="font-normal">(+57) 2 519 0969</span>
+            </p>
+          </div>
 
+          <div class="flex flex-col items-center justify-center gap-5 p-5">
+            <img class="w-12" src="./img/lineaUnica.svg" alt="Imagen">
+
+            <p class="font-bold text-center">
+              Línea Única de Atención nacional:
+              <br>
+              <span class="font-normal">(604) 44 45 150</span>
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center justify-center gap-5 p-5">
+            <img class="w-12" src="./img/correoElectronico.svg " alt="Imagen">
+
+            <p class="font-bold text-center">
+              Correo electrónico
+              <br>
+              <span class="font-normal">contactenos@dominio.gov.co</span>
+            </p>
+          </div>
+        </section>
+        <!--Informacion municipio-->
+
+        <!--Ahora si el mapa-->
         <section class="w-full">
-          
-        </section>
-      </section>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1737480225315!2d-75.58155728766567!3d6.240817926354038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429afa96f2347%3A0xdcc43fd6f4a16cf7!2s1cero1%20Software!5e0!3m2!1ses-419!2sco!4v1708542875949!5m2!1ses-419!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-    </section>
+        </section>
+        <!--Ahora si el mapa-->
+      </section>
+      <!--Mapa-->
+    </main>
+    
     <!-- main  -->
 
-    <!-- footer  -->
+    
 
+    <!-- footer  -->
+    <footer class="flex flex-col mt-40">
+      <!-- sec info  -->
+      <section class="bg-colorMunicipio px-6 flex flex-col gap-6">
+        <!-- info alcaldia  -->
+        <article
+          class="lg:container mx-auto bg-white rounded-md transform translate-y-[-60px] lg:translate-y-[-2rem] px-10 py-10 lg:py-20 shadow-md grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-6 w-full lg:w-[90%]"
+        >
+          <!-- sec 1 información alcaldía -->
+          <div
+            class="col-span-1 lg:col-span-2 flex flex-col gap-4 order-2 lg:order-1"
+          >
+            <!-- titulo  -->
+            <h2 class="text-blueTitle font-semibold text-lg">
+              Alcadía Municipal de {...}, {Departamento}
+            </h2>
+            <!-- información  -->
+            <article class="flex flex-col gap-3 text-[0.9rem]">
+              <p class="font-normal">
+                Dirección: Carrera 30 Calle 29-59.
+              </p>
+              <p class="font-normal">Código Postal: 051850</p>
+              <p class="font-normal">
+                Horario de atención: Lunes a Viernes 7:30 a.m. a 12:00 m. y 1:30 p.m. a 5:00 p.m. Sábados 8:00 a.m. a 12:00 m.
+              </p>
+              <p class="font-normal">Teléfono conmutador: +(57)(4) 866 32 43 / +(57)(4) 866 32 40 / +(57)(4) 866 37 07</p>
+              <p class="font-normal">Línea gratuita: +(57)(4) 018000-400-004</p>
+              <p class="font-normal">Línea anticorrupción: (+57) 018000919748</p>
+              <p class="font-normal">
+                Correo institucional:
+                <a
+                  href="mailto:contactenos@donmatias-antioquia.gov.co"
+                  class="underline font-semibold text-blueTitle"
+                  >contactenos@dominio-dominio.gov.co</a
+                >
+              </p>
+              <p class="font-normal">
+                Correo de Notificaciones Judiciales:
+                <a
+                  href="mailto:contactenos@donmatias-antioquia.gov.co"
+                  class="underline text-blueTitle font-semibold"
+                >
+                contactenos@dominio-dominio.gov.co</a
+                >
+              </p>
+            </article>
+          </div>
+
+          <!-- sec 2 logos alcaldia  -->
+          <div class="col-span-1 flex gap-3 justify-center order-1 lg:order-2">
+            <img
+              src="./img/Escudo_de_Colombia.png"
+              alt="Escudo de la república de Colombia"
+              class="w-14 h-14 lg:w-[5rem] lg:h-[5rem] object-contain"
+            />
+            <img
+              src="./img/logoAlcaldia.png"
+              alt="Escudo del municipio de Alcaldía de jamundí"
+              class="w-14 h-14 lg:w-[5rem] lg:h-[5rem] object-contain"
+            />
+          </div>
+          <!-- sec 3 redes alcaldia -->
+          <div
+            class="col-span-1 lg:col-span-3 order-3 flex flex-wrap gap-6 lg:gap-16"
+          >
+            <div class="flex gap-3 items-center">
+              <span
+                class="bg-blueTitle text-white rounded-full flex justify-center items-center p-2 lg:p-3"
+              >
+                <i class="fab fa-facebook facebook-icon"></i
+              ></span>
+              <a
+                href="#"
+                target="_blank"
+                class="hover:underline text-blueTitle font-semibold"
+                >@Entidad</a
+              >
+            </div>
+            <div class="flex gap-3 items-center">
+              <span
+                class="bg-blueTitle text-white rounded-full flex justify-center items-center p-2 lg:p-3"
+              >
+                <i class="fab fa-instagram facebook-icon"></i
+              ></span>
+              <a
+                href="#"
+                target="_blank"
+                class="hover:underline text-blueTitle font-semibold"
+                >@Entidad</a
+              >
+            </div>
+            <div class="flex gap-3 items-center">
+              <span
+                class="bg-blueTitle text-white rounded-full flex justify-center items-center p-2 lg:p-3"
+              >
+                <i class="fab fa-twitter facebook-icon"></i
+              ></span>
+              <a
+                href="#"
+                target="_blank"
+                class="hover:underline text-blueTitle font-semibold"
+                >@Entidad</a
+              >
+            </div>
+            <div class="flex gap-3 items-center">
+              <span
+                class="bg-blueTitle text-white rounded-full flex justify-center items-center p-2 lg:p-3"
+              >
+                <i class="fab fa-youtube facebook-icon"></i
+              ></span>
+              <a
+                href="#"
+                target="_blank"
+                class="hover:underline text-blueTitle font-semibold"
+                >@Entidad</a
+              >
+            </div>
+          </div>
+
+          <!-- sec 4 metricas sitio -->
+          <div class="col-span-1 lg:col-span-3 order-4 flex flex-wrap gap-6">
+            <h3 class="font-semibold text-[14px]">
+              Última Actualización:
+              <span id="lblDateSystem" class="font-normal"></span>
+            </h3>
+          </div>
+          <!--sec 5 secciones de sitio  -->
+          <div
+            class="col-span-1 lg:col-span-3 order-5 flex flex-wrap gap-6 lg:gap-10"
+          >
+            <a href="#" class="underline text-blueTitle text-[1rem]"
+              >Políticas</a
+            >
+            <a href="#" class="underline text-blueTitle text-[1rem]"
+              >Mapas del sitio</a
+            >
+            <a href="#" class="underline text-blueTitle text-[1rem]"
+              >Terminos y condiciones</a
+            >
+            <a href="#" class="underline text-blueTitle text-[1rem]"
+              >Accesibilidad</a
+            >
+          </div>
+        </article>
+        <!-- info 1cero1 -->
+        <article class="flex justify-center gap-3 pb-10">
+          <h3 class="text-white">Desarrollado por:</h3>
+          <img
+            src="./img/logo_101_software_white.png"
+            class="w-[8rem]"
+            alt=""
+          />
+        </article>
+      </section>
+
+      <!-- sec gob  -->
+      <section class="bg-gobColor px-6">
+        <article
+          class="lg:container mx-auto flex justify-center lg:justify-start py-3 gap-3"
+        >
+          <img src="./img/logofooter.png" class="w-[3rem]" alt="" />
+          <div class="h-auto w-[1px] bg-white"></div>
+          <img src="./img/logoGov.svg" class="w-[8rem]" alt="" />
+        </article>
+      </section>
+    </footer>
     <!-- footer  -->
 
     <script src="./SplideSlider/splide.min.js"></script>
-    <script src="./main.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/nav.js" defer></script>
   </body>
 </html>

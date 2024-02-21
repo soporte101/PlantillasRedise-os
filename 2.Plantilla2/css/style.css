@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+:root{
+  --colorMunicipio: #138f4c;
+}
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-work-sans {
+  font-family: "Work Sans", sans-serif;
+}
+
+.bg-gradient-gray {
+  background: #828282;
+  background: repeating-linear-gradient(to top, #828282 0%, #ffffff 100%);
+}
+
+
+.splide__arrow--prev svg,
+.splide__arrow--next svg{
+  fill: #fff;
+}
+
+.splide__pagination__page.is-active{
+  background: var(--colorMunicipio) !important;
+  transform: scale(1) !important;
+  border: none !important;
+}
+
+
+div:hover path{
+  stroke: white !important;
+}
+
+.activeTab{
+  background-color: #6b7280;
+  color: #fff;
+}
