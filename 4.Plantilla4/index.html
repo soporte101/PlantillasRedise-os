@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alcaldía de Jamundí</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./SplideSlider/splide.min.css">
-    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./SplideSlider/splide.min.css" />
+    <link rel="stylesheet" href="./nav.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -14,7 +14,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="./tailwind.js" ></script>
+    <script src="./tailwind.js"></script>
+    <script src="./tailwindConfig.js"></script>
   </head>
   <body class="w-full h-full overflow-x-hidden">
     <!--Header-->
@@ -28,58 +29,58 @@
         </figure>
       </section>
       <!-- sec gob  -->
-            <!-- sec logos and input search -->
-            <section
-            class="lg:container mx-auto  p-6 flex flex-wrap justify-center lg:justify-between items-center gap-y-6 xl:gap-6"
-          >
-            <article
-              class="flex gap-6 flex-col lg:flex-row items-center justify-center lg:justify-start"
-            >
-              <section class="flex gap-3">
-                <a href="https://www.gov.co/" class="w-14">
-                  <img
-                    src="./img/Escudo_de_Colombia.png"
-                    class="w-full h-full object-contain"
-                    alt=""
-                  />
-                </a>
-                <a href="./index.html" class="w-14">
-                  <img
-                    src="../img/logoAlcaldia.png"
-                    class="w-full h-full object-contain"
-                    alt=""
-                  />
-                </a>
-              </section>
-              <h2 class="text-[14px] font-semibold text-center lg:text-start">
-                Alcaldía Municipal de Santa Rosa de Cabal en Risaralda
-              </h2>
-            </article>
-    
-            <section class="flex flex-col gap-3 w-full lg:w-1/4">
-              <a
-                href="/_layouts/15/Authenticate.aspx"
-                class="headerWeb__aut text-[12px] text-center lg:text-end hover:underline text-primaryBlue"
-                >Administrar Sitio</a
-              >
-              <!-- section input  -->
-              <article class="relative h-auto w-full">
-                <input
-                  type="text"
-                  placeholder="Buscar....."
-                  class="text-[12px] border-2 w-full rounded-md py-2 px-3 outline-none focus:shadow-md transition duration-300"
-                />
-                <button
-                  class="bg-gobColor hover:bg-navColor transition duration-300 rounded-full text-white absolute right-2 top-[0.3rem] cursor-pointer p-1 w-7 h-7 flex justify-center items-center"
-                  id="btnSearchTramite"
-                >
-                  <i class="fas fa-search text-[12px]"></i>
-                </button>
-              </article>
-              <!-- section input  -->
-            </section>
+      <!-- sec logos and input search -->
+      <section
+        class="lg:container mx-auto p-6 flex flex-wrap justify-center lg:justify-between items-center gap-y-6 xl:gap-6"
+      >
+        <article
+          class="flex gap-6 flex-col lg:flex-row items-center justify-center lg:justify-start"
+        >
+          <section class="flex gap-3">
+            <a href="https://www.gov.co/" class="w-14">
+              <img
+                src="./img/Escudo_de_Colombia.png"
+                class="w-full h-full object-contain"
+                alt=""
+              />
+            </a>
+            <a href="./index.html" class="w-14">
+              <img
+                src="../img/logoAlcaldia.png"
+                class="w-full h-full object-contain"
+                alt=""
+              />
+            </a>
           </section>
-          <!-- sec logos and input search -->
+          <h2 class="text-[14px] font-semibold text-center lg:text-start">
+            Alcaldía Municipal de Santa Rosa de Cabal en Risaralda
+          </h2>
+        </article>
+
+        <section class="flex flex-col gap-3 w-full lg:w-1/4">
+          <a
+            href="/_layouts/15/Authenticate.aspx"
+            class="headerWeb__aut text-[12px] text-center lg:text-end hover:underline text-primaryBlue"
+            >Administrar Sitio</a
+          >
+          <!-- section input  -->
+          <article class="relative h-auto w-full">
+            <input
+              type="text"
+              placeholder="Buscar....."
+              class="text-[12px] border-2 w-full rounded-md py-2 px-3 outline-none focus:shadow-md transition duration-300"
+            />
+            <button
+              class="bg-gobColor hover:bg-navColor transition duration-300 rounded-full text-white absolute right-2 top-[0.3rem] cursor-pointer p-1 w-7 h-7 flex justify-center items-center"
+              id="btnSearchTramite"
+            >
+              <i class="fas fa-search text-[12px]"></i>
+            </button>
+          </article>
+          <!-- section input  -->
+        </section>
+      </section>
+      <!-- sec logos and input search -->
       <!-- nav  -->
       <section class="header bg-gris px-6 w-full border-b-2 border-gobColor">
         <nav class="menu lg:container mx-auto">
@@ -89,17 +90,17 @@
             </div>
             <button type="button" class="close-menu-btn"></button>
           </div>
-          <ul >
-            <li class="" ><a href="#" class="">Inicio</a></li>
+          <ul>
+            <li class=""><a href="#" class="">Inicio</a></li>
             <li class=" ">
-              <a href="#" 
+              <a href="#"
                 >Transparencia y acceso <br />
                 información pública</a
               >
             </li>
-            <li class="dropdown group ">
-              <section class=" h-full lg:pr-4 ">
-                <a href="#" class="transition-all duration-300 "
+            <li class="dropdown group">
+              <section class="h-full lg:pr-4">
+                <a href="#" class="transition-all duration-300"
                   >Atención y Servicios <br />
                   a la Ciudadanía</a
                 >
@@ -117,7 +118,7 @@
                   <a href="#"><span>team</span></a>
                   <i class="fa-solid fa-chevron-down"></i>
 
-                  <ul class="sub-menu sub-menu-right sub-menu-left-mobile ">
+                  <ul class="sub-menu sub-menu-right sub-menu-left-mobile">
                     <li>
                       <a href="#"><span>team 1</span></a>
                     </li>
@@ -145,7 +146,7 @@
                   <a href="#"><span>elements</span></a>
                   <i class="fa-solid fa-chevron-down"></i>
 
-                  <ul class="sub-menu sub-menu-right sub-menu-left-mobile ">
+                  <ul class="sub-menu sub-menu-right sub-menu-left-mobile">
                     <li>
                       <a href="$"><span>accordion</span></a>
                     </li>
@@ -188,7 +189,9 @@
             <li class="dropdown group">
               <section class="h-full lg:pr-4">
                 <a href="#">Portfolio</a>
-                <i class="fa-solid fa-chevron-down group-hover:rotate-180 duration-500 group-hover:text-white"></i>
+                <i
+                  class="fa-solid fa-chevron-down group-hover:rotate-180 duration-500 group-hover:text-white"
+                ></i>
               </section>
 
               <ul class="sub-menu">
@@ -218,8 +221,6 @@
                     <li>
                       <a href="#"><span>portfolio 4</span></a>
                     </li>
-        
-                    </li>
                   </ul>
                 </li>
               </ul>
@@ -244,20 +245,40 @@
     <!--Header-->
 
     <!-- main  -->
-     
+
     <!-- Slider  -->
-    <section class="slider px-6 flex justify-center items-center lg:container mx-auto mt-[3rem]">
+    <section
+      class="slider px-6 flex justify-center items-center lg:container mx-auto mt-[3rem]"
+    >
       <section id="" class="splide" aria-label="Beautiful Images">
         <div class="splide__track m-auto">
-          <ul class="splide__list" style="width: 100%; margin: auto;">
+          <ul class="splide__list" style="width: 100%; margin: auto">
             <li class="splide__slide">
-             <a href=""><img src="./img/slider-1.avif" class="w-full" style="margin-right: 50px; max-height:480px" alt=""></a>
+              <a href=""
+                ><img
+                  src="./img/slider-1.avif"
+                  class="w-full"
+                  style="margin-right: 50px; max-height: 480px"
+                  alt=""
+              /></a>
             </li>
             <li class="splide__slide">
-              <a href=""><img src="./img/slider-2.webp" class="w-full" style="margin-right: 50px; max-height:480px" alt=""></a>
+              <a href=""
+                ><img
+                  src="./img/slider-2.webp"
+                  class="w-full"
+                  style="margin-right: 50px; max-height: 480px"
+                  alt=""
+              /></a>
             </li>
             <li class="splide__slide">
-              <a href=""><img src="./img/slider-3.jpeg" class="w-full" style="margin-right: 50px; max-height:480px" alt=""></a>
+              <a href=""
+                ><img
+                  src="./img/slider-3.jpeg"
+                  class="w-full"
+                  style="margin-right: 50px; max-height: 480px"
+                  alt=""
+              /></a>
             </li>
           </ul>
         </div>
@@ -265,326 +286,542 @@
     </section>
     <!-- Slider  -->
 
-     <!-- Tramites section  -->
+    <!-- Tramites section  -->
     <section class="px-6 mt-4 lg:container mx-auto mt-[3rem]">
-    <article class="grid grid-cols-1 md:grid-cols-4 ">
-      <a href="#" class="col-span-1 group bg-mainColorTramites flex justify-center items-center py-6  transition-all duration-300 hover:bg-mainHoverTramites cursor-pointer ">
-        <figure class=" flex flex-col items-center relative gap-6">
-            <img src="./iconos/ico_pagos.svg" class="w-20 object-contain" alt="Ícono de pagos">
+      <article class="grid grid-cols-1 md:grid-cols-4">
+        <a
+          href="#"
+          class="col-span-1 group bg-mainColorTramites flex justify-center items-center py-6 transition-all duration-300 hover:bg-mainHoverTramites cursor-pointer"
+        >
+          <figure class="flex flex-col items-center relative gap-6">
+            <img
+              src="./iconos/ico_pagos.svg"
+              class="w-20 object-contain"
+              alt="Ícono de pagos"
+            />
             <p class="text-white">PAGOS</p>
-            <span class="bg-yellow-400 w-full h-4 rounded-full absolute bottom-[-3rem] opacity-0 md:group-hover:opacity-100"></span>
-        </figure>
-     </a>
-     <a href="#" class="col-span-1 group bg-secondaryBlue flex justify-center items-center py-6 transition-all duration-300 hover:bg-mainHoverTramites cursor-pointer ">
-      <figure class=" flex flex-col items-center relative gap-6">
-          <img src="./iconos/ico_pagos_y_tramites.svg" class="w-20 object-contain" alt="Ícono de pagos">
-          <p class="text-white">PAGOS Y TRAMITES</p>
-          <span class=" bg-yellow-400 w-full h-4 rounded-full absolute bottom-[-3rem] opacity-0 md:group-hover:opacity-100"></span>
-      </figure>
-   </a>
-  <a href="#" class="col-span-1  group  bg-mainColorTramites flex justify-center items-center py-6 transition-all duration-300 hover:bg-mainHoverTramites cursor-pointer ">
-    <figure class=" flex flex-col items-center relative gap-6">
-        <img src="./iconos/ico_notificaciones.svg" class="w-20 object-contain" alt="Ícono de pagos">
-        <p class="text-white">NOTIFICACIONES</p>
-        <span class=" bg-yellow-400 w-full h-4 rounded-full absolute bottom-[-3rem] opacity-0 md:group-hover:opacity-100"></span>
-    </figure>
-  </a>
-  <a href="#" class="col-span-1 group  bg-secondaryBlue flex justify-center items-center py-6 transition-all duration-300 hover:bg-mainHoverTramites cursor-pointer ">
-  <figure class=" flex flex-col items-center relative gap-6">
-      <img src="./iconos/ico_contratacion.svg" class="w-20 object-contain" alt="Ícono de pagos">
-      <p class="text-white">CONTRATACION</p>
-      <span class=" bg-yellow-400 w-full h-4 rounded-full absolute bottom-[-3rem] opacity-0 md:group-hover:opacity-100"></span>
-  </figure>
-  </a>
-    </article>
+            <span
+              class="bg-yellowMain w-full h-4 rounded-full absolute bottom-[-3rem] opacity-0 md:group-hover:opacity-100"
+            ></span>
+          </figure>
+        </a>
+        <a
+          href="#"
+          class="col-span-1 group bg-secondaryBlue flex justify-center items-center py-6 transition-all duration-300 hover:bg-mainHoverTramites cursor-pointer"
+        >
+          <figure class="flex flex-col items-center relative gap-6">
+            <img
+              src="./iconos/ico_pagos_y_tramites.svg"
+              class="w-20 object-contain"
+              alt="Ícono de pagos"
+            />
+            <p class="text-white">PAGOS Y TRAMITES</p>
+            <span
+              class="bg-yellowMain w-full h-4 rounded-full absolute bottom-[-3rem] opacity-0 md:group-hover:opacity-100"
+            ></span>
+          </figure>
+        </a>
+        <a
+          href="#"
+          class="col-span-1 group bg-mainColorTramites flex justify-center items-center py-6 transition-all duration-300 hover:bg-mainHoverTramites cursor-pointer"
+        >
+          <figure class="flex flex-col items-center relative gap-6">
+            <img
+              src="./iconos/ico_notificaciones.svg"
+              class="w-20 object-contain"
+              alt="Ícono de pagos"
+            />
+            <p class="text-white">NOTIFICACIONES</p>
+            <span
+              class="bg-yellowMain w-full h-4 rounded-full absolute bottom-[-3rem] opacity-0 md:group-hover:opacity-100"
+            ></span>
+          </figure>
+        </a>
+        <a
+          href="#"
+          class="col-span-1 group bg-secondaryBlue flex justify-center items-center py-6 transition-all duration-300 hover:bg-mainHoverTramites cursor-pointer"
+        >
+          <figure class="flex flex-col items-center relative gap-6">
+            <img
+              src="./iconos/ico_contratacion.svg"
+              class="w-20 object-contain"
+              alt="Ícono de pagos"
+            />
+            <p class="text-white">CONTRATACION</p>
+            <span
+              class="bg-yellowMain w-full h-4 rounded-full absolute bottom-[-3rem] opacity-0 md:group-hover:opacity-100"
+            ></span>
+          </figure>
+        </a>
+      </article>
     </section>
 
-  <!-- Tramites section  -->
-    <section class="flex lg:container mx-auto mt-[2rem] justify-center items-center flex-col ">
-      <h2 class="font-bold md:text-xl lg:text-6xl m-5 p-5 text-blue-900">¡Bienvenidos!</h2>
+    <!-- Tramites section  -->
+    <section
+      class="flex lg:container mx-auto mt-[2rem] justify-center items-center flex-col"
+    >
+      <h2 class="font-bold md:text-xl lg:text-6xl m-5 p-5 text-blue-900">
+        ¡Bienvenidos!
+      </h2>
       <h3 class="text-5xl text-blue-900">Alcaldia de ...</h3>
-      <p class="text-2xl m-5 text-center font-semibold">Realice de manera ágil y segura sus trámites en línea sin filas 
-        ni congestiones en lugares públicos.</p>
-        <p class="text-2xl m-2 text-center font-semibold">En este espacio brindamos atención a sus solicitudes.
-        </p>
+      <p class="text-2xl m-5 text-center font-semibold">
+        Realice de manera ágil y segura sus trámites en línea sin filas ni
+        congestiones en lugares públicos.
+      </p>
+      <p class="text-2xl m-2 text-center font-semibold">
+        En este espacio brindamos atención a sus solicitudes.
+      </p>
     </section>
-     
-    <section class="lg:container mx-auto mt-[3rem] bg-yellow-400 h-16 rounded-xl flex flex-row justify-center items-center gap-5">
-        <h2 class="font-semibold text-center text-4xl text-blue-900 mt-20 mb-20 ">SERVICIO CIUDADANO</h2>
-        <span class="bg-blue-700 transition-all duration-300 w-16 h-4 text-xs font-medium me-2 px-2.5 py-0.5 rounded-xl top-full"></span>
-      </section>
-    
-        <section class="slider__container px-5 w-full h-[300px] lg:h-[450px] text-white m-auto">
-          <section class="splide slider__home h-full relative flex justify-center items-end">
-            <section class="splide__track h-full w-full">
-      
-              <ul class="splide__list display grid grid-cols-1 h-full"> 
-                <div class="splide__slide flex flex-col gap-5 col-span-1">
-                  <div class="cols-span-1 h-altodecirculos bg-white flex justify-center items-center rounded-full shadow-2xl shadow-gray-700">
-                    <a href="" class="inline-block flex justify-center items-center w-anchoCirculoInterior h-altoCirculoInterior bg-bgServices rounded-full">
-                      <img src="./iconos/ico_nuestros_funcionarios.svg">
-                    </a>
-                  </div>
-                  <span class="text-2xl text-blue-900 text-center font-semibold">Nuestros Funcionarios</span>
-                </div>
-                <div class="splide__slide flex flex-col gap-5 cols-span-1">
-                  <div class="w-anchodecirculos h-altodecirculos bg-white flex justify-center items-center rounded-full shadow-2xl shadow-gray-700">
-                    <a href="" class="inline-block flex justify-center items-center w-anchoCirculoInterior h-altoCirculoInterior bg-bgServices rounded-full">
-                      <img src="./iconos/ico_nuestros_planes.svg">
-                    </a>
-                  </div>
-                  <span class="text-2xl text-blue-900 text-center font-semibold">Nuestros Planes</span>
-                </div>
-                <div class="splide__slide flex flex-col gap-5 cols-span-1">
-                  <div class="w-anchodecirculos h-altodecirculos bg-white flex justify-center items-center rounded-full shadow-2xl shadow-gray-700">
-                    <a href="" class="inline-block flex justify-center items-center w-anchoCirculoInterior h-altoCirculoInterior bg-bgServices rounded-full">
-                      <img src="./iconos/ico_tramites_y_servicios.svg">
-                    </a>
-                  </div>
-                  <span class="text-2xl text-blue-900 text-center font-semibold">Tramites y Servicios</span>
-                </div>
-                <div class="splide__slide flex flex-col gap-5 cols-span-1">
-                  <div class="w-anchodecirculos h-altodecirculos bg-white flex justify-center items-center rounded-full shadow-2xl shadow-gray-700">
-                    <a href="" class="inline-block flex justify-center items-center w-anchoCirculoInterior h-altoCirculoInterior bg-bgServices rounded-full">
-                      <img src="./iconos/ico_PQRD.svg">  
-                    </a>
-                  </div>
-                  <span class="text-2xl text-blue-900 text-center font-semibold">PQRD</span>
-                </div>
-                <div class="splide__slide flex flex-col gap-5 cols-span-1">
-                  <div class="w-anchodecirculos h-altodecirculos bg-white flex justify-center items-center rounded-full shadow-2xl shadow-gray-700">
-                    <a href="" class="inline-block flex justify-center items-center w-anchoCirculoInterior h-altoCirculoInterior bg-bgServices rounded-full">
-                      <img src="./iconos/ico_impuesto_predial.svg">
-                    </a>
-                  </div>
-                  <span class="text-2xl text-blue-900 text-center font-semibold">Impuesto Predial</span>
-                </div>
-              </ul>
-            
-              <div id="multiple-slides-wrapper" class="splide-wrapper site">
-                <section class="splide categorias w-full relative" aria-labelledby="multiple-slides-heading">
-                    <div class="splide__track overflow-hidden relative z-0 px-0" id="multiple-slides-track">
-                        <ul class="splide__list" id="multiple-slides-list" id="slider__categorias">
-                              <a href="#" class="categorias__item categorias__item--active splide__slide no-underline  p-[10px] rounded-lg bg-mainColor hover:bg-mainColorHover text-colorTitulos font-medium text-[0.8rem] text-center text-white z-98 transition-all !h-full duration-500 flex items-center justify-center" data-target="Todas las categorias">
-                                  Todas las categorías
-                              </a>
-                        </ul>
-                    </div>     
-            <section class="splide__arrows"></section>
-          </section>
+
+    <section
+      class="lg:container mx-auto mt-[3rem] bg-yellowMain h-16 rounded-xl flex flex-row justify-center items-center gap-5"
+    >
+      <h2 class="font-semibold text-center text-4xl text-blue-900 mt-20 mb-20">
+        SERVICIO CIUDADANO
+      </h2>
+      <span
+        class="bg-blue-700 transition-all duration-300 w-16 h-4 text-xs font-medium me-2 px-2.5 py-0.5 rounded-xl top-full"
+      ></span>
+    </section>
+
+    <section
+      class="slider__container px-5 w-full h-[300px] lg:h-[450px] text-white m-auto"
+    >
+      <section
+        class="splide slider__home h-full relative flex justify-center items-end"
+      >
+        <section class="splide__track h-full w-full">
+          <ul class="splide__list display grid grid-cols-1 h-full">
+            <div class="splide__slide flex flex-col gap-5 col-span-1">
+              <div
+                class="cols-span-1 h-altodecirculos bg-white flex justify-center items-center rounded-full shadow-2xl shadow-gray-700"
+              >
+                <a
+                  href=""
+                  class="inline-block flex justify-center items-center w-anchoCirculoInterior h-altoCirculoInterior bg-bgServices rounded-full"
+                >
+                  <img src="./iconos/ico_nuestros_funcionarios.svg" />
+                </a>
               </div>
+              <span class="text-2xl text-blue-900 text-center font-semibold"
+                >Nuestros Funcionarios</span
+              >
+            </div>
+            <div class="splide__slide flex flex-col gap-5 cols-span-1">
+              <div
+                class="w-anchodecirculos h-altodecirculos bg-white flex justify-center items-center rounded-full shadow-2xl shadow-gray-700"
+              >
+                <a
+                  href=""
+                  class="inline-block flex justify-center items-center w-anchoCirculoInterior h-altoCirculoInterior bg-bgServices rounded-full"
+                >
+                  <img src="./iconos/ico_nuestros_planes.svg" />
+                </a>
+              </div>
+              <span class="text-2xl text-blue-900 text-center font-semibold"
+                >Nuestros Planes</span
+              >
+            </div>
+            <div class="splide__slide flex flex-col gap-5 cols-span-1">
+              <div
+                class="w-anchodecirculos h-altodecirculos bg-white flex justify-center items-center rounded-full shadow-2xl shadow-gray-700"
+              >
+                <a
+                  href=""
+                  class="inline-block flex justify-center items-center w-anchoCirculoInterior h-altoCirculoInterior bg-bgServices rounded-full"
+                >
+                  <img src="./iconos/ico_tramites_y_servicios.svg" />
+                </a>
+              </div>
+              <span class="text-2xl text-blue-900 text-center font-semibold"
+                >Tramites y Servicios</span
+              >
+            </div>
+            <div class="splide__slide flex flex-col gap-5 cols-span-1">
+              <div
+                class="w-anchodecirculos h-altodecirculos bg-white flex justify-center items-center rounded-full shadow-2xl shadow-gray-700"
+              >
+                <a
+                  href=""
+                  class="inline-block flex justify-center items-center w-anchoCirculoInterior h-altoCirculoInterior bg-bgServices rounded-full"
+                >
+                  <img src="./iconos/ico_PQRD.svg" />
+                </a>
+              </div>
+              <span class="text-2xl text-blue-900 text-center font-semibold"
+                >PQRD</span
+              >
+            </div>
+            <div class="splide__slide flex flex-col gap-5 cols-span-1">
+              <div
+                class="w-anchodecirculos h-altodecirculos bg-white flex justify-center items-center rounded-full shadow-2xl shadow-gray-700"
+              >
+                <a
+                  href=""
+                  class="inline-block flex justify-center items-center w-anchoCirculoInterior h-altoCirculoInterior bg-bgServices rounded-full"
+                >
+                  <img src="./iconos/ico_impuesto_predial.svg" />
+                </a>
+              </div>
+              <span class="text-2xl text-blue-900 text-center font-semibold"
+                >Impuesto Predial</span
+              >
+            </div>
+          </ul>
+
+          <div id="multiple-slides-wrapper" class="splide-wrapper site">
+            <section
+              class="splide categorias w-full relative"
+              aria-labelledby="multiple-slides-heading"
+            >
+              <div
+                class="splide__track overflow-hidden relative z-0 px-0"
+                id="multiple-slides-track"
+              >
+                <ul
+                  class="splide__list"
+                  id="multiple-slides-list"
+                  id="slider__categorias"
+                >
+                  <a
+                    href="#"
+                    class="categorias__item categorias__item--active splide__slide no-underline p-[10px] rounded-lg bg-mainColor hover:bg-mainColorHover text-colorTitulos font-medium text-[0.8rem] text-center text-white z-98 transition-all !h-full duration-500 flex items-center justify-center"
+                    data-target="Todas las categorias"
+                  >
+                    Todas las categorías
+                  </a>
+                </ul>
+              </div>
+              <section class="splide__arrows"></section>
+            </section>
+          </div>
         </section>
-      
-            <section class="splide__arrows"></section>
-  
-            <button class="splide__toggle text-white uppercase absolute bottom-[0.5em] left-[28rem] transform -translate-x-1/3 text-md" type="button">
-              <span class="splide__toggle__play">
-                Iniciar
-                <i class="fa-solid fa-play"></i>
-              </span>
-              <span class="splide__toggle__pause">
-                Pausar
-                <i class="fa-solid fa-pause"></i>
-              </span>
-            </button>
-            
-          </section>
-        </section>
 
-        
-      
-  <!-- section noticias  -->
+        <section class="splide__arrows"></section>
 
-    <section class="px-6 mt-[3rem] lg:conatiner mx-auto mt-[3rem]">
-
-      <article class="flex flex-col gap-y-10">
-       <!-- titulo  -->
-       <section class="bg-yellow-400 h-16 rounded-xl flex flex-row justify-center items-center gap-5 ">
-        <h2 class=" font-semibold text-center text-4xl text-blue-900 mt-20 mb-20 ">NOTICIAS</h2>
-        <span class="bg-blue-700 transition-all duration-300 w-16 h-4 text-xs font-medium me-2 px-2.5 py-0.5 rounded-xl top-full "></span>
+        <button
+          class="splide__toggle text-white uppercase absolute bottom-[0.5em] left-[28rem] transform -translate-x-1/3 text-md"
+          type="button"
+        >
+          <span class="splide__toggle__play">
+            Iniciar
+            <i class="fa-solid fa-play"></i>
+          </span>
+          <span class="splide__toggle__pause">
+            Pausar
+            <i class="fa-solid fa-pause"></i>
+          </span>
+        </button>
       </section>
-       <!-- titulo  -->
-
-       <!-- seccion de noticias  -->
-      <section class="flex gap-6 flex-wrap">
-         <figure class="flex flex-col p-4 rounded-md shadow-xl grow lg:w-64"> 
-            <img src="https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg" class="w-full h-52 object-cover rounded-t-md" alt="">
-            <figcaption class="flex flex-col">
-              <section class="bg-yellow-400 font-semibold p-4 py-6 rounded-b-md">
-              <p class="overflow-hidden line-clamp-3 text-[12px]">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit corporis minus officiis doloribus at enim qui fuga accusamus. At vero placeat hic, mollitia minima facere fugit doloribus beatae nostrum soluta!
-              </p>
-            </section>
-              <p class="font-semibold overflow-hidden line-clamp-3 text-[12px] p-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quas officiis, sunt eaque minus, praesentium perferendis deserunt assumenda sapiente natus maxime dolorum facilis aliquid voluptas id suscipit excepturi quae cupiditate.
-              </p>
- 
-              <a href="#" class="mt-[2rem] font-semibold transition-all duration-500 text-blue-400 hover:text-blue-900 text-[14px] p-4  ">Leer mas</a>
-            </figcaption>
-
-         </figure>
-         <figure class="flex flex-col p-4 rounded-md shadow-xl grow lg:w-64"> 
-          <img src="https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg" class="w-full h-52 object-cover rounded-t-md" alt="">
-          <figcaption class="flex flex-col">
-            <section class="bg-yellow-400 font-semibold p-4 py-6 rounded-b-md">
-              <p class="overflow-hidden line-clamp-3 text-[12px]">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit corporis minus officiis doloribus at enim qui fuga accusamus. At vero placeat hic, mollitia minima facere fugit doloribus beatae nostrum soluta!
-              </p>
-            </section>
-            <p class="font-semibold overflow-hidden line-clamp-3 text-[12px] p-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quas officiis, sunt eaque minus, praesentium perferendis deserunt assumenda sapiente natus maxime dolorum facilis aliquid voluptas id suscipit excepturi quae cupiditate.
-            </p>
-
-            <a href="#" class="mt-[2rem] font-semibold transition-all duration-500 text-blue-400 hover:text-blue-900 text-[14px] p-4  ">Leer mas</a>
-          </figcaption>
-       </figure>
-
-       <figure class="flex flex-col p-4 rounded-md shadow-xl grow lg:w-64"> 
-        <img src="https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg" class="w-full h-52 object-cover rounded-t-md" alt="">
-        <figcaption class="flex flex-col">
-          <section class="bg-yellow-400 font-semibold p-4 py-6 rounded-b-md">
-            <p class="overflow-hidden line-clamp-3 text-[12px]">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit corporis minus officiis doloribus at enim qui fuga accusamus. At vero placeat hic, mollitia minima facere fugit doloribus beatae nostrum soluta!
-            </p>
-          </section>
-          <p class="font-semibold overflow-hidden line-clamp-3 text-[12px] p-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quas officiis, sunt eaque minus, praesentium perferendis deserunt assumenda sapiente natus maxime dolorum facilis aliquid voluptas id suscipit excepturi quae cupiditate.
-          </p>
-
-          <a href="#" class="mt-[2rem] font-semibold transition-all duration-500 text-blue-400 hover:text-blue-900 text-[14px] p-4  ">Leer mas</a>
-        </figcaption>
-     </figure>          
-       </section>
-        <!-- seccion de noticias  -->
-      </article>
     </section>
 
-    <section class="px-6">
-      <article class="lg:container mx-auto mt-3 lg:mt-0">
-          <section class="w-full lg:w-1/5 h-16 lg:h-auto bg-blue-900 rounded-xl flex justify-center items-center hover:bg-gray-500 mx-auto">
-              <a href="">
-                  <h2 class="text-center text-2xl lg:text-lg text-white">Ver más noticias</h2> 
-              </a> 
-          </section>
+    <!-- section noticias  -->
+
+    <section class="px-6 mt-[3rem] lg:container mx-auto mt-[3rem]">
+      <article class="flex flex-col gap-y-10">
+        <!-- titulo  -->
+        <section
+          class="bg-yellowMain h-16 rounded-xl flex flex-row justify-center items-center gap-5"
+        >
+          <h2
+            class="font-semibold text-center text-4xl text-blue-900 mt-20 mb-20"
+          >
+            NOTICIAS
+          </h2>
+          <span
+            class="bg-blue-700 transition-all duration-300 w-16 h-4 text-xs font-medium me-2 px-2.5 py-0.5 rounded-xl top-full"
+          ></span>
+        </section>
+        <!-- titulo  -->
+
+        <!-- seccion de noticias  -->
+        <section class="flex gap-6 flex-wrap">
+          <figure class="flex flex-col p-4 rounded-md shadow-xl grow lg:w-64">
+            <img
+              src="https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg"
+              class="w-full h-52 object-cover rounded-t-md"
+              alt=""
+            />
+            <figcaption class="flex flex-col">
+              <section
+                class="bg-yellowMain font-semibold p-4 py-6 rounded-b-md"
+              >
+                <p class="overflow-hidden line-clamp-3 text-[12px]">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Fugit corporis minus officiis doloribus at enim qui fuga
+                  accusamus. At vero placeat hic, mollitia minima facere fugit
+                  doloribus beatae nostrum soluta!
+                </p>
+              </section>
+              <p
+                class="font-semibold overflow-hidden line-clamp-3 text-[12px] p-4"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quas
+                officiis, sunt eaque minus, praesentium perferendis deserunt
+                assumenda sapiente natus maxime dolorum facilis aliquid voluptas
+                id suscipit excepturi quae cupiditate.
+              </p>
+
+              <a
+                href="#"
+                class="mt-[2rem] font-semibold transition-all duration-500 text-blue-400 hover:text-blue-900 text-[14px] p-4"
+                >Leer mas</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="flex flex-col p-4 rounded-md shadow-xl grow lg:w-64">
+            <img
+              src="https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg"
+              class="w-full h-52 object-cover rounded-t-md"
+              alt=""
+            />
+            <figcaption class="flex flex-col">
+              <section
+                class="bg-yellowMain font-semibold p-4 py-6 rounded-b-md"
+              >
+                <p class="overflow-hidden line-clamp-3 text-[12px]">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Fugit corporis minus officiis doloribus at enim qui fuga
+                  accusamus. At vero placeat hic, mollitia minima facere fugit
+                  doloribus beatae nostrum soluta!
+                </p>
+              </section>
+              <p
+                class="font-semibold overflow-hidden line-clamp-3 text-[12px] p-4"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quas
+                officiis, sunt eaque minus, praesentium perferendis deserunt
+                assumenda sapiente natus maxime dolorum facilis aliquid voluptas
+                id suscipit excepturi quae cupiditate.
+              </p>
+
+              <a
+                href="#"
+                class="mt-[2rem] font-semibold transition-all duration-500 text-blue-400 hover:text-blue-900 text-[14px] p-4"
+                >Leer mas</a
+              >
+            </figcaption>
+          </figure>
+
+          <figure class="flex flex-col p-4 rounded-md shadow-xl grow lg:w-64">
+            <img
+              src="https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg"
+              class="w-full h-52 object-cover rounded-t-md"
+              alt=""
+            />
+            <figcaption class="flex flex-col">
+              <section
+                class="bg-yellowMain font-semibold p-4 py-6 rounded-b-md"
+              >
+                <p class="overflow-hidden line-clamp-3 text-[12px]">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Fugit corporis minus officiis doloribus at enim qui fuga
+                  accusamus. At vero placeat hic, mollitia minima facere fugit
+                  doloribus beatae nostrum soluta!
+                </p>
+              </section>
+              <p
+                class="font-semibold overflow-hidden line-clamp-3 text-[12px] p-4"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quas
+                officiis, sunt eaque minus, praesentium perferendis deserunt
+                assumenda sapiente natus maxime dolorum facilis aliquid voluptas
+                id suscipit excepturi quae cupiditate.
+              </p>
+
+              <a
+                href="#"
+                class="mt-[2rem] font-semibold transition-all duration-500 text-blue-400 hover:text-blue-900 text-[14px] p-4"
+                >Leer mas</a
+              >
+            </figcaption>
+          </figure>
+        </section>
+        <!-- seccion de noticias  -->
+        <section class="w-full flex justify-center<">
+          <a
+            href="w-full lg:w-1/5 h-16 lg:h-auto bg-blue-900 rounded-xl flex justify-center items-center hover:bg-gray-500 mx-auto"
+          >
+            <h2 class="text-center text-2xl lg:text-lg text-white">
+              Ver más noticias
+            </h2>
+          </a>
+        </section>
       </article>
-  </section>
-  
+    </section>
 
     <section class="px-6 mt-[3rem] lg:container mx-auto mt-[3rem]">
       <article class="lg:container flex flex-col gap-y-10">
-       <section class="bg-yellow-400 h-16 rounded-xl flex flex-row justify-center items-center gap-7">
-        <h2 class="font-semibold text-center text-4xl text-blue-900 mt-20 mb-20 ">ULTIMOS EVENTOS</h2>
-        <span class="bg-blue-700 transition-all duration-300 w-16 h-4 text-xs font-medium me-2 px-2.5 py-0.5 rounded-xl top-full "></span>
-      </section>
+        <section
+          class="bg-yellowMain h-16 rounded-xl flex flex-row justify-center items-center gap-7"
+        >
+          <h2
+            class="font-semibold text-center text-4xl text-blue-900 mt-20 mb-20"
+          >
+            ULTIMOS EVENTOS
+          </h2>
+          <span
+            class="bg-blue-700 transition-all duration-300 w-16 h-4 text-xs font-medium me-2 px-2.5 py-0.5 rounded-xl top-full"
+          ></span>
+        </section>
+      </article>
+    </section>
 
     <!-- Eventos -->
-    <section class="grid container mx-auto grid-cols-2 p-24">
-        <article class="grid">
-          <div class="container mx-auto flex flex-wrap justify-between justify-center">
-            <div class="bg-gray-100 rounded-lg p-4 mb-4 w-full md:w-full md:mr-4 shadow-2xl">
-                <div class="flex items-center mb-2">
-                    <p class="text-sm text-gray-600 mr-2">Fecha de 2024</p>
-                </div>
-                <div class="flex">
-                    <img src="https://images.pexels.com/photos/5198284/pexels-photo-5198284.jpeg" alt="Imagen 1" class="w-1/2 mb-2 rounded-lg">
-                    <div class="ml-4">
-                        <h2 class="text-lg font-semibold mb-2 text-blue-900">Pague sus IMPUESTOS</h2>
-                        <hr class="border border-black my-2 gap-5">
-                        <p class="text-sm text-gray-700 mb-4">Lorem Ipsum is simply dummy text of the
-                          printing and typesetting industry. Lorem
-                          Ipsum has been the industry's ... </p>
-                        <a href="">
-                          <button class="bg-red-600 hover:bg-gray-500 text-white font-bold py-2 px-8 rounded-xl">Ver más</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container mx-auto flex flex-wrap justify-between justify-center">
-          <div class="bg-gray-100 rounded-lg p-4 mb-4 md:w-full md:mr-4 shadow-2xl">
-              <div class="flex items-center mb-2">
-                  <p class="text-sm text-gray-600 mr-2">Fecha de 2024</p>
-              </div>
-              <div class="flex">
-                  <img src="https://images.pexels.com/photos/5198284/pexels-photo-5198284.jpeg" alt="Imagen 1" class="w-1/2 mb-2 rounded-lg">
-                  <div class="ml-4">
-                      <h2 class="text-lg font-semibold mb-2 text-blue-900">Título de Noticias Lorem
-                        Ipsum is simply dummy text
-                        of the printing</h2>
-                      <hr class="border border-black my-2 gap-5">
-                      <p class="text-sm text-gray-700 mb-4">Lorem Ipsum is simply dummy text of the
-                        printing and typesetting industry. Lorem
-                        Ipsum has been the industry's ... </p>
-                     <a href="">
-                      <button class="bg-red-600 hover:bg-gray-500 text-white font-bold py-2 px-8 rounded-xl">Ver más</button>
-                     </a>
-                  </div>
-              </div>
+    <section
+      class="grid lg:container mx-auto grid-cols-1 lg:grid-cols-2 p-24 gap-3"
+    >
+      <article class="flex flex-col col-span-1 h-full justify-between">
+        <div
+          class="bg-gray-100 rounded-lg p-4 mb-4 w-full md:w-full md:mr-4 shadow-2xl grow"
+        >
+          <div class="flex items-center mb-2">
+            <p class="text-sm text-gray-600 mr-2">Fecha de 2024</p>
           </div>
-      </div>
-        </article>
-        <article>
-          <div class="container mx-auto flex flex-wrap justify-center grid h-full">
-            <div class="bg-gray-100 rounded-lg p-4 mb-4 md: h-full md:mr-4 shadow-2xl">
-                <div class="flex items-center mb-2">
-                    <p class="font-semibold text-1xl text-black-600">Fecha de 2024</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img src="https://images.pexels.com/photos/5198284/pexels-photo-5198284.jpeg" alt="Imagen 1" class="h-full md:w-full mb-2 rounded-lg">
-                    <div class="md:ml-4 md:mt-0 mt-4"> 
-                        <h2 class="text-lg font-semibold mb-2 text-blue-900">Título de Noticias Lorem
-                          Ipsum is simply dummy
-                          text of the printing</h2>
-                        <hr class="border border-black my-2">
-                        <p class="text-sm text-gray-700 mb-4">Lorem Ipsum is simply dummy text of the
-                          printing and typesetting industry. Lorem
-                          Ipsum has been the industry's ...</p>
-                        <a href="" >
-                          <button class="bg-red-600 hover:bg-gray-500 text-white py-2 px-8 rounded-xl">Ver más</button>
-                        </a>
-                    </div>
-                </div>
+          <div class="flex">
+            <img
+              src="https://images.pexels.com/photos/5198284/pexels-photo-5198284.jpeg"
+              alt="Imagen 1"
+              class="w-1/2 mb-2 rounded-lg"
+            />
+            <div class="ml-4">
+              <h2 class="text-lg font-semibold mb-2 text-blue-900">
+                Pague sus IMPUESTOS
+              </h2>
+              <hr class="border border-black my-2 gap-5" />
+              <p class="text-sm text-gray-700 mb-4">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's ...
+              </p>
+              <a href="">
+                <button
+                  class="bg-red-600 hover:bg-gray-500 text-white font-bold py-2 px-8 rounded-xl"
+                >
+                  Ver más
+                </button>
+              </a>
             </div>
-        </div>      
-        </article>
-      </section>
+          </div>
+        </div>
+        <div
+          class="bg-gray-100 rounded-lg p-4 mb-4 md:w-full md:mr-4 shadow-2xl grow"
+        >
+          <div class="flex items-center mb-2">
+            <p class="text-sm text-gray-600 mr-2">Fecha de 2024</p>
+          </div>
+          <div class="flex">
+            <img
+              src="https://images.pexels.com/photos/5198284/pexels-photo-5198284.jpeg"
+              alt="Imagen 1"
+              class="w-1/2 mb-2 rounded-lg"
+            />
+            <div class="ml-4">
+              <h2 class="text-lg font-semibold mb-2 text-blue-900">
+                Título de Noticias Lorem Ipsum is simply dummy text of the
+                printing
+              </h2>
+              <hr class="border border-black my-2 gap-5" />
+              <p class="text-sm text-gray-700 mb-4">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's ...
+              </p>
+              <a href="">
+                <button
+                  class="bg-red-600 hover:bg-gray-500 text-white font-bold py-2 px-8 rounded-xl"
+                >
+                  Ver más
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="col-span-1">
+        <div
+          class="bg-gray-100 rounded-lg p-4 mb-4 md: h-full md:mr-4 shadow-2xl"
+        >
+          <div class="flex items-center mb-2">
+            <p class="font-semibold text-1xl text-black-600">Fecha de 2024</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="https://images.pexels.com/photos/5198284/pexels-photo-5198284.jpeg"
+              alt="Imagen 1"
+              class="h-full md:w-full mb-2 rounded-lg"
+            />
+            <div class="md:ml-4 md:mt-0 mt-4">
+              <h2 class="text-lg font-semibold mb-2 text-blue-900">
+                Título de Noticias Lorem Ipsum is simply dummy text of the
+                printing
+              </h2>
+              <hr class="border border-black my-2" />
+              <p class="text-sm text-gray-700 mb-4">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's ...
+              </p>
+              <a href="">
+                <button
+                  class="bg-red-600 hover:bg-gray-500 text-white py-2 px-8 rounded-xl"
+                >
+                  Ver más
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
     <!-- Eventos -->
 
     <!-- Encuesta -->
-    <section class="lg:container mx-auto mt-[3rem]"> 
-        <article class="bg-blue-900 grid grid-cols-1 lg:grid-cols-2 gap-3  rounded-xl shadow-xl px-[6rem] py-[2rem] ">
-          <section class="col-span-1  flex flex-col lg:flex-row  items-center gap-6 ">
-            <img src="./iconos/ico_contratacion.svg" class="w-24" alt=""/> 
-            <h2 class="font-semibold text-4xl text-white lg:container mx-auto text-center lg:text-start ">ENCUESTA DE
-              SATISFACCIÓN</h2>
-          </section>
-            <section class="col-span-1 flex flex-col lg:flex-row items-center gap-3 ">
-              <p class="font-semibold text-2xl text-white text-center lg:text-start">Tu opinión es
-                muy importante
-                para nosotros</p>
-                <div class="bg-white w-32 h-10 rounded-2xl flex flex-row justify-center items-center gap-5">
-                  <a href="#" class="font-semibold text-2xl text-blue-900 text-center lg:text-start">INICIAR</a>
-                </div>
-            </section>
-        </article>
+    <section class="lg:container mx-auto mt-[3rem]">
+      <article
+        class="bg-blue-900 grid grid-cols-1 lg:grid-cols-2 gap-3 rounded-xl shadow-xl px-[6rem] py-[2rem]"
+      >
+        <section
+          class="col-span-1 flex flex-col lg:flex-row items-center gap-6"
+        >
+          <img src="./iconos/ico_contratacion.svg" class="w-24" alt="" />
+          <h2
+            class="font-semibold text-4xl text-white lg:container mx-auto text-center lg:text-start"
+          >
+            ENCUESTA DE SATISFACCIÓN
+          </h2>
+        </section>
+        <section
+          class="col-span-1 flex flex-col lg:flex-row items-center gap-3"
+        >
+          <p
+            class="font-semibold text-2xl text-white text-center lg:text-start"
+          >
+            Tu opinión es muy importante para nosotros
+          </p>
+          <div
+            class="bg-white w-32 h-10 rounded-2xl flex flex-row justify-center items-center gap-5"
+          >
+            <a
+              href="#"
+              class="font-semibold text-2xl text-blue-900 text-center lg:text-start"
+              >INICIAR</a
+            >
+          </div>
+        </section>
+      </article>
     </section>
     <!-- Encuesta -->
 
     <!-- Redes sociales -->
-      <section class="bg-blue-300 w-full">
-        <section class="lg:container mx-auto p-10 rounded-md">
-
-        </section>
-      </section>
+    <section class="bg-blue-300 w-full">
+      <section class="lg:container mx-auto p-10 rounded-md"></section>
+    </section>
     <!-- Redes sociales -->
-    
 
     <!-- main  -->
 
     <!-- footer  -->
     <footer class="flex flex-col mt-24">
       <!-- sec info  -->
-      <section class="bg-greenFooter px-6 flex flex-col gap-6">
+      <section class="bg-colorFooter px-6 flex flex-col gap-6">
         <!-- info alcaldia  -->
         <article
           class="lg:container mx-auto bg-white rounded-md transform translate-y-[-30px] lg:translate-y-[-2rem] px-10 py-10 lg:py-20 shadow-md grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-6 w-full lg:w-[90%]"
@@ -736,7 +973,7 @@
       </section>
 
       <!-- sec gob  -->
-      <section class="bg-green-500 px-6">
+      <section class="bg-gobColor px-6">
         <article
           class="lg:container mx-auto flex justify-center lg:justify-start py-3 gap-3"
         >
@@ -748,8 +985,6 @@
     </footer>
     <!-- footer  -->
 
-    <script src="./tailwindConfig.js" defer></script>
-   
     <script src="./main.js" defer></script>
     <script src="./nav.js"></script>
     <script src="./SplideSlider/splide.min.js"></script>
