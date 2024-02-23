@@ -12,3 +12,51 @@
   background: #828282;
   background: repeating-linear-gradient(to top, #828282 0%, #ffffff 100%);
 }
+
+.after-vertical {
+  clip-path: polygon(0 93%, 100% 93%, 100% 100%, 0 100%);
+}
+
+.enlace__interes:hover .after-vertical {
+  clip-path: polygon(0 27%, 100% 27%, 100% 100%, 0 100%);
+}
+
+
+.enlace__servicio:hover {
+  color: white;
+}
+
+.enlace__servicio:hover .after-vertical {
+  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+}
+
+
+/* .enlace__servicio:hover .svg {
+  fill: none !important;
+  stroke: white !important;
+}
+
+.enlace__servicio:hover .svg * {
+  fill: none !important;
+  stroke: white !important;
+}
+
+.enlace__servicio:hover .svg .cabeza {
+  stroke: white !important;
+  fill: white !important;
+}
+
+.enlace__servicio:hover .svg .carita {
+  fill: white !important;
+} */
+/* 
+.enlace__servicio .icono__servicio {
+  background-image: url("./assets/icons/services/icono-pqrsd.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.enlace__servicio:hover .icono__servicio {
+  background-image: url("./assets/icons/services/icono-pqrsd-white.svg");
+} */
