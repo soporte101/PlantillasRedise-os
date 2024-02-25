@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alcaldía de Jamundí</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -12,21 +13,29 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- tailwind  -->
     <script src="./js/tailwind.js"></script>
+    <script src="./js/tailwindConfig.js"></script>
+    <!-- tailwind  -->
+    <!-- splide  -->
+    <link rel="stylesheet" href="./SplideSlider/splide.min.css" />
+    <!-- splide  -->
   </head>
-  <body class="w-full h-screen overflow-x-hidden">
+  <body class="w-full h-screen">
     <!-- header  -->
-    <header class="flex flex-col gap-8 lg:gap-6">
-      <!-- Logo gov  -->
-      <section class="h-12 bg-gobColor flex items-center px-6">
-        <article class="lg:container mx-auto flex justify-between items-center">
-          <img src="./img/logoGov.svg" class="w-32 h-32" alt="" />
-        </article>
+    <header class="flex flex-col">
+      <!-- sec gob  -->
+      <section class="bg-gobColor px-6 py-3">
+        <figure
+          class="lg:container mx-auto flex items-center justify-center lg:justify-start"
+        >
+          <img src="./img/logoGov.svg" class="w-32 object-contain" alt="" />
+        </figure>
       </section>
-      <!-- Logo gov  -->
+      <!-- sec gob  -->
       <!-- sec logos and input search -->
       <section
-        class="lg:container mx-auto px-6 flex flex-wrap justify-center lg:justify-between items-center gap-y-6 xl:gap-6"
+        class="lg:container mx-auto p-6 py-10 flex flex-wrap justify-center lg:justify-between items-center gap-y-6 xl:gap-6"
       >
         <article
           class="flex gap-6 flex-col lg:flex-row items-center justify-center lg:justify-start"
@@ -66,7 +75,7 @@
               class="text-[12px] border-2 w-full rounded-md py-2 px-3 outline-none focus:shadow-md transition duration-300"
             />
             <button
-              class="bg-primaryBlue hover:bg-secondaryBlue transition duration-300 rounded-full text-white absolute right-2 top-[0.3rem] cursor-pointer p-1 w-7 h-7 flex justify-center items-center"
+              class="bg-gobColor hover:bg-navColor transition duration-300 rounded-full text-white absolute right-2 top-[0.3rem] cursor-pointer p-1 w-7 h-7 flex justify-center items-center"
               id="btnSearchTramite"
             >
               <i class="fas fa-search text-[12px]"></i>
@@ -76,177 +85,371 @@
         </section>
       </section>
       <!-- sec logos and input search -->
-      <!-- navbar -->
-      <nav class="bg-grisColor border-b-2 border-primaryBlue">
-        <section
-          class="px-6 2xl:px-0 lg:container mx-auto w-full 2xl:h-16 overflow-visible"
-        >
-          <!-- section mobile  -->
-          <section class="w-full flex justify-between lg:hidden py-4">
-            <a href="./index.html" class="w-12">
-              <img
-                src="./img/logoAlcaldia.png"
-                class="w-14 object-contain"
-                alt=""
-              />
-            </a>
+      <!-- nav  -->
+      <section class="header bg-gris px-6 w-full border-b-2 border-gobColor">
+        <nav class="menu lg:container mx-auto">
+          <div class="head p-3 lg:px-0">
+            <div class="logo">
+              <img src="./img/logoAlcaldia.png" alt="logo" />
+            </div>
+            <button type="button" class="close-menu-btn"></button>
+          </div>
+          <ul>
+            <li class=""><a href="#" class="">Inicio</a></li>
+            <li class=" ">
+              <a href="#"
+                >Transparencia y acceso <br />
+                información pública</a
+              >
+            </li>
+            <li class="dropdown group">
+              <section class="h-full lg:pr-4">
+                <a href="#" class="transition-all duration-300"
+                  >Atención y Servicios <br />
+                  a la Ciudadanía</a
+                >
 
-            <i
-              class="fa-solid fa-bars text-[1rem] text-primaryBlue cursor-pointer"
-            ></i>
-          </section>
-          <!-- section mobile  -->
-          <!-- section menu  -->
-          <ul
-            class="bg-white flex flex-col w-full h-screen overflow-scroll absolute right-0 top-0 lg:bg-transparent lg:flex-row lg:p-0 lg:right-auto lg:top-auto lg:relative lg:opacity-100 lg:h-full lg:container mx-auto lg:overflow-visible"
-          >
-            <!-- mobile  -->
-            <section class="flex flex-col lg:hidden">
-              <article
-                class="h-12 bg-gobColor items-center px-6 flex justify-center items-center"
-              >
-                <img src="./img/logoGov.svg" class="w-32 h-32" alt="" />
-              </article>
-              <article
-                class="px-6 py-2 flex justify-between items-center shadow-sm"
-              >
-                <div class="flex items-center gap-3">
-                  <a href="./index.html" class="w-12">
-                    <img
-                      src="./img/logoAlcaldia.png"
-                      class="w-14 object-contain"
-                      alt=""
-                    />
-                  </a>
-                  <h3 class="font-semibold text-[12px]">Alcaldia de {...}</h3>
-                </div>
                 <i
-                  class="fa-solid fa-circle-xmark text-primaryBlue transition-all duration-300 hover:text-secondaryBlue text-[1.5rem]"
+                  class="fa-solid fa-chevron-down transform group-hover:rotate-180 duration-500 group-hover:text-white"
                 ></i>
-              </article>
-            </section>
-            <!-- mobile  -->
-            <!-- menu  -->
-            <section
-              class="w-full flex flex-col lg:grid lg:grid-cols-6 h-full relative grow"
-            >
-              <li
-                class="text-[14px] lg:text-[11px] 2xl:text-[13px] font-semibold hover:bg-primaryBlue hover:text-white lg:h-full flex justify-center items-center hover:underline transition-all duration-500 col-span-1 py-4 lg:py-2 2xl:py-0"
-              >
-                <a href="./index.html">Inicio</a>
-              </li>
-              <li
-                class="text-[14px] lg:text-[11px] 2xl:text-[13px] font-semibold hover:bg-primaryBlue hover:text-white lg:h-full flex justify-center items-center hover:underline transition-all duration-500 col-span-1 py-4 lg:py-2 2xl:py-0"
-              >
-                <a href="./index.html" class="text-center lg:text-start lg:px-4"
-                  >Trasparencia y accesos a la información pública</a
-                >
-              </li>
-              <!-- dropdown level 1 -->
-              <li
-                class="text-[14px] lg:text-[11px] 2xl:text-[13px] font-semibold hover:bg-primaryBlue lg:h-full justify-center items-center transition-all duration-500 col-span-1 px-4 cursor-pointer lg:py-2 2xl:py-0 group dropdown relative inline-flex"
-              >
-                <!-- dropdownText  -->
-                <section
-                  class="flex items-center gap-3 group-hover:text-white transition-all dropdown-text"
-                >
-                  <h3>Atención y servicios a la ciudadania</h3>
-                  <i
-                    class="fa-solid fa-chevron-down transition-all duration-300 group-hover:rotate-180"
-                  ></i>
-                </section>
-                <!-- dropdownText  -->
-                <!-- dropdown-menu  -->
-                <section class="dropdown-menu hidden lg:absolute">
-                  <li class="dropdown-item">
-                    <a href="#" class="dropdown-link">Link One</a>
-                  </li>
-                  <li class="dropdown-item">
-                    <a href="#" class="dropdown-link">Link Two</a>
-                  </li>
-                  <li class="dropdown-item">
-                    <!-- dropdown level 2  -->
-                    <section class="dropdown relative inline-flex">
-                      <!-- dropdownText  -->
-                      <section class="flex gap-3 items-center dropdown-text">
-                        <h3>Dropdown Level 2</h3>
-                        <i
-                          class="fa-solid fa-chevron-down transition-all duration-300 iconsub"
-                        ></i>
-                      </section>
-                      <!-- dropdownText  -->
+              </section>
 
-                      <!-- dropdown-menu  -->
-                      <section class="dropdown-menu hidden lg:absolute">
-                        <li class="dropdown-item">
-                          <a href="#" class="dropdown-link">Level two link</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#"><span>about</span></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#"><span>team</span></a>
+                  <i class="fa-solid fa-chevron-down"></i>
+
+                  <ul class="sub-menu sub-menu-right sub-menu-left-mobile">
+                    <li>
+                      <a href="#"><span>team 1</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>team 2</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>team 3</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>team 4</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>team 5</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"><span>testimonials</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>pricing</span></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#"><span>elements</span></a>
+                  <i class="fa-solid fa-chevron-down"></i>
+
+                  <ul class="sub-menu sub-menu-right sub-menu-left-mobile">
+                    <li>
+                      <a href="$"><span>accordion</span></a>
+                    </li>
+                    <li>
+                      <a href="$"><span>alert</span></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="$"><span>cards</span></a>
+                      <i class="fa-solid fa-chevron-down"></i>
+
+                      <ul class="sub-menu sub-menu-right">
+                        <li>
+                          <a href="#"><span>card 1</span></a>
                         </li>
-                      </section>
-                      <!-- dropdown-menu  -->
-                    </section>
+                        <li>
+                          <a href="#"><span>card 2</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span>card 3</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span>card 4</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span>card 5</span></a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="$"><span>carousel</span></a>
+                    </li>
+                    <li>
+                      <a href="$"><span>table</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li class="dropdown group">
+              <section class="h-full lg:pr-4">
+                <a href="#">Portfolio</a>
+                <i
+                  class="fa-solid fa-chevron-down group-hover:rotate-180 duration-500 group-hover:text-white"
+                ></i>
+              </section>
 
-                    <!-- dropdown level 2  -->
-                  </li>
-                </section>
-                <!-- dropdown-menu  -->
-              </li>
-              <!-- dropdown level 1 -->
-              <li
-                class="text-[14px] lg:text-[11px] 2xl:text-[13px] font-semibold hover:bg-primaryBlue lg:h-full flex justify-center items-center transition-all duration-500 col-span-1 px-4 cursor-pointer lg:py-2 2xl:py-0 group"
-              >
-                <section
-                  class="flex items-center gap-3 group-hover:text-white transition-all"
-                >
-                  <a href="./index.html">Participa</a>
-                  <i
-                    class="fa-solid fa-chevron-down transition-all duration-300 group-hover:rotate-180"
-                  ></i>
-                </section>
-              </li>
-              <li
-                class="text-[14px] lg:text-[11px] 2xl:text-[13px] font-semibold hover:bg-primaryBlue lg:h-full flex justify-center items-center transition-all duration-500 col-span-1 px-4 cursor-pointer lg:py-2 2xl:py-0 group"
-              >
-                <section
-                  class="flex items-center gap-3 group-hover:text-white transition-all"
-                >
-                  <a href="./index.html">Alcaldia</a>
-                  <i
-                    class="fa-solid fa-chevron-down transition-all duration-300 group-hover:rotate-180"
-                  ></i>
-                </section>
-              </li>
-              <li
-                class="text-[14px] lg:text-[11px] 2xl:text-[13px] font-semibold hover:bg-primaryBlue lg:h-full flex justify-center items-center transition-all duration-500 col-span-1 px-4 cursor-pointer lg:py-2 2xl:py-0 group"
-              >
-                <section
-                  class="flex items-center gap-3 group-hover:text-white transition-all"
-                >
-                  <a href="./index.html">Dependencias</a>
-                  <i
-                    class="fa-solid fa-chevron-down transition-all duration-300 group-hover:rotate-180"
-                  ></i>
-                </section>
-              </li>
-            </section>
-            <!-- menu  -->
+              <ul class="sub-menu">
+                <li>
+                  <a href="#"><span>portfolio masonry</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>portfolio list</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>portfolio details</span></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#"><span>portfolio grid</span></a>
+                  <i class="fa-solid fa-chevron-down"></i>
+
+                  <ul class="sub-menu sub-menu-left sub-menu-left-mobile">
+                    <li>
+                      <a href="#"><span>portfolio 1</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>portfolio 2</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>portfolio 3</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>portfolio 4</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
-          <!-- section menu  -->
+        </nav>
+        <section class="container py-2 lg:py-0">
+          <div class="header-right">
+            <button type="button" class="open-menu-btn">
+              <span class="line line-1"></span>
+              <span class="line line-2"></span>
+              <span class="line line-3"></span>
+            </button>
+          </div>
         </section>
-      </nav>
+      </section>
 
-      <!-- navbar -->
+      <!-- nav  -->
     </header>
     <!-- header  -->
 
     <!-- main  -->
+    <main class="flex flex-col gap-12 lg:container mx-auto">
+      <!--Slider home-->
+      <section>
+        <article
+          class="slider__container w-full h-[300px] lg:h-[450px] text-white"
+        >
+          <section
+            class="splide slider__home h-full relative flex justify-center items-end"
+          >
+            <section class="splide__track h-full">
+              <ul class="splide__list">
+                <a href="#" class="splide__slide">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://images.pexels.com/photos/935979/pexels-photo-935979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Imagen"
+                  />
+                </a>
+
+                <a href="#" class="splide__slide">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://images.pexels.com/photos/730564/pexels-photo-730564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Imagen"
+                  />
+                </a>
+
+                <a href="#" class="splide__slide">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Imagen"
+                  />
+                </a>
+              </ul>
+            </section>
+
+            <section class="splide__arrows"></section>
+
+            <article
+              class="absolute bg-mainBlue flex items-center justify-center px-6 lg:px-10 h-10 lg:h-12 rounded-t-lg"
+            >
+              <button
+                class="splide__toggle !bottom-auto text-white uppercase text-[12px] lg:text-[1rem] h-full items-center"
+                type="button"
+              >
+                <span class="splide__toggle__play">
+                  Iniciar
+                  <i class="fa-solid fa-play"></i>
+                </span>
+                <span class="splide__toggle__pause">
+                  Pausar
+                  <i class="fa-solid fa-pause"></i>
+                </span>
+              </button>
+              <ul class="splide__pagination relative !bottom-auto z-0"></ul>
+            </article>
+          </section>
+        </article>
+      </section>
+      <!--Slider home-->
+
+      <!-- main content -->
+      <section class="flex flex-col gap-8 px-6">
+        <!-- Bienvenidos  -->
+        <article class="flex flex-col gap-3 w-full items-center">
+          <h1
+            class="text-mainBlue text-[2rem] lg:text-2xl xl:text-4xl 2xl:text-6xl font-semibold"
+          >
+            ¡Bienvenidos!
+          </h1>
+          <h2
+            class="text-mainBlue text-[1.5rem] lg:text-lg xl:text-2xl 2xl:text-4xl"
+          >
+            ALCADÍA DE ...
+          </h2>
+          <div class="flex flex-col gap-4 text-center items-center">
+            <p
+              class="whitespace-normal overflow-hidden overflow-ellipsis lg:max-w-[63%]"
+            >
+              Realice de manera ágil y segura sus trámites en línea sin filas ni
+              congestiones en lugares públicos.
+            </p>
+            <p>En este espacio brindamos atención a sus solicitudes.</p>
+          </div>
+        </article>
+        <!-- Bienvenidos  -->
+        <!-- Interes  -->
+        <article class="flex flex-col gap-6">
+          <h2
+            class="text-[1.5rem] lg:text-xl xl:text-2xl 2xl:text-4xl text-blackTitle text-center xl:text-start font-semibold 2xl:font-normal"
+          >
+            Enlaces de interes
+          </h2>
+
+          <div class="w-full flex flex-wrap gap-6 lg:gap-8">
+            <!-- item interes  -->
+            <a href="#" class="grow xl:w-1/4 h-auto">
+              <figure
+                class="flex items-center font-bold gap-6 rounded-lg bg-mainBlue hover:bg-secondaryBlue text-white hover:text-mainBlue group transition-all duration-500 py-8 px-10 w-full h-full"
+              >
+                <i
+                  class="fa-solid fa-gear text-white text-[3rem] lg:text-6xl group-hover:text-mainBlue transition-all duration-500"
+                ></i>
+                <h3 class="uppercase text-xl lg:text-2xl">
+                  PROYECTOS EN EJECUCIÓN
+                </h3>
+              </figure>
+            </a>
+            <!-- item interes  -->
+            <!-- item interes  -->
+            <a href="#" class="grow xl:w-1/4 h-auto">
+              <figure
+                class="flex items-center font-bold gap-6 rounded-lg bg-mainBlue hover:bg-secondaryBlue text-white hover:text-mainBlue group transition-all duration-500 py-8 px-10 w-full h-full"
+              >
+                <i
+                  class="fa-regular fa-building text-white text-[3rem] lg:text-6xl group-hover:text-mainBlue transition-all duration-500"
+                ></i>
+                <h3 class="uppercase text-xl lg:text-2xl">
+                  PAGA AQUÍ IMPUESTO PREDIAL
+                </h3>
+              </figure>
+            </a>
+            <!-- item interes  -->
+            <!-- item interes  -->
+            <a href="#" class="grow xl:w-1/4 h-auto">
+              <figure
+                class="flex items-center font-bold gap-6 rounded-lg bg-mainBlue hover:bg-secondaryBlue text-white hover:text-mainBlue group transition-all duration-500 py-8 px-10 w-full h-full"
+              >
+                <i
+                  class="fa-solid fa-rocket text-white text-[3rem] lg:text-6xl group-hover:text-mainBlue transition-all duration-500"
+                ></i>
+                <h3 class="uppercase text-xl lg:text-2xl">
+                  PLAN DE DESARROLLO
+                </h3>
+              </figure>
+            </a>
+            <!-- item interes  -->
+            <!-- item interes  -->
+            <a href="#" class="grow xl:w-1/4">
+              <figure
+                class="flex items-center font-bold gap-6 rounded-lg bg-mainBlue hover:bg-secondaryBlue text-white hover:text-mainBlue group transition-all duration-500 py-8 px-10 w-full h-full"
+              >
+                <i
+                  class="fa-solid fa-industry text-white text-[3rem] lg:text-6xl group-hover:text-mainBlue transition-all duration-500"
+                ></i>
+                <h3 class="uppercase text-xl lg:text-2xl">
+                  INDUSTRIA Y COMERCIO
+                </h3>
+              </figure>
+            </a>
+            <!-- item interes  -->
+            <!-- item interes  -->
+            <a href="#" class="grow xl:w-1/4">
+              <figure
+                class="flex items-center font-bold gap-6 rounded-lg bg-mainBlue hover:bg-secondaryBlue text-white hover:text-mainBlue group transition-all duration-500 py-8 px-10 w-full h-full"
+              >
+                <i
+                  class="fa-solid fa-plane-departure text-white text-[3rem] lg:text-6xl group-hover:text-mainBlue transition-all duration-500"
+                ></i>
+                <h3 class="uppercase text-xl lg:text-2xl">
+                  PATIA-CAUCA TURÍSTICO
+                </h3>
+              </figure>
+            </a>
+            <!-- item interes  -->
+            <!-- item interes  -->
+            <a href="#" class="grow xl:w-1/4">
+              <figure
+                class="flex items-center font-bold gap-6 rounded-lg bg-mainBlue hover:bg-secondaryBlue text-white hover:text-mainBlue group transition-all duration-500 py-8 px-10 w-full h-full"
+              >
+                <i
+                  class="fa-solid fa-book text-white text-[3rem] lg:text-6xl group-hover:text-mainBlue transition-all duration-500"
+                ></i>
+                <h3 class="uppercase text-xl lg:text-2xl">NORMATIVIDAD</h3>
+              </figure>
+            </a>
+            <!-- item interes  -->
+          </div>
+        </article>
+        <!-- Interes  -->
+      </section>
+      <!-- main content -->
+    </main>
 
     <!-- main  -->
 
     <!-- footer  -->
 
     <!-- footer  -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/popper.min.js"></script>
+
+    <!-- scripts  -->
+    <!-- nav  -->
+    <script src="./js/nav.js"></script>
+    <!-- nav  -->
+    <!-- splide  -->
+    <script src="./SplideSlider/splide.min.js"></script>
+    <!-- splide  -->
+    <!-- main  -->
     <script src="./js/main.js" defer></script>
+    <!-- main  -->
+    <!-- scripts  -->
   </body>
 </html>

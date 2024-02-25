@@ -1,105 +1,13 @@
-//Configuración de colores generales
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        gobColor: "#3366cc",
-        primaryBlue: "#014883",
-        secondaryBlue: "#3c63ad",
-        hoverBlue: "#00b6ed",
-        footerColor: "#3a5399",
-        grisColor: "#f2f2f2",
-      },
-    },
+var splide = new Splide(".slider__home", {
+  classes: {
+    arrows: "splide__arrows",
+    arrow: "rounded-full",
+    prev: "splide__arrow--prev absolute !left-5 top-1/2 transform-translate-y-1/2 scale-x-[1] min-w-[2.2rem] h-[2.2rem] border-2 flex items-center justify-center fill-white  shadow-sm focus:!outline-none [&>svg]:w-[1.3rem] lg:[&>svg]:w-[3rem] lg:min-w-[4rem] lg:h-[4rem] ",
+    next: "splide__arrow--next absolute !right-5 top-1/2 transform-translate-y-1/2 scale-x-[1] min-w-[2.2rem] h-[2.2rem] border-2 flex items-center justify-center fill-white  shadow-sm focus:!outline-none [&>svg]:w-[1.3rem] lg:[&>svg]:w-[3rem] lg:min-w-[4rem] lg:h-[4rem]",
+    pagination: "splide__pagination  focus:!outline-none",
+    page: "splide__pagination__page border-2 border-solid  w-3 h-3  lg:w-4 lg:h-4 shadow-md focus:!outline-none",
   },
-};
-
-// const menu = document.getElementById("menu"),
-//   btnMenu = document.getElementById("btnMenu"),
-//   btnClose = document.getElementById("btnClose");
-
-// btnMenu.addEventListener("click", () => {
-//   menu.classList.toggle("translate-x-[-100%]");
-
-//   btnMenu.classList.toggle("hidden");
-//   btnClose.classList.toggle("hidden");
-
-//   document.body.style.overflow = "hidden";
-// });
-
-// btnClose.addEventListener("click", () => {
-//   menu.classList.toggle("translate-x-[-100%]");
-
-//   btnMenu.classList.toggle("hidden");
-//   btnClose.classList.toggle("hidden");
-
-//   document.body.style.overflow = "auto";
-// });
-
-//Funcion para los submenus
-
-function submenuActions() {
-  const itemDropDown = document.querySelectorAll(".itemDropDown");
-
-  itemDropDown.forEach((item) => {
-    const dropDownMenu = item.querySelector(".dropDownMenu");
-    item.addEventListener("mouseover", () => {
-      dropDownMenu.classList.remove("max-h-0");
-      dropDownMenu.classList.add("max-h-[700px]");
-    });
-    item.addEventListener("mouseout", () => {
-      dropDownMenu.classList.remove("max-h-[700px]");
-      dropDownMenu.classList.add("max-h-0");
-    });
-  });
-
-  const subMenu = document.querySelectorAll(".subMenu");
-  subMenu.forEach((item) => {
-    const subMenuDown = document.querySelectorAll(".subMenuDown");
-    const iconSub = document.querySelectorAll(".iconsub");
-    item.addEventListener("mouseover", () => {
-      subMenuDown.forEach((sub) => {
-        sub.addEventListener("mouseover", () => {
-          sub.classList.remove("max-h-0");
-          sub.classList.add("max-h-[700px]");
-        });
-      });
-      iconSub.forEach((icon) => {
-        icon.classList.add("rotate-180");
-      });
-
-      console.log(subMenuDown.classList);
-    });
-    item.addEventListener("mouseout", () => {
-      subMenuDown.classList.remove("max-h-[700px]");
-      subMenuDown.classList.add("max-h-0");
-      iconSub.classList.remove("rotate-180");
-      console.log(subMenuDown.classList);
-    });
-  });
-}
-
-submenuActions();
-
-//Funcion para obtener la fecha del sistema
-
-// function obtenerFechaFormateada() {
-//   const lblDateSystem = document.getElementById("lblDateSystem");
-
-//   const fechaActual = new Date();
-//   const opcionesFormato = {
-//     year: "numeric",
-//     month: "long",
-//     day: "2-digit",
-//   };
-
-//   const fechaFormateada = fechaActual.toLocaleDateString(
-//     "es-ES",
-//     opcionesFormato
-//   );
-
-//   lblDateSystem.innerText = fechaFormateada;
-// }
-
-// // Llamar a la función
-// obtenerFechaFormateada();
+  rewind: true,
+  autoplay: "play",
+});
+splide.mount();
