@@ -11,3 +11,53 @@ var splide = new Splide(".slider__home", {
   autoplay: "play",
 });
 splide.mount();
+
+var splide = new Splide(".patrocinadores", {
+  breakpoints: {
+    1920: {
+      perPage: 6,
+      gap: ".5rem",
+    },
+    1440: {
+      perPage: 6,
+      gap: ".5rem",
+    },
+    1280: {
+      perPage: 5,
+    },
+    1024: {
+      perPage: 5,
+      gap: ".5rem",
+    },
+    960: {
+      perPage: 4,
+      gap: ".5rem",
+    },
+    720: {
+      perPage: 4,
+      gap: ".5rem",
+    },
+    640: {
+      perPage: 3,
+      gap: ".5rem",
+    },
+    480: {
+      perPage: 2,
+      gap: ".5rem",
+    },
+  },
+  perPage: 4,
+  gap: ".5rem",
+  perMove: 1,
+  autoplay: "play",
+  rewind: true,
+  pagination: false,
+  classes: {
+    arrows: "splide__arrows",
+    arrow: "rounded-full",
+    prev: "splide__arrow--prev absolute !left-[-3rem] scale-x-[1] top-[0.5rem] lg:top-[2rem] min-w-[2.2rem] h-[2.2rem] border-0 flex items-center justify-center focus:!outline-none [&>svg]:w-[1rem]",
+    next: "splide__arrow--next absolute !right-[-3rem] top-[0.5rem] lg:top-[2rem] min-w-[2.2rem] h-[2.2rem] border-0 flex items-center justify-center focus:!outline-none [&>svg]:w-[1rem]",
+  },
+});
+
+splide.mount();

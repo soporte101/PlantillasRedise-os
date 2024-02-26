@@ -163,10 +163,6 @@
   display: flex;
 }
 
-.header-right > * {
-  margin-left: 25px;
-}
-
 .header-right .icon-btn {
   background-color: transparent;
   border: none;
