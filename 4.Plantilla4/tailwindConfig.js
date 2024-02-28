@@ -1,5 +1,3 @@
-//Configuración de colores generales
-
 tailwind.config = {
     theme: {
       extend: {
