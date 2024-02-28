@@ -17,7 +17,8 @@ tailwind.config = {
           secondaryBlue:"#0085c8",
           mainHoverTramites:"#014883",
           colorButtonNoticias:"006ba0",
-          colorSeccionNoticias:"c6c6c6",
+          colorSectionNoticias:"c6c6c6",
+          colorRedesSociales:"7eccf0",
         },
         width:{
           anchodecirculos:"220px",
