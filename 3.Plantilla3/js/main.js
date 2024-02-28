@@ -61,3 +61,48 @@ var splide = new Splide(".patrocinadores", {
 });
 
 splide.mount();
+
+/*Tabs redes sociales */
+
+let tabs = document.querySelector("#tabs");
+
+tabs.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (e.target.closest(".tabRedes")) {
+    let tabSelected = e.target.closest(".tabRedes").dataset.target;
+    let tabSelected2 = e.target.closest(".tabRedes");
+
+    let tabLater = document.querySelector(".activeTab");
+
+    const tabActive = document.querySelectorAll(".tab-active");
+
+    tabActive.forEach((item) => {
+      item.addEventListener("click", () => {
+        // Iterar sobre todos los elementos y quitar la clase si la tienen
+        tabActive.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("border-blackTitle");
+          }
+        });
+
+        // Alternar la clase en el elemento actual
+        item.classList.toggle("border-blackTitle");
+      });
+    });
+
+    tabLater.classList.remove("activeTab");
+
+    tabSelected2.classList.add("activeTab");
+
+    let itemsRedes = [...document.querySelectorAll(".itemRed")];
+
+    for (const i in itemsRedes) {
+      if (tabSelected == itemsRedes[i].dataset.select) {
+        itemsRedes[i].classList.remove("hidden");
+      } else {
+        itemsRedes[i].classList.add("hidden");
+      }
+    }
+  }
+});
