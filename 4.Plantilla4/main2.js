@@ -178,4 +178,5 @@ var splide = new Splide(".patrocinadores", {
     next: "splide__arrow--next absolute !right-[-3rem] top-[0.5rem] lg:top-[2rem] min-w-[2.2rem] h-[2.2rem] border-0 flex items-center justify-center focus:!outline-none [&>svg]:w-[1rem]",
   },
 });
+splide.mount();
 //slider patrocinadores
