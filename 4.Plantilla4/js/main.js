@@ -88,8 +88,8 @@ var splide = new Splide(".slider__servicios", {
   classes: {
     arrows: "splide__arrows",
     arrow: "rounded-full",
-    prev: "splide__arrow--prev absolute bg-white shadow-md scale-x-[1]  min-w-[2.2rem] h-[2.2rem] border-0 flex items-center justify-center transition-all duration-500 hover:bg-gris shadow-sm focus:!outline-none [&>svg]:w-[1rem] top-[5rem] fill-blueServices",
-    next: "splide__arrow--next absolute bg-white shadow-md   min-w-[2.2rem] h-[2.2rem] border-0 flex items-center justify-center transition-all duration-500 hover:bg-gris shadow-sm focus:!outline-none [&>svg]:w-[1rem] top-[5rem] fill-blueServices",
+    prev: "splide__arrow--prev absolute bg-white shadow-md scale-x-[1] opacity-[0.5] hover:opacity-100 transition-all duration-500  min-w-[2.2rem] h-[2.2rem] border-0 flex items-center justify-center transition-all duration-500 hover:bg-gris shadow-sm focus:!outline-none [&>svg]:w-[1rem] top-[5rem] fill-blueServices",
+    next: "splide__arrow--next absolute bg-white shadow-md opacity-[0.5] hover:opacity-100 transition-all duration-500   min-w-[2.2rem] h-[2.2rem] border-0 flex items-center justify-center transition-all duration-500 hover:bg-gris shadow-sm focus:!outline-none [&>svg]:w-[1rem] top-[5rem] fill-blueServices",
   },
 });
 splide.mount();
@@ -180,3 +180,48 @@ var splide = new Splide(".patrocinadores", {
 });
 splide.mount();
 //slider patrocinadores
+
+/*Tabs redes sociales */
+
+let tabs = document.querySelector("#tabs");
+
+tabs.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (e.target.closest(".tabRedes")) {
+    let tabSelected = e.target.closest(".tabRedes").dataset.target;
+    let tabSelected2 = e.target.closest(".tabRedes");
+
+    let tabLater = document.querySelector(".activeTab");
+
+    const tabActive = document.querySelectorAll(".tab-active");
+
+    tabActive.forEach((item) => {
+      item.addEventListener("click", () => {
+        // Iterar sobre todos los elementos y quitar la clase si la tienen
+        tabActive.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("border-blackTitle");
+          }
+        });
+
+        // Alternar la clase en el elemento actual
+        item.classList.toggle("border-blackTitle");
+      });
+    });
+
+    tabLater.classList.remove("activeTab");
+
+    tabSelected2.classList.add("activeTab");
+
+    let itemsRedes = [...document.querySelectorAll(".itemRed")];
+
+    for (const i in itemsRedes) {
+      if (tabSelected == itemsRedes[i].dataset.select) {
+        itemsRedes[i].classList.remove("hidden");
+      } else {
+        itemsRedes[i].classList.add("hidden");
+      }
+    }
+  }
+});
