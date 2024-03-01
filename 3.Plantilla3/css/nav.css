@@ -2,7 +2,7 @@
 
 :root {
   --textcolor: #000;
-  --mainColor: #3c63ad;
+  --mainColor: #3366cc;
 }
 
 * {
@@ -59,6 +59,11 @@
   color: white;
 }
 
+.splide__arrow--next,
+.splide__arrow--prev{
+  z-index: 60;
+}
+
 .header .menu .dropdown section a:hover .header .menu a {
   text-decoration: none;
   text-transform: capitalize;
@@ -102,16 +107,16 @@
   width: 230px;
   padding: 15px 0;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  z-index: 999;
   transform-origin: top;
   transform: scaleY(0);
   visibility: hidden;
   opacity: 0;
   border-radius: 5px;
-  background-color: white;
+  background: #fff;
 }
 .header .menu .sub-menu li {
-  padding: 10px 0;
+  padding: 6px 24px;
 }
 
 .header .menu .sub-menu-right {
@@ -134,24 +139,24 @@
   flex-direction: column;
 }
 
-.header .menu .sub-menu a {
+/* .header .menu .sub-menu a {
   padding: 6px 24px;
-}
+} */
 
 .header .menu .sub-menu .dropdown > a {
   padding-right: 34px;
 }
 
 .header .menu .sub-menu span {
-  background-image: linear-gradient(var(--mainColor), var(--mainColor));
-  background-size: 0 3px;
+  background-image: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+  background-size: 0 1px;
   background-repeat: no-repeat;
   background-position: 0 100%;
   transition: background-size 0.5s ease;
 }
 
 .header .menu .sub-menu li:hover > a > span {
-  background-size: 100% 3px;
+  background-size: 100% 1px;
 }
 
 .header .menu .sub-menu i {
@@ -161,6 +166,10 @@
 
 .header-right {
   display: flex;
+}
+
+.header-right > * {
+  margin-left: 25px;
 }
 
 .header-right .icon-btn {
@@ -184,7 +193,7 @@
     height: 100%;
     /* padding: 15px 30px 30px; */
     overflow-y: auto;
-    z-index: 1;
+    z-index: 999;
     transform: translateX(100%);
     background-color: white;
   }
@@ -214,6 +223,7 @@
 
   .header .menu .close-menu-btn {
     height: 35px;
+    min-width: 35px;
     width: 35px;
     position: relative;
     display: inline-flex;
