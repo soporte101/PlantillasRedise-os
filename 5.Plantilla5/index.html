@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alcaldía de Jamundí</title>
+  <title>Alcaldía de Tualcaldia</title>
   <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./assets/css/nav.css">
   <link rel="stylesheet" href="./SplideSlider/splide.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -15,436 +16,1077 @@
 </head>
 
 <body class="w-full h-full overflow-x-hidden m-auto">
-  <!--Header-->
-  <header class="w-full border-b-4 border-b-blue-500 z-99">
-    <section class="h-[2.5rem] bg-blue-600 w-full flex lg:py-[0.5rem] lg:pl-[3rem]">
-      <!--Barra gov-->
-      <section class="container lg:m-auto flex justify-center items-center lg:items-start lg:justify-start">
-        <a href="#" title="Enlace Gov" aria-label="Enlace Gov" class="w-[8rem] flex items-center">
-          <img src="./assets/img/logoGov.svg" alt="Logo gov" />
+  <!--!!Header-->
+  <header class="flex flex-col">
+    <!--! sec gob  -->
+    <section class="bg-gobColor px-6 py-2">
+      <figure class="lg:container mx-auto flex items-center justify-center lg:justify-start">
+        <a href="https://www.gov.co">
+          <img src="./assets/img/logoGov.svg" class="w-32 object-contain" alt="Imagen" />
         </a>
+      </figure>
+    </section>
+    <!--! sec gob  -->
+    <!--! sec logos and input search -->
+    <section
+      class="lg:container mx-auto  p-6 flex flex-wrap justify-center lg:justify-between items-center gap-y-6 xl:gap-6">
+      <article class="flex gap-6 flex-col lg:flex-row items-center justify-center lg:justify-start">
+        <section class="flex gap-3">
+          <a href="https://petro.presidencia.gov.co" class="w-14">
+            <img src="./assets/img/Escudo_de_Colombia.png" class="w-full h-full object-contain" alt="Imagen" />
+          </a>
+          <a href="/" class="w-14">
+            <img src="./assets/img/logo-alcaldia.png" class="w-full h-full object-contain" alt="Imagen" />
+          </a>
+        </section>
+        <h2 class="text-[14px] font-semibold text-center lg:text-start">
+          Alcaldía Municipal de {...}
+        </h2>
+      </article>
+
+      <section class="flex flex-col gap-3 w-full lg:w-1/4">
+        <a href="/_layouts/15/Authenticate.aspx"
+          class="headerWeb__aut text-[12px] text-center lg:!text-end hover:underline text-primaryColor">Administrar
+          Sitio</a>
+        <!--! section input  -->
+        <article class="relative h-auto w-full">
+          <input type="text" placeholder="Buscar....."
+            class="text-[12px] border-2 w-full rounded-md py-2 px-3 outline-none focus:shadow-md transition duration-300" />
+          <button
+            class="bg-gobColor hover:bg-navColor transition duration-300 rounded-full text-white absolute right-2 top-[0.3rem] cursor-pointer p-1 min-w-7 w-7 h-7 flex justify-center items-center"
+            id="btnSearchTramite">
+            <i class="fas fa-search text-[12px]"></i>
+          </button>
+        </article>
+        <!--! section input  -->
       </section>
     </section>
-
-    <!--Titulo principal alcaldia-->
-    <section class="lg:container hidden lg:flex justify-between mx-auto p-5">
-      <section class="flex items-center gap-5">
-        <figure>
-          <img src="./assets/img/Escudo_de_Colombia.png" alt="Escudo de la república de Colombia" class="w-14" />
-        </figure>
-
-        <h1 class="text-lg font-bold font-work-sans">
-          Alcaldia municipal de {...}
-        </h1>
-      </section>
-
-      <section class="flex items-end flex-col gap-2">
-        <a class="font-medium font-work-sans text-sm text-blue-500 hover:underline" href="#" title="Administrar sitio"
-          aria-label="Administrar sitio">Administrar sitio</a>
-        <section class="relative">
-          <input type="text" placeholder="Buscar en la entidad"
-            class="w-[20rem] border-2 border-gray-300 px-4 py-[0.5rem] rounded-md shadow" />
-
-          <i
-            class="fa-solid fa-magnifying-glass absolute top-[0.4rem] right-[0.5rem] p-2 bg-blue-500 rounded-xl text-white cursor-pointer hover:bg-blue-700 transition-all ease duration-500"></i>
-        </section>
-      </section>
-    </section>
-
-    <!--Menu-->
-    <nav class="bg-gray-100 w-full flex px-10 lg:px-0 items-center py-3 lg:p-0 h-16 shadow-xl z-99" id="navbar">
-      <section class="mx-auto lg:container w-full lg:h-full">
-        <section class="flex items-center justify-between lg:hidden h-[10%]">
-          <img src="./assets/img/Escudo_de_Colombia.png" alt="Escudo de Colombia" class="w-14 lg:hidden" />
-
-          <i class="fa-solid fa-bars lg:hidden text-[1.7rem]" id="btnMenu"></i>
-
-          <i class="fa-solid fa-xmark hidden lg:hidden text-[1.7rem]" id="btnClose"></i>
-        </section>
-
-        <ul
-          class="w-full h-[90%] left-0 flex justify-evenly lg:justify-between font-work-sans text-sm font-medium text-gray-800 items-center flex-col lg:flex-row lg:relative fixed lg:top-auto top-[6.8rem] bg-gray-100 lg:z-50 z-50 transition-all ease duration-500 transform lg:translate-x-0 translate-x-[-100%]"
-          id="menu">
-          <li
-            class="lg:h-full flex items-center hover:bg-gray-300 transition-all ease duration-500 sm:text-center font-bold px-10">
-            <a href="#" title="Enlace" aria-label="Enlace">Inicio</a>
+    <!--! sec logos and input search -->
+    <!--! nav  -->
+    <section class="header bg-gris px-6 w-full border-b-2 border-blueLine">
+      <nav class="menu lg:container mx-auto">
+        <div class="head p-3 lg:px-0">
+          <div class="logo">
+            <img src="./assets/img/logo-alcaldia.png" alt="logo" />
+          </div>
+          <button type="button" class="close-menu-btn"></button>
+        </div>
+        <ul>
+          <li class=""><a href="#" class="">Inicio</a></li>
+          <li class="">
+            <a href="/Transparencia/Paginas/Transparencia-y-Acceso-a-la-Informacion-Publica.aspx">Transparencia
+              y acceso <br />
+              información pública</a>
           </li>
+          <li class="dropdown group">
+            <section class=" h-full lg:pr-4 ">
+              <a href="#" class="transition-all duration-300 ">Atención y
+                Servicios <br />
+                a la Ciudadanía</a>
 
-          <li class="sm:text-center group font-bold relative lg:h-full z-40">
-            <section
-              class="lg:h-full flex items-center hover:bg-gray-300 group-hover:bg-gray-300 transition-all ease duration-500 sm:text-center font-bold px-10 cursor-pointer">
-              <span>Transparencia y acceso <br />
-                a la informacion publica</span>
-
-              <i class="fa-solid fa-chevron-down p-2"></i>
+              <i
+                class="fa-solid fa-chevron-down transform group-hover:rotate-180 duration-500 group-hover:text-white"></i>
             </section>
 
-            <ul
-              class="w-full lg:top-[100%] lg:rounded-lg lg:z-50 z-50 lg:left-0 scale-0 hidden group-hover:flex lg:flex group-hover:scale-100 overflow-y-hidden transition-all duration-300 ease lg:absolute [&>section>li>a]:text-gray-700">
-              <section
-                class="w-full mt-[15px] lg:rounded-lg text-start p-6 flex flex-col gap-2 [&>li:hover]:bg-gray-300 [&>li:hover]:transition-all [&>li:hover]:ease [&>li:hover]:duration-500 lg:z-50 z-50 lg:bg-white lg:shadow-md [&>li]:p-1">
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-              </section>
+            <ul class="sub-menu">
+              <li><a accesskey="q" href="/Ciudadanos/Paginas/PQRD.aspx">Peticiones,
+                  Quejas, Reclamos y Denuncias</a> </li>
+
+              <li><a href="/Ciudadanos/Paginas/Estado-Tramite.aspx">Estado
+                  Tramite</a></li>
+
+              <li><a href="/Ciudadanos/Paginas/Tramites-y-Servicios.aspx">Trámites
+                  y Servicios</a> </li>
+
+              <li><a href="/Ciudadanos/Paginas/Pagos-en-Linea.aspx">Pagos
+                  en Línea</a> </li>
+
+              <li><a href="/Ciudadanos/Paginas/Servicios-de-Atencion-en-Linea.aspx">Servicio
+                  de Atención en Línea</a> </li>
+
+              <li class="dropdown">
+                <a href="#"><span>Trabaja con
+                    nosotros</span></a>
+                <i class="fa-solid fa-chevron-down"></i>
+
+                <ul class="sub-menu sub-menu-right sub-menu-left-mobile">
+                  <li><a href="/Ciudadanos/Paginas/Ofertas-Laborales.aspx">Agencia
+                      de Gestión y Colocación de
+                      Empleo</a></li>
+                  <li><a href="/Ciudadanos/Paginas/Envie-su-Hoja-de-Vida.aspx?IDRequest=6242">Envíe
+                      su Hoja de Vida</a></li>
+                </ul>
+              </li>
+              <li>
+              <li><a href="/Ciudadanos/Paginas/Notificaciones-a-Terceros.aspx">Notificaciones
+                  a Terceros</a></li>
+
+              <li><a href="/Ciudadanos/Paginas/Encuesta.aspx">Encuestas</a>
+              </li>
+
+              <li><a href="/Ciudadanos/Paginas/Mecanismos-de-Participacion-Ciudadana.aspx">Mecanismo
+                  de Participación Ciudadana</a></li>
+
+              <li><a href="/Ciudadanos/Paginas/Escribale-al-Alcalde.aspx?IDRequest=6291">Escríbale
+                  al Alcalde</a></li>
+
+              <li><a href="/Ciudadanos/PortaldeNinos/Paginas/default.aspx">Portal
+                  de Niños</a></li>
+            </ul>
+          </li>
+          <li class="dropdown group">
+            <section class=" h-full lg:pr-4 ">
+              <a href="#" class="transition-all duration-300 ">Participa</a>
+
+              <i
+                class="fa-solid fa-chevron-down transform group-hover:rotate-180 duration-500 group-hover:text-white"></i>
+            </section>
+
+            <ul class="sub-menu">
+              <li><a href="/Conectividad/Paginas/Participacion-en-Linea.aspx">Participación
+                  en Línea</a></li>
+              <li><a href="/Ciudadanos/Paginas/Servicios-de-Atencion-en-Linea.aspx">Servicios
+                  de Atención en Línea</a></li>
+              <li><a href="/Ciudadanos/Paginas/Encuesta.aspx">Encuestas</a>
+              </li>
+              <li><a href="/Conectividad/Paginas/Instancias-de-Participacion-Ciudadana.aspx">Instancias
+                  de Participación<br />
+                  Ciudadana</a></li>
+
+              <li><a href="/Conectividad/Paginas/Estadisticas-del-Sitio-Web.aspx">Estadísticas
+                  del Sitio Web</a></li>
+            </ul>
+          </li>
+          <li class="dropdown group">
+            <section class="h-full lg:pr-4">
+              <a href="#">Mi municipio</a>
+              <i class="fa-solid fa-chevron-down group-hover:rotate-180 duration-500 group-hover:text-white"></i>
+            </section>
+
+            <ul class="sub-menu">
+              <li><a href="/MiMunicipio/Paginas/Presentacion.aspx">Presentación</a>
+              </li>
+
+              <li><a accesskey="i" href="/MiMunicipio/Paginas/Informacion-del-Municipio.aspx">Información
+                  del Municipio</a></li>
+
+              <li><a href="/MiMunicipio/Paginas/Nuestros-Simbolos.aspx">Nuestros
+                  Símbolos</a></li>
+
+              <li><a href="/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx">Pasado,
+                  Presente y Futuro</a></li>
+
+              <li class="dropdown">
+                <a href="#"><span>Turismo</span></a>
+                <i class="fa-solid fa-chevron-down"></i>
+
+                <ul class="sub-menu sub-menu-left sub-menu-left-mobile">
+                  <li><a href="/MiMunicipio/Paginas/Turismo%20Donmatías.aspx">Fiestas
+                      y Celebraciones</a></li>
+
+                  <li><a href="/MiMunicipio/Paginas/Como-Llegar-al-Municipio.aspx">Cómo
+                      llegar al Municipio </a></li>
+
+                  <li><a href="/MiMunicipio/Paginas/Vias-de-Comunicacion.aspx">Vías
+                      de Comunicación</a></li>
+
+                  <li><a href="/MiMunicipio/Paginas/Sitios-de-Interes.aspx">Sitios
+                      de Interés</a></li>
+
+                  <li><a href="/MiMunicipio/Paginas/Directorio-Turistico.aspx">Directorio
+                      Turístico</a></li>
+                </ul>
+              </li>
+
+              <li><a href="/MiMunicipio/Paginas/Economia.aspx">Economía</a>
+              </li>
+
+              <li><a href="/MiMunicipio/Paginas/Ecologia.aspx">Ecología</a>
+              </li>
+
+              <li class="dropdown">
+                <a href="#"><span>Galerías</span></a>
+                <i class="fa-solid fa-chevron-down"></i>
+
+                <ul class="sub-menu sub-menu-left sub-menu-left-mobile">
+                  <li><a href="/MiMunicipio/Paginas/Galeria-de-Imagenes.aspx">Galería
+                      de Imágenes</a></li>
+
+                  <li><a href="/MiMunicipio/Paginas/Galeria-de-Mapas.aspx">Galería
+                      de Mapas</a></li>
+
+                  <li><a href="/MiMunicipio/Paginas/Galeria-de-Videos.aspx">Galería
+                      de Videos</a></li>
+
+                  <li><a href="/MiMunicipio/Paginas/Galeria-de-Audios.aspx">Galería
+                      de Audios</a></li>
+                </ul>
+              </li>
+
+              <li><a href="/MiMunicipio/Paginas/Calendario-de-Eventos.aspx">Calendario
+                  de Eventos</a></li>
             </ul>
           </li>
 
-          <li class="sm:text-center group font-bold relative lg:h-full">
-            <section
-              class="lg:h-full flex items-center hover:bg-gray-300 group-hover:bg-gray-300 transition-all ease duration-500 sm:text-center font-bold px-10 cursor-pointer">
-              <span>Atencion y servicios <br />
-                a la ciudadania</span>
-
-              <i class="fa-solid fa-chevron-down p-2"></i>
+          <li class="dropdown group">
+            <section class="h-full lg:pr-4">
+              <a href="#">Nuestra alcaldía</a>
+              <i class="fa-solid fa-chevron-down group-hover:rotate-180 duration-500 group-hover:text-white"></i>
             </section>
 
-            <ul
-              class="w-full lg:top-[100%] lg:rounded-lg lg:z-50 z-50 lg:left-0 scale-0 hidden group-hover:flex lg:flex group-hover:scale-100 overflow-y-hidden transition-all duration-300 ease lg:absolute [&>section>li>a]:text-gray-700">
-              <section
-                class="w-full mt-[15px] lg:rounded-lg text-start p-6 flex flex-col gap-2 [&>li:hover]:bg-gray-300 [&>li:hover]:transition-all [&>li:hover]:ease [&>li:hover]:duration-500 lg:z-50 z-50 lg:bg-white lg:shadow-md [&>li]:p-1">
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 2</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-                <li class="cursor-pointer">
-                  <a href="#" title="Enlace" aria-label="Enlace">Item 1</a>
-                </li>
-              </section>
+            <ul class="sub-menu">
+              <li><a href="/NuestraAlcaldia/Paginas/Mision-y-Vision.aspx">Misión
+                  Visión</a></li>
+              <li><a href="/NuestraAlcaldia/Paginas/Objetivos-y-Funciones.aspx">Objetivos
+                  y Funciones</a></li>
+
+              <li><a href="/NuestraAlcaldia/Paginas/Organigrama.aspx">Organigrama</a>
+              </li>
+
+              <li class="dropdown">
+                <a href="#"><span>Directorios</span></a>
+                <i class="fa-solid fa-chevron-down"></i>
+
+                <ul class="sub-menu sub-menu-left sub-menu-left-mobile">
+                  <li><a href="/NuestraAlcaldia/Paginas/Directorio-de-Dependencias.aspx">Directorio
+                      de Dependencias</a></li>
+
+                  <li><a href="/NuestraAlcaldia/Paginas/Directorio-de-Entidades-Descentralizadas.aspx">Entidades
+                      Descentralizadas</a></li>
+
+                  <li><a href="/NuestraAlcaldia/Paginas/Directorio-de-Agremiaciones.aspx">Directorio
+                      de Agremiaciones</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#"><span>Órganos de Control</span></a>
+                <i class="fa-solid fa-chevron-down"></i>
+
+                <ul class="sub-menu sub-menu-left sub-menu-left-mobile">
+                  <li><a href="/NuestraAlcaldia/Paginas/Personeria.aspx">Personería</a>
+                  </li>
+
+                  <li><a href="/NuestraAlcaldia/Paginas/Contraloria.aspx">Contraloría</a>
+                  </li>
+
+                  <li><a href="/NuestraAlcaldia/Paginas/Procuraduria.aspx">Procuraduría</a>
+                  </li>
+
+                  <li><a href="/NuestraAlcaldia/Paginas/Control-Interno.aspx">Control
+                      Interno</a></li>
+                </ul>
+              </li>
+
+              <li><a href="/NuestraAlcaldia/Paginas/Nuestros-Directivos-y-Funcionarios.aspx">Nuestros
+                  Directivos y <br />
+                  Funcionarios</a></li>
+
+              <li><a accesskey="n" href="/NuestraAlcaldia/Paginas/Sala-de-Prensa.aspx">Sala
+                  de prensa</a></li>
+
+              <li><a href="/NuestraAlcaldia/Paginas/Objetivos-de-Desarrollo-Sostenible.aspx">Objetivos
+                  de Desarrollo<br />
+                  Sostenible</a></li>
             </ul>
           </li>
 
-          <li class="sm:text-center font-bold group relative lg:h-full">
-            <section
-              class="lg:h-full flex items-center hover:bg-gray-300 transition-all ease duration-500 sm:text-center font-bold px-10 cursor-pointer">
-              <span>Participa</span>
-
-              <i class="fa-solid fa-chevron-down p-2"></i>
+          <li class="dropdown group">
+            <section class="h-full lg:pr-4">
+              <a href="#">Proyectos</a>
+              <i class="fa-solid fa-chevron-down group-hover:rotate-180 duration-500 group-hover:text-white"></i>
             </section>
-          </li>
 
-          <li class="sm:text-center font-bold lg:h-full">
-            <section
-              class="lg:h-full flex items-center hover:bg-gray-300 transition-all ease duration-500 sm:text-center font-bold px-10 cursor-pointer">
-              <span>Nuestra entidad</span>
+            <ul class="sub-menu">
+              <li><a href="/Proyectos/Paginas/Proyectos-Vigentes.aspx">Proyectos
+                  Vigentes</a></li>
 
-              <i class="fa-solid fa-chevron-down p-2"></i>
-            </section>
-          </li>
-
-          <li
-            class="lg:h-full flex items-center hover:bg-gray-300 transition-all ease duration-500 sm:text-center font-bold px-10">
-            <a href="" title="Enlace" aria-label="Enlace">Noticias</a>
+              <li><a href="/Proyectos/Paginas/Portal-Unico-de-Contratacion.aspx">Portal
+                  Único de Contratación</a></li>
+            </ul>
           </li>
         </ul>
+        </li>
+
+        </ul>
+      </nav>
+      <section class="container py-2 lg:py-0">
+        <div class="header-right">
+          <button type="button" class="open-menu-btn">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </button>
+        </div>
       </section>
-    </nav>
+    </section>
+
+    <!--! nav  -->
   </header>
-  <!--Header-->
-
-  <!-- main  -->
-
+  <!--!! main  -->
   <main>
-    <!-- Start SliderHome -->
-    <section id="image-carousel" class="splide  flex mb-5 justify-center items-center mt-[2rem] w-4/5 lg:container mx-auto lg:px-0" aria-label="Beautiful Images">
-      <div class="splide__track container mx-auto">
-        <ul class="splide__list h-56 lg:h-64 xl:h-400">
-          <li class="splide__slide">
+    <!--!! Start SliderHome -->
+    <section id="image-carousel"
+      class="splide  flex mb-5 justify-center w-full items-center mt-2 xl:container mx-auto lg:px-0"
+      aria-label="Beautiful Images">
+      <div class="splide__track">
+        <ul class="splide__list h-56 w-full md:h-[450px]">
+          <a href="" class="splide__slide">
             <img src="./assets/img/slider-1.avif" alt="" class="w-full h-full">
-          </li>
-          <li class="splide__slide">
-            <img src="./assets/img/slider-2.webp" alt="" class="w-full h-full">
-          </li>
-          <li class="splide__slide">
-            <img src="./assets/img/slider-3.jpeg" alt="" class="w-full h-full">
-          </li>
+          </a>
+          <a href="" class="splide__slide">
+            <img src="./assets/img/jupiter.avif" alt="" class="w-full h-full">
+          </a>
+          <a href="" class="splide__slide">
+            <img src="./assets/img/nebulosa-carina.webp" alt="" class="w-full h-full">
+          </a>
+          <a href="" class="splide__slide">
+            <img src="./assets/img/bandera-colombia.jpg" alt="" class="w-full h-full">
+          </a>
         </ul>
       </div>
-    </section>
-    <!-- End SliderHome -->
-  
-    <!-- Start section encuesta de satisfaction and Zona de pagos -->
-    <section class="w-4/5 h-auto mb-5 flex justify-center items-center flex-col gap-6 flex-wrap sm:flex-row md:justify-between md:flex-nowrap lg:full lg:container mx-auto lg:h-56 lg:px-0">
+      <section class="splide__arrows"></section>
 
-      <div class="encuesta w-full h-32 md:w-1/2  flex justify-between items-center flex-row bg-greenCardServices rounded-xl">
-        <div class="w-full h-full p-2 flex items-center  gap-5">
+
+      <article
+        class="absolute bg-secondColor flex items-center bottom-0 justify-center px-6 lg:px-10 h-10 lg:h-12 rounded-t-lg">
+        <button class="splide__toggle" type="button">
+          <span class="text-primaryColor text-xl font-semibold splide__toggle__play">Iniciar
+            <i class="fa-solid fa-play"></i>
+          </span>
+          <span class="text-primaryColor text-xl font-semibold splide__toggle__pause">Pausar
+            <i class="fa-solid fa-pause"></i>
+          </span>
+        </button>
+        <ul class="splide__pagination relative !bottom-auto z-0"></ul>
+      </article>
+
+    </section>
+    <!--!! End SliderHome -->
+
+    <!--!! Start section encuesta de satisfaction and Zona de pagos -->
+    <section
+      class="full px-5 h-auto mb-10 flex justify-center items-center flex-col gap-6 flex-wrap sm:flex-row md:justify-between md:flex-nowrap lg:full lg:container mx-auto lg:h-56 lg:px-0">
+
+      <div class="encuesta w-full h-40 md:w-1/2  flex justify-between items-center flex-row bg-primaryColor rounded-xl">
+        <div class="w-full h-full pl-5 flex items-center  gap-2 lg:gap-10 lg:pl-20">
           <img src="./assets/icons/icono-encuesta.svg" alt="">
-          <div class="text-xl text-white text-left lg:text-left">
+          <div class="text-lg text-white text-left lg:text-xl">
             <h3 class="font-bold">ENCUESTA DE</h3>
-            <p class="">SATISFACCIÓN<p>
+            <p class="">SATISFACCIÓN
+            <p>
           </div>
         </div>
-        <a href=""class="inline-block justify-center transition-all ease duration-500 rounded-tr-xl rounded-br-xl flex items-center  bg-lightGreen w-1/5 h-full" ><i class="fa-solid fa-chevron-right text-6xl text-center" style="color: #ffffff;"></i></a>
+        <a href=""
+          class="inline-block justify-center transition-all ease duration-500 rounded-tr-xl rounded-br-xl flex items-center  bg-thirdColor w-1/5 h-full"><i
+            class="fa-solid fa-chevron-right text-6xl text-center" style="color: #ffffff;"></i></a>
       </div>
-        
-      <div class="pagos w-full h-32 flex justify-between items-center flex-row bg-greenCardServices rounded-xl md:w-1/2 ">
-        <div class="w-full h-full p-2 flex items-center  gap-5">
+
+      <div class="pagos w-full h-40 flex justify-between items-center flex-row bg-primaryColor rounded-xl md:w-1/2 ">
+        <div class="w-full h-full pl-5 flex items-center  gap-2 lg:gap-10 lg:pl-20">
           <img src="./assets/icons/icono-zona-pagos.svg" alt="">
-          <div class="text-xl text-white text-left lg:text-left">
+          <div class="text-lg text-white text-left lg:text-xl">
             <h3 class="font-bold">ZONA DE</h3>
-            <p class="">PAGOS<p>
+            <p class="">PAGOS
+            <p>
           </div>
         </div>
-        <a href="" class="inline-block justify-center transition-all ease duration-500 rounded-tr-xl rounded-br-xl items-center flex bg-lightGreen w-1/5 h-full"  ><i class="fa-solid fa-chevron-right text-6xl text-center" style="color: #ffffff;"></i></a>
+        <a href=""
+          class="inline-block justify-center transition-all ease duration-500 rounded-tr-xl rounded-br-xl items-center flex bg-thirdColor w-1/5 h-full"><i
+            class="fa-solid fa-chevron-right text-6xl text-center" style="color: #ffffff;"></i></a>
       </div>
     </section>
-    <!-- End section encuesta de satisfaction and Zona de pagos -->
+    <!--!! End section encuesta de satisfaction and Zona de pagos -->
 
 
-    <!-- Start Section Bienvenida -->
-    <section class="w-4/5 m-auto h-auto lg:w-full lg:px-0 text-center mb-5">
-      <h1 class="text-greenFooter font-bold text-5xl">!Bienvenidos¡</h1>
-      <h5 class="text-black text-4xl m-5">ALCALDÍA DE...</h5>
-      <p class="w-full text-center m-auto lg:w-1/3">Realice de manera ágil y segura sus trámites en , sin filas
+    <!--!! Start Section Bienvenida -->
+    <section class="w-4/5 m-auto h-auto lg:w-full text-center mt-20 mb-5">
+      <h1 class="text-primaryColor font-semibold text-4xl h-auto lg:text-5xl">!Bienvenidos¡</h1>
+      <h5 class="text-black text-3xl m-5">ALCALDÍA DE...</h5>
+      <p class="w-full text-xl text-center m-auto lg:w-1/3">Realice de manera ágil y segura sus trámites en , sin filas
         ni congestiones en lugares públicos.</p>
-        <br>
-      <p>En este espacio brindamos atención a sus solicitudes.</p>
+      <br>
+      <p class="text-xl">En este espacio brindamos atención a sus solicitudes.</p>
     </section>
-    <!-- End Section Bienvenida -->
+    <!--!! End Section Bienvenida -->
 
 
-    <!-- Start Section Enlaces de Interes -->
-    <section class="enlaces__interes w-4/5 lg:w-full h-auto flex flex-col justify-center items-center mb-20 mt-10 lg:container mx-auto lg:px-0">
-      <h1 class="text-greenFooter text-5xl w-full h-auto mb-10 mt-10 text-center">Enlaces de interés</h1>
+    <!--!! Start Section Enlaces de Interes -->
+    <section
+      class="enlaces__interes w-4/5 lg:w-full h-auto flex flex-col justify-center items-center mb-20 mt-10 lg:container mx-auto lg:px-0">
+      <h1 class="text-primaryColor text-4xl w-full h-auto mb-10 mt-10 text-center">Enlaces de interés</h1>
       <div class="contenedor__enlaces w-full flex flex-row flex-wrap justify-center gap-10 items-center">
-        <a href="" class="enlace__interes inline-block w-full lg:w-cardsWidth h-cardsHeight bg-bgSectionServices flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5">
-          <div class="w-32 h-32 rounded-full bg-gray-800 text-center text-5xl flex items-center justify-center relagive z-50">
+        <a href=""
+          class="enlace__interes inline-block w-full lg:w-cardsWidth h-cardsHeight bg-secondColor flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5">
+          <div
+            class="w-32 h-32 rounded-full bg-gray-800 text-center text-5xl flex items-center justify-center relagive z-50">
             <img src="./assets/icons/icono-impuesto-predial.svg" alt="">
           </div>
           <p class="relative z-50 text-lg text-center font-semibold rounded-lg">IMPUESTO PREDIAL</p>
-          <span class="after-vertical w-full h-full bg-lightGreen left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-thirdColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__interes inline-block w-full lg:w-cardsWidth h-cardsHeight bg-bgSectionServices flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5">
-          <div class="w-32 h-32 rounded-full bg-gray-800 text-center text-5xl flex items-center justify-center relagive z-50">
+        <a href=""
+          class="enlace__interes inline-block w-full lg:w-cardsWidth h-cardsHeight bg-secondColor flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5">
+          <div
+            class="w-32 h-32 rounded-full bg-gray-800 text-center text-5xl flex items-center justify-center relagive z-50">
             <img src="./assets/icons/icono-tramites-y-servicios.svg" alt="">
           </div>
           <p class="relative z-50 text-lg text-center font-semibold rounded-lg">TRÁMITES Y SERVICIOS</p>
-          <span class="after-vertical w-full h-full bg-lightGreen left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-thirdColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__interes inline-block w-full lg:w-cardsWidth h-cardsHeight bg-bgSectionServices flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5">
-          <div class="w-32 h-32 rounded-full bg-gray-800 text-center text-5xl flex items-center justify-center relagive z-50">
-          <img src="./assets/icons/icono-contratacion.svg" alt="">
+        <a href=""
+          class="enlace__interes inline-block w-full lg:w-cardsWidth h-cardsHeight bg-secondColor flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5">
+          <div
+            class="w-32 h-32 rounded-full bg-gray-800 text-center text-5xl flex items-center justify-center relagive z-50">
+            <img src="./assets/icons/icono-contratacion.svg" alt="">
           </div>
           <p class="relative z-50 text-lg text-center font-semibold rounded-lg">CONTRATACIÓN</p>
-          <span class="after-vertical w-full h-full bg-lightGreen left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-thirdColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__interes inline-block w-full lg:w-cardsWidth h-cardsHeight bg-bgSectionServices flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5">
-          <div class="w-32 h-32 rounded-full bg-gray-800 text-center text-5xl flex items-center justify-center relagive z-50">
+        <a href=""
+          class="enlace__interes inline-block w-full lg:w-cardsWidth h-cardsHeight bg-secondColor flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5">
+          <div
+            class="w-32 h-32 rounded-full bg-gray-800 text-center text-5xl flex items-center justify-center relagive z-50">
             <img src="./assets/icons/icono-industria-y-comercio.svg" alt="">
           </div>
           <p class="relative z-50 text-lg text-center font-semibold rounded-lg">INDUSTRIA Y COMERCIO</p>
-          <span class="after-vertical w-full h-full bg-lightGreen left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-thirdColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-       
+
       </div>
     </section>
-    <!-- End enlaces de interes -->
+    <!--!! End enlaces de interes -->
 
 
-    <!-- Start section services -->
-    <section class="w-full h-auto bg-bgSectionServices flex flex-col justify-center items-center relative mb-20 pb-24 pt-10 xl:h-containerServices">
-      <h1 class="text-greenFooter inline-block p-5 text-5xl h-auto text-center relative -top-5 inline-block">Servicio al ciudadano</h1>
-      <div class="contenedor__enlaces w-4/5 h-full m-auto flex flex-row flex-wrap gap-10 justify-center  lg:container mx-auto lg:m-auto">
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-pqrsd.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-pqrsd-white.svg')] "></div>
+    <!--!! Start section services -->
+    <section
+      class="w-full h-auto bg-secondColor flex flex-col justify-center items-center relative mb-20 pb-24 pt-10 xl:h-containerServices">
+      <h1 class="text-primaryColor inline-block p-5 text-5xl h-auto text-center relative -top-5 inline-block">Servicio
+        al ciudadano</h1>
+      <div
+        class="contenedor__enlaces w-4/5 h-full m-auto flex flex-row flex-wrap gap-10 justify-center  lg:container mx-auto lg:m-auto">
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-pqrsd.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-pqrsd-white.svg')] ">
+            </div>
             <p class="w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">PQRSD</p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
 
 
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-transparencia.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-transparencia-white.svg')]"></div>
-            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">TRANSPARENCIA Y ACCESO A LA INFORMACIÓN PÚBLICA</p>
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-transparencia.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-transparencia-white.svg')]">
+            </div>
+            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">TRANSPARENCIA Y ACCESO
+              A LA INFORMACIÓN PÚBLICA</p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-portal-tributario.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-portal-tributario-white.svg')]"></div>
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-portal-tributario.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-portal-tributario-white.svg')]">
+            </div>
             <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">PORTAL TRIBUTARIO</p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-tramites-y-servicios.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-tramites-y-servicios-white.svg')]"></div>
-            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">TRÁMITES Y SERVICIOS</p>
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-tramites-y-servicios.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-tramites-y-servicios-white.svg')]">
+            </div>
+            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">TRÁMITES Y SERVICIOS
+            </p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-nuestro-alcalde.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-nuestro-alcalde-white.svg')]"></div>
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-nuestro-alcalde.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-nuestro-alcalde-white.svg')]">
+            </div>
             <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">NUESTRO ALCALDE</p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-presupuesto-y-finanza.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-presupuesto-y-finanza-white.svg')]"></div>
-            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">PRESUPUESTO Y FINANZAS</p>
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-presupuesto-y-finanza.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-presupuesto-y-finanza-white.svg')]">
+            </div>
+            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">PRESUPUESTO Y FINANZAS
+            </p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-nuestro-municipio.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-nuestro-municipio-white.svg')]"></div>
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-nuestro-municipio.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-nuestro-municipio-white.svg')]">
+            </div>
             <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">NUESTRO MUNICIPIO</p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-gavinete.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-gavinete-white.svg')]"></div>
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-gavinete.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-gavinete-white.svg')]">
+            </div>
             <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">NUESTRO GAVINETE</p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-emprendimiento.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-emprendimiento-white.svg')]"></div>
-            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">RED DE EMPRENDIMIENTO MUNICIPAL</p>
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-emprendimiento.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-emprendimiento-white.svg')]">
+            </div>
+            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">RED DE EMPRENDIMIENTO
+              MUNICIPAL</p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-portal-ninos.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-portal-ninos-white.svg')]"></div>
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-portal-ninos.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-portal-ninos-white.svg')]">
+            </div>
             <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">PORTAL NIÑOS</p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-proyectos.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-proyectos-white.svg')]"></div>
-            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">PROYECTOS QUE AVANZAN</p>
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-proyectos.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-proyectos-white.svg')]">
+            </div>
+            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">PROYECTOS QUE AVANZAN
+            </p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
-        <a href="" class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
-          <div class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
-            <div class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-rendicion-de-cuentas.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-rendicion-de-cuentas-white.svg')]"></div>
-            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">RENDICIÓN DE CUENTAS</p>
+        <a href=""
+          class="enlace__servicio group inline-block  w-full h-cardsHeight bg-white flex flex-col gap-10 justify-center items-center rounded-lg relative sm:w-4/6 md:w-2/5 lg:w-cardsWidth">
+          <div
+            class="w-full h-full text-center gap-5 p-5 flex m-auto flex-col items-center justify-center relagive z-50">
+            <div
+              class="icono__servicio w-full h-1/2 m-auto flex items-center justify-center m-auto bg-[url('./assets/icons/services/icono-rendicion-de-cuentas.svg')] bg-no-repeat bg-contain bg-center group-hover:bg-[url('./assets/icons/services/icono-rendicion-de-cuentas-white.svg')]">
+            </div>
+            <p class=" w-full h-1/3 relative z-50 text-center text-base font-semibold rounded-lg">RENDICIÓN DE CUENTAS
+            </p>
           </div>
-          <span class="after-vertical w-full h-full bg-greenCardServices left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
+          <span
+            class="after-vertical w-full h-full bg-primaryColor left-0 right-0 rounded-lg absolute z-10 transition-all duration-500"></span>
         </a>
       </div>
     </section>
-    <!-- End section services -->
+    <!--!! End section services -->
 
-    <!-- Start section news-->
-    <section class=" h-heightNews w-4/5 mb-20 p-10 flex flex-col items-center lg:container mx-auto ">
-      
-      <div class="first__new transition-all duration-500 h-auto w-4/5 md:px-10 md:py-5 rounded-lg bg-greenCardServices lg:bg-white lg:w-full flex justify-center items-center relative flex-col gap-10 lg:h-heightFirstNew  lg:flex-row">
-        
-        <div class="image__new w-639 transition-all duration-500 relative ma-auto rounded-none h-1/2 relative top-4 flex items-center flex-col justify-center lg:top-0 lg:relative z-50 rounded-md lg:left-10 lg:scale-x-110 lg:flex-row lg:w-1/2 lg:h-4/5">
-          <h4 class="text-4xl w-64 p-2 text-greenCardServices absolute -top-24 left-0 lg:left-0 lg:-top-16 ">Noticias</h4>
-          <img src="./assets/img/imagen-primera-noticia.png" alt="" class="w-full shadow-md shadow-black object-cover  lg:rounded-md md:h-95% lg:h-full ">
+    <!--!! Start section news-->
+    <section class=" h-auto w-full px-10 mb-5 p-10 flex flex-col items-center relative lg:container lg:px-5 mx-auto ">
+
+      <div
+        class="first__new transition-all duration-500 h-auto w-full md:w-4/5 rounded-lg bg-primaryColor mb-20 lg:bg-white lg:w-full flex justify-center items-center relative flex-col gap-10 lg:h-heightFirstNew  lg:flex-row">
+
+        <div class="image__new w-full transition-all duration-500 scale-x-110 relative top-10 ma-auto  h-1/2  flex items-center flex-col justify-center lg:top-0 lg:relative z-50 rounded-md lg:translate-x-5 lg:flex-row lg:w-1/2 lg:h-4/5">
+          <h4 class="text-4xl w-64 p-2 text-primaryColor absolute -top-28 left-8 lg:left-0 lg:-top-16 ">Noticias</h4>
+          <img src="./assets/img/imagen-primera-noticia.png" alt="" class="w-full shadow-md shadow-black object-cover rounded-t-md lg:rounded-md lg:h-full ">
         </div>
-        <div class="texts__new transition-all duration-500 w-full h-auto p-4 relative bg-greenCardServices relative rounded-md flex lg:bottom-0 lg:py-12 justify-center items-center lg:h-full lg:scale-x-110  lg:right-10  lg:w-1/2 lg:pl-20">
-          <div class="content_texts h-auto w-full  m-auto flex flex-col items-start justify-evenly gap-4 lg:w-95% xl:h-full xl:pl-10">
-            <span class="bg-yellow-500 text-black w-32 h-10 text-xs text-center flex items-center font-medium me-2 px-2.5">Febrero 30, 2023</span>
-            <h4 class="title__new w-full text-white text-2xl">
-              Lorem Ipsum is simply 
-              dummy text of the printing 
-              and typesetting industry. 
-            </h4>
+        <div class="texts__new pt-10 transition-all duration-500 w-full h-auto p-4 relative bg-primaryColor  rounded-md flex lg:bottom-0 lg:py-12 justify-center items-center lg:h-full lg:scale-x-110  lg:-translate-x-5  lg:w-1/2 lg:pl-20">
+          <div class="content_texts h-auto w-full  m-auto flex flex-col items-start justify-evenly lg:w-95% xl:h-full xl:pl-4">
+
+            <div>
+
+              <span class="bg-yellow-500 -tr text-black w-40 h-12 text-md text-center flex items-center font-medium me-2 px-2.5">Febrero  30, 2023</span>
+              <h4 class="title__new -tr w-full text-white mt-4 text-2xl">
+                Lorem Ipsum is simply
+                dummy text of the printing
+                and typesetting industry.
+              </h4>
+            </div>
+
             <p class="description__new w-full text-white text-xl">
-              Lorem Ipsum is simply dummy text of the 
-              printing and typesetting industry. Lorem Ipsum 
-              has been the industry's standard dummy text 
-              ever since the 1500s, when an unknown printer 
-              took a galley of type and scrambled it to make a 
-              type specimen book. It has survived not only 
-              five centuries, but also the leap into electronic 
-              typesetting, remaining essentially unchanged. 
+              Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum
+              has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer
+              took a galley of type and scrambled it to make a
+              type specimen book. It has survived not only
+              five centuries, but also the leap into electronic
+              typesetting, remaining essentially unchanged.
             </p>
-            <a href="" class="more h-10 w-40 inline-block bg-white flex items-start justify-between hover:bg-gray-100 text-gray-800 font-semibold shadow">
-              <span class="icono__ver_mas-noticias bg-lightGreen w-12 h-full flex justify-center text-center">
-                <img src="./assets/icons/icono-ver-mas-noticias.svg"  class="h-1/2 w-1/2 m-auto" alt="">
+            <a href=""
+              class="more h-12 w-48 inline-block bg-white flex items-start justify-between hover:bg-gray-100 text-gray-800 font-semibold shadow">
+              <span class="icono__ver_mas-noticias bg-thirdColor w-12 h-full flex justify-center text-center">
+                <img src="./assets/icons/icono-ver-mas-noticias.svg" class="h-1/2 w-1/2 m-auto" alt="">
               </span>
-              <h6 class="text-greenFooter text-center px-2 text-center m-auto">Conoce más</h6>
+              <h6 class="text-primaryColor w-full block text-center px-2 text-center m-auto">Conoce más</h6>
             </a>
           </div>
-        </div>  
+        </div>
       </div>
 
 
-      <div class="oter__news">
+      <div class="oter__news w-full h-auto flex justify-center items-center flex-wrap gap-10">
+        <div class="max-w-md p-2 bg-white border border-gray-200 rounded-xl shadow relative">
+          <figure class=" w-full">
+            <img class="rounded-t-lg w-full" src="./assets/img/noticia02.png" alt="" />
+          </figure>
+          <span
+            class="date absolute top-0 h-12 w-62 mt-2 text-center rounded-tl-xl bg-primaryColor text-white font-bold p-4">Enero
+            30. 2024</span>
+          <div class="p-5">
+
+            <p class="mb-3 text-black font-semibold py-10">Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the...</p>
+            <a href=""
+              class="more h-10 w-48 inline-block bg-white flex items-start justify-between hover:bg-gray-100 text-gray-800 font-semibold shadow">
+              <span class="icono__ver_mas-noticias bg-primaryColor w-12 h-full flex justify-center text-center">
+                <img src="./assets/icons/icono-ver-mas-noticias.svg" class="h-1/2 w-1/2 m-auto" alt="">
+              </span>
+              <h6 class="text-primaryColor w-full block text-center px-2 text-center m-auto">Conoce más</h6>
+            </a>
+          </div>
+        </div>
+        <div class="max-w-md p-2 bg-white border border-gray-200 rounded-xl shadow relative">
+          <figure class=" w-full">
+            <img class="rounded-t-lg w-full" src="./assets/img/noticia03.png" alt="" />
+          </figure>
+          <span
+            class="date absolute top-0 h-12 w-62 mt-2 text-center rounded-tl-xl bg-primaryColor text-white font-bold p-4">Enero
+            30. 2024</span>
+          <div class="p-5">
+
+            <p class="mb-3 text-black font-semibold py-10">Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the...</p>
+            <a href=""
+              class="more h-10 w-48 inline-block bg-white flex items-start justify-between hover:bg-gray-100 text-gray-800 font-semibold shadow">
+              <span class="icono__ver_mas-noticias bg-primaryColor w-12 h-full flex justify-center text-center">
+                <img src="./assets/icons/icono-ver-mas-noticias.svg" class="h-1/2 w-1/2 m-auto" alt="">
+              </span>
+              <h6 class="text-primaryColor w-full block text-center px-2 text-center m-auto">Conoce más</h6>
+            </a>
+          </div>
+        </div>
+        <div class="max-w-md p-2 bg-white border border-gray-200 rounded-xl shadow relative">
+          <figure class=" w-full">
+            <img class="rounded-t-lg w-full" src="./assets/img/noticia04.png" alt="" />
+          </figure>
+          <span
+            class="date absolute top-0 h-12 w-62 mt-2 text-center rounded-tl-xl bg-primaryColor text-white font-bold p-4">Enero
+            30. 2024</span>
+          <div class="p-5">
+
+            <p class="mb-3 text-black font-semibold py-10">Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the...</p>
+            <a href=""
+              class="more h-10 w-48 inline-block bg-white flex items-start justify-between hover:bg-gray-100 text-gray-800 font-semibold shadow">
+              <span class="icono__ver_mas-noticias bg-primaryColor w-12 h-full flex justify-center text-center">
+                <img src="./assets/icons/icono-ver-mas-noticias.svg" class="h-1/2 w-1/2 m-auto" alt="">
+              </span>
+              <h6 class="text-primaryColor w-full block text-center px-2 text-center m-auto">Conoce más</h6>
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+      <article class="w-full h-32 my-10 p-4 p-white lg:px-8 ">
+        <div class="full bg-primaryColor m-auto w-full rounded-xl h-4/5 flex items-center justify-center">
+          <a href="#" class="inline-block w-fu7l text-center flex m-auto justify-center items-center p-2 lg:w-1/2">
+            <figure class="w-12  h-12 inline bg-white rounded-full flex items-center justify-center p-2">
+              <img src="./assets/icons/icono-ver-mas-noticias2.svg" class="full w-full" alt="">
+            </figure>
+            <span class="text-lg text-white w-1/2 font-semibold mx-5 lg:w-auto">VER MÁS NOTICIAS</span>
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <!--!! End section news-->
+
+    <!--!! Start section social media -->
+
+    <!--!! Video destacado -->
+    <section class="w-full h-auto mb-20  lg:container mx-auto">
+
+      <article class="w-full h-auto mb-10 min-h-[650px] px-2 lg:px-12 bg-secondColor m-auto lg:rounded-xl lg:w-4/5">
+        <div class="w-full h-20 px-4 flex justify-between items-center gap-2">
+          <div class="w-1/2 h-4/5 md:w-1/3 ">
+            <a href="#"
+              class="inline w-full m-auto h-auto text-center font-semibold text-primaryColor pt-3 text-lg lg:text-2xl pl-4 flex justify-start flex-nowrap items-center gap-2">
+              <img src="./assets/icons/icono-youtube.svg" class="min-w-10 h-10">
+              <span>Youtube</span>
+
+            </a>
+          </div>
+          <div class="w-1/2 h-4/5 md:w-1/3 ">
+            <a href="#"
+              class="inline w-full m-auto h-full text-center font-semibold text-primaryColor text-lg lg:text-2xl pl-4 flex justify-end pr-4 flex-nowrap items-center gap-2">
+              <img src="./assets/icons/icono-ver-mas-videos.svg" class="min-w-10 h-10">
+              <span class="w-fit"> Más videos</span>
+            </a>
+          </div>
+
+        </div>
+        <div class="video__texts full lg:px-10 h-auto m-auto">
+          <figure class="border-t-8 border-t-xl border-thirdColor h-auto w-full">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/pZdyLIBC77M?si=GjyxqS8wAI3LgmZb"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </figure>
+          <div class="text__description px-[20px] py-2 ">
+            <h3 class="w-fit font-bold my-2">Alcaldia Municipal de ...</h3>
+            <span class="font-semibold w-fit">639 suscriptores</span>
+            <p class="paragraph my-2">Somos una tierra de héroes, el bastión de una región de vida y prosperidad,
+              herencia
+              de lucha y tradición. El Municipio dio el primer paso en la historia para construir una región de
+              liderazgo.... </p>
+          </div>
+        </div>
+      </article>
+
+      <!--! Facebook twitter  -->
+      <article
+        class="facebook w-full h-auto min-h-[400px] flex fle-col flex-wrap  sm:flex-nowrap justify-center gap-5 px-2 m-auto lg:w-4/5">
+        <div class="facebook w-4/5 sm:w-1/2 h-auto relative rounded-xl border-solid border-2 border-gray-200 ">
+          <p
+            class="w-full mb-5 sm:full lg:w-1/2 bg-primaryColor h-16 relative px left-0 rounded-tr-xl rounded-tl-xl text-2xl flex items-center gap-5 text-white text-start pl-5">
+            <i class="fa-brands fa-square-facebook text-4xl"></i>
+            Facebook
+          </p>
+
+          <div class="h-auto max-h-[600px] overflow-y-auto w-ful px-4 m-auto text-black">
+            <iframe
+              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FNASA%2Fposts%2Fpfbid02AiWat6S4LnMdWDEborqaWuv3XxZ3vtMbKNUtNGsZc19HGKct55psUWxCCPB28RQtl&show_text=true&width=500"
+              width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
+        </div>
+
+        <div class="twitter w-4/5 sm:w-1/2 lgw- h-auto  relative rounded-xl border-solid border-2 border-gray-200 ">
+          <p
+            class="w-full mb-5 sm:w-full lg:w-1/2 bg-thirdColor h-16 relative left-0 rounded-tr-xl rounded-tl-xl text-2xl flex items-center gap-5 text-white text-start pl-5">
+            <i class="fa-brands fa-square-x-twitter text-4xl"></i>
+          </p>
+          <div class=" h-auto max-h-[600px] overflow-y-auto w-ful px-4 m-auto">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">NASA and <a
+                  href="https://twitter.com/Int_Machines?ref_src=twsrc%5Etfw">@Int_Machines</a> will discuss highlights
+                from the IM-1 mission that carried six NASA science instruments to the Moon. Tune in at 2pm (1900 UTC)
+                on Feb. 28: <a href="https://t.co/YeRHdCVEyM">https://t.co/YeRHdCVEyM</a><br><br>Media: RSVP by 11am EST
+                (1600 UTC) Feb. 28 to participate in person. <a
+                  href="https://t.co/vg4QFJgcmE">pic.twitter.com/vg4QFJgcmE</a></p>&mdash; NASA (@NASA) <a
+                href="https://twitter.com/NASA/status/1762561704850776467?ref_src=twsrc%5Etfw">February 27, 2024</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </article>
+
+    </section>
+    <!--! End section Social Media -->
+
+    <!--! Start section Events-->
+    <section class="w-4/5 m-auto mb-10 h-auto lg:container px-0">
+      <h1
+        class="title h-36 text-4xl text-center bg-primaryColor text-white flex items-center justify-center relative w-full -z-10 font-medium">
+        Programación General</h1>
+      <section
+        class="w-full px-0 lg:px-4 h-auto flex gap-10 flex-col relative lg:flex-row m-auto items-center justify-center">
+
+        <div class="w-full lg:w-4/5 xl:w-1/3 h-auto min-h-[550px] relative -top-8 rounded-md">
+          <figure class="bg-yellow-500 w-full h-12 block flex items-center px-4 rounded-t-md">
+            <img src="./assets/icons/icono-calendario.svg" class="h-auto w-10 my-auto" alt="icono de calendario">
+            <span class="text-2xl font-bold ml-5 text-[#173e71]"> AGOSTO</span>
+          </figure>
+          <section class="w-full p-2 h-auto flex flex-wrap gap-4 items-center justify-evenly">
+            <a href="#" class="inline-block w-[170px] h-[150px] ">
+              <h3 class="text-3xl font-semibold text-[#173e71]">06</h3>
+              <p class="font-medium text-[#919292]">Lorem Ipsum is simply dummy
+                text of the printing and
+                typesetting industry.
+              </p>
+            </a>
+            <a href="#" class="inline-block w-[170px] ">
+              <h3 class="text-3xl font-semibold text-[#173e71]">06</h3>
+              <p class="font-medium text-[#919292]">Lorem Ipsum is simply dummy
+                text of the printing and
+                typesetting industry.
+              </p>
+            </a>
+            <a href="#" class="inline-block w-[170px] ">
+              <h3 class="text-3xl font-semibold text-[#173e71]">06</h3>
+              <p class="font-medium text-[#919292]">Lorem Ipsum is simply dummy
+                text of the printing and
+                typesetting industry.
+              </p>
+            </a>
+            <a href="#" class="inline-block w-[170px] ">
+              <h3 class="text-3xl font-semibold text-[#173e71]">06</h3>
+              <p class="font-medium text-[#919292]">Lorem Ipsum is simply dummy
+                text of the printing and
+                typesetting industry.
+              </p>
+            </a>
+            <a href="#" class="inline-block w-[170px] ">
+              <h3 class="text-3xl font-semibold text-[#173e71]">06</h3>
+              <p class="font-medium text-[#919292]">Lorem Ipsum is simply dummy
+                text of the printing and
+                typesetting industry.
+              </p>
+            </a>
+            <a href="#" class="inline-block w-[170px] ">
+              <h3 class="text-3xl font-semibold text-[#173e71]">06</h3>
+              <p class="font-medium text-[#919292]">Lorem Ipsum is simply dummy
+                text of the printing and
+                typesetting industry.
+              </p>
+            </a>
+
+          </section>
+        </div>
+
+        <div
+          class="w-full lg:w-1/2 xl:w-1/3 relative h-auto min-h-[550px] relative md:-top-24 lg:-top-8 shadow shadow-lg shadow-gray-400 p-4 bg-white rounded-md flex items-center flex-col justify-center transition-all duration-300">
+          <figure class="w-full h-52 relative">
+            <img src="./assets/img/evento.PNG" class=" w-full h-full object-cover" alt="">
+          </figure>
+          <section class="w-full  h-auto min-h-64 px-4 mt-4">
+            <div class="inline-block w-full flex flex-row justify-center gap-5 mb-2">
+              <h3 class="text-3xl font-semibold text-[#173e71]" text-center>06</h3>
+              <p class="font-semibold text-[#173e71]">Lorem Ipsum is simply dummy
+                text of the printing and
+                typesetting industry.
+              </p>
+            </div>
+            <div class="description">
+              <h5 class="w-fit text-[#d5006c] font-semibold text-sm">DESCRIPCIÓN</h5>
+              <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, distinctio tenetur.</p>
+              <p class="block">
+                <i class="fa-solid fa-location-dot" style="color: #d5006c;"></i>
+                Direccion: calle 9 No. 237, tu direccion
+                </pp>
+              <p class="font-medium" class="block">
+                <i class="fa-solid fa-phone" style="color: #d5006c;"></i>
+                PBX: (+57)33333333333
+              </p>
+              <p class="font-medium" class="block">
+                <i class="fa-regular fa-envelope" style="color: #d5006c;"></i>
+                Email: contactenos@email.gov.co
+              </p>
+              <p class="font-medium" class="block">
+                <i class="fa-regular fa-clock" style="color: #d5006c;"></i>
+                Horario: 00: 00: 00
+              </p>
+
+            </div>
+          </section>
+        </div>
+
+      </section>
+    </section>
+    <!--!En section Events -->
+    <!--! Banner Bancolombia-->
+    <section class="w-full lg:container my-10 mx-auto py-10 lg:px-16">
+      <img class="w-full shadow-md" src="./assets/img/banner_bancolombia_v2.jpg" alt="Imagen">
+    </section>
+    <!--! Banner Bancolombia-->
+
+    <!--! Start section patrocinadores -->
+    <div class="w-full p-14 lg:container mx-auto relative overflow-hidden transition-all duration-500">
+      <div class="splide-wrapper">
+        <section class="splide patrocinadores w-full relative" aria-labelledby="multiple-slides-heading">
+          <div class="splide__track overflow-hidden relative z-0 px-0">
+            <ul class="splide__list" id="slider__patrocinadores">
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/2.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/3.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/4.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/5.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/6.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/7.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/8.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/9.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/10.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/11.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/12.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/13.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/15.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/17.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/18.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/19.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/20.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/21.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/22.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/23.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/24.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/27.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/28.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/29.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/30.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/31.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/32.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/33.webp" alt="Imagen">
+              </a>
+              <a href="#" class="splide__slide">
+                <img src="./assets/img/patrocinadores/logos/37.webp" alt="Imagen">
+              </a>
+
+              <!--!Aqui se carga el resto de categorias-->
+            </ul>
+          </div>
+
+          <section class="splide__arrows"></section>
+        </section>
+      </div>
+    </div>
+    <!--! End patrocinadores -->
+    <!--! Banner envia tu correo-->
+    <section class="w-full h-auto m-auto flex flex-col lg:container items-center justify-center  mt-16">
+      <figure class="w-full">
+        <img src="./assets/img/banner-envia-tu-correo.png" alt="" class="w-full h-full object-cover">
+      </figure>
+      <div class="h-12 w-full bg-primaryColor">
 
       </div>
     </section>
+    <!-- ! Mapa-->
+    <section class="w-full lg:container mx-auto mb-20">
 
-    <!-- End section news-->
-  </main>  
 
-  <!-- main  -->
+      <!--!Ahora si el mapa-->
+      <section class="w-full">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1737480225315!2d-75.58155728766567!3d6.240817926354038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429afa96f2347%3A0xdcc43fd6f4a16cf7!2s1cero1%20Software!5e0!3m2!1ses-419!2sco!4v1708542875949!5m2!1ses-419!2sco"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-  <!-- footer  -->
+      </section>
+      <!--!Ahora si el mapa-->
+    </section>
+    <!--! End Mapa-->
+  </main>
+
+  <!--!!End-main  -->
+
+  <!--!! footer  -->
   <footer class="flex flex-col">
-    <!-- sec info  -->
-    <section class="bg-greenFooter px-6 flex flex-col gap-6">
-      <!-- info alcaldia  -->
+    <!--!! sec info  -->
+    <section class="bg-primaryColor px-6 flex flex-col gap-6">
+      <!--!! info alcaldia  -->
       <article
-        class="lg:container mx-auto bg-white rounded-md transform translate-y-[-30px] lg:translate-y-[-2rem] px-10 py-10 lg:py-20 shadow-md grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-6 w-full lg:w-[90%]">
-        <!-- sec 1 información alcaldía -->
+        class="lg:container mx-auto bg-white border rounded-md transform translate-y-[-30px] lg:translate-y-[-2rem] px-10 py-10 lg:py-20 shadow-md grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-6 w-full lg:w-[90%]">
+        <!--!! sec 1 información alcaldía -->
         <div class="col-span-1 lg:col-span-2 flex flex-col gap-4 order-2 lg:order-1">
-          <!-- titulo  -->
+          <!--!! titulo  -->
           <h2 class="text-blueTitle font-semibold text-lg">
-            Alcaldía Municipal de Jamundí, Valle del Cauca
+            Alcaldía Municipal de Tualcaldia, Departamento
           </h2>
-          <!-- información  -->
+          <!--!! información  -->
           <article class="flex flex-col gap-3 text-[0.9rem]">
             <p class="font-normal">
-              Dirección: Cra. 10 #9-74, Jamundí - Valle del Cauca, Colombia.
+              Dirección: Cra. 10 #9-74, Tualcaldia - Departamento, Colombia.
             </p>
             <p class="font-normal">Código Postal: 764001</p>
             <p class="font-normal">
@@ -454,25 +1096,26 @@
             <p class="font-normal">Teléfono conmutador: (+57) 2 519 0969</p>
             <p class="font-normal">
               Correo institucional:
-              <a href="mailto:contactenos@jamundi.gov.co"
-                class="underline font-semibold text-blueTitle">contactenos@jamundi.gov.co</a>
+              <a href="mailto:contactenos@Tualcaldia.gov.co"
+                class="underline font-semibold text-blueTitle inline-block w-full overflow-x-hidden">contactenos@Tualcaldia.gov.co</a>
             </p>
             <p class="font-normal">
               Correo de Notificaciones Judiciales:
-              <a href="mailto:notificacionjudicial@jamundi.gov.co" class="underline text-blueTitle font-semibold">
-                notificacionjudicial@jamundi.gov.co</a>
+              <a href="mailto:notificacionjudicial@Tualcaldia.gov.co"
+                class="underline inline-block w-full overflow-x-hidden text-blueTitle font-semibold">
+                notificacionjudicial@Tualcaldia.gov.co</a>
             </p>
           </article>
         </div>
 
-        <!-- sec 2 logos alcaldia  -->
+        <!--!! sec 2 logos alcaldia  -->
         <div class="col-span-1 flex gap-3 justify-center order-1 lg:order-2">
           <img src="./assets/img/Escudo_de_Colombia.png" alt="Escudo de la república de Colombia"
             class="w-14 h-14 lg:w-[5rem] lg:h-[5rem] object-contain" />
-          <img src="./assets/img/logoAlcaldia.png" alt="Escudo del municipio de Alcaldía de jamundí"
+          <img src="./assets/img/logo-alcaldia.png" alt="Escudo del municipio de Alcaldía de Tualcaldia"
             class="w-14 h-14 lg:w-[5rem] lg:h-[5rem] object-contain" />
         </div>
-        <!-- sec 3 redes alcaldia -->
+        <!--!! sec 3 redes alcaldia -->
         <div class="col-span-1 lg:col-span-3 order-3 flex flex-wrap gap-6 lg:gap-16">
           <div class="flex gap-3 items-center">
             <span class="bg-blueTitle text-white rounded-full flex justify-center items-center p-2 lg:p-3">
@@ -496,14 +1139,14 @@
           </div>
         </div>
 
-        <!-- sec 4 metricas sitio -->
+        <!--!! sec 4 metricas sitio -->
         <div class="col-span-1 lg:col-span-3 order-4 flex flex-wrap gap-6">
           <h3 class="font-semibold text-[14px]">
             Última Actualización:
             <span id="lblDateSystem" class="font-normal"></span>
           </h3>
         </div>
-        <!--sec 5 secciones de sitio  -->
+        <!--!!sec 5 secciones de sitio  -->
         <div class="col-span-1 lg:col-span-3 order-5 flex flex-wrap gap-6 lg:gap-10">
           <a href="#" class="underline text-blueTitle text-[1rem]">Políticas</a>
           <a href="#" class="underline text-blueTitle text-[1rem]">Mapas del sitio</a>
@@ -511,14 +1154,14 @@
           <a href="#" class="underline text-blueTitle text-[1rem]">Accesibilidad</a>
         </div>
       </article>
-      <!-- info 1cero1 -->
+      <!--!! info 1cero1 -->
       <article class="flex justify-center gap-3 pb-10">
         <h3 class="text-white">Desarrollado por:</h3>
         <img src="./assets/img/logo_101_software_white.png" class="w-[8rem]" alt="" />
       </article>
     </section>
 
-    <!-- sec gob  -->
+    <!--!! sec gob  -->
     <section class="bg-gobColor px-6">
       <article class="lg:container mx-auto flex justify-center lg:justify-start py-3 gap-3">
         <img src="./assets/img/logofooter.png" class="w-[3rem]" alt="" />
@@ -528,8 +1171,10 @@
     </section>
   </footer>
 
-  <!-- footer  -->
+  <!--!! footer  -->
   <script src="./main.js" defer></script>
+  <script src="./js/nav.js" defer></script>
+
+</body>
 
 </html>
-
