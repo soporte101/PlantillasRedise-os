@@ -48,6 +48,34 @@ var splide = new Splide(".slider__home", {
 splide.mount();
 // slider Home
 
+// slider tramites
+var splide = new Splide(".slider__tramites", {
+  breakpoints: {
+    1440: {
+      perPage: 4,
+    },
+    1280: {
+      perPage: 2,
+    },
+    720: {
+      perPage: 2,
+    },
+    640: {
+      perPage: 1,
+    },
+    480: {
+      perPage: 1,
+    },
+  },
+  perPage: 4,
+  perMove: 1,
+  rewind: true,
+  arrows: false,
+  autoplay: "play",
+});
+splide.mount();
+// slidertramites
+
 // slider servicios al ciudadano
 var splide = new Splide(".slider__servicios", {
   breakpoints: {
