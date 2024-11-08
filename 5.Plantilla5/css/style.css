@@ -1,38 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
-  font-family: "Montserrat", sans-serif;
-
+* {
+	font-family: 'Montserrat', sans-serif;
 }
 .font-montserrat {
 }
 
 .font-work-sans {
-  font-family: "Work Sans", sans-serif;
+	font-family: 'Work Sans', sans-serif;
 }
-.
-.bg-gradient-gray {
-  background: #828282;
-  background: repeating-linear-gradient(to top, #828282 0%, #ffffff 100%);
+. .bg-gradient-gray {
+	background: #828282;
+	background: repeating-linear-gradient(to top, #828282 0%, #ffffff 100%);
 }
 
 .after-vertical {
-  clip-path: polygon(0 93%, 100% 93%, 100% 100%, 0 100%);
+	clip-path: polygon(0 93%, 100% 93%, 100% 100%, 0 100%);
 }
 
 .enlace__interes:hover .after-vertical {
-  clip-path: polygon(0 27%, 100% 27%, 100% 100%, 0 100%);
+	clip-path: polygon(0 27%, 100% 27%, 100% 100%, 0 100%);
 }
 
-
 .enlace__servicio:hover {
-  color: white;
+	color: white;
 }
 
 .enlace__servicio:hover .after-vertical {
-  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+	clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
 }
-
 
 /* .enlace__servicio:hover .svg {
   fill: none !important;
